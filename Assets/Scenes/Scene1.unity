@@ -470,12 +470,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: -1372625422
-  m_StartPoint: {x: -0.49438512, y: 0.33900106, z: -2.1757085}
-  m_EndPoint: {x: -0.00000016391277, y: -0.33900094, z: 2.5105271}
+  m_StartPoint: {x: 0.0001460957, y: -1.3870804, z: -1.2308284}
+  m_EndPoint: {x: -0.00014608297, y: 1.1556275, z: 2.009197}
   m_Width: 0
   m_CostModifier: -1
   m_Bidirectional: 1
-  m_AutoUpdatePosition: 0
+  m_AutoUpdatePosition: 1
   m_Area: 0
 --- !u!4 &560094834
 Transform:
@@ -484,13 +484,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560094832}
-  m_LocalRotation: {x: -0.2958074, y: 0.6280278, z: 0.30670372, w: 0.65116197}
-  m_LocalPosition: {x: 0.76694673, y: 3.5839157, z: 0.022931283}
-  m_LocalScale: {x: 0.10069945, y: 0.4650334, z: 0.6342671}
+  m_LocalRotation: {x: -0.06219877, y: 0.7044129, z: 0.062190518, w: 0.7043197}
+  m_LocalPosition: {x: 0.7770322, y: 3.706009, z: 0.048239704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 792933578}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: -50.335003, y: 94.981, z: -3.8380003}
+  m_LocalEulerAnglesHint: {x: -10.092, y: 90.008, z: -0.001}
 --- !u!1 &583510989
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1.9523394e-25, y: 7.807811e-39, z: 4.361e-42, w: 0}
+  m_BoundingSphereOverride: {x: -0.06640625, y: -0.5, z: 7.5, w: 5.5}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -980,7 +980,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c921ef001ce9649d09868edb56ef12c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AgentTypeID: -1372625422
   m_StartPoint: {x: 0, y: -1, z: 0}
-  m_EndPoint: {x: -2.2752926, y: -2.129078, z: 2.9805048}
+  m_EndPoint: {x: 0.26097268, y: -1.9583358, z: 2.8495088}
   m_Width: 0
   m_CostModifier: -1
   m_Bidirectional: 1

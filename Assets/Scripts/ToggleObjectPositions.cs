@@ -5,15 +5,21 @@ using UnityEngine;
 public class ToggleObjectPositions : MonoBehaviour
 {
     [SerializeField] private GameObject parentOfPositionChildren; // should not change dynamically
-    private Component[] positions; //should not change dynamically
+    private List<Transform> positions; //only should be changed in start
     private int currentPositionIndex;
     
     // Start is called before the first frame update
     void Start()
     {
-        positions = parentOfPositionChildren.GetComponentsInChildren<Transform>();
+        Transform parentTransform = parentOfPositionChildren.GetComponent<Transform>();
+        Transform[] transforms = parentOfPositionChildren.GetComponentsInChildren<Transform>();
+        positions = new List<Transform>(); 
+        foreach (Transform x in transforms) {
+            if (x.gameObject != parentOfPositionChildren) {
+                positions.Add(x);
+            }
+        }
         currentPositionIndex = 0; 
-        
     }
 
     // Update is called once per frame
@@ -21,7 +27,7 @@ public class ToggleObjectPositions : MonoBehaviour
     {   
         if (Input.GetButtonDown("CameraToggle")) {
             currentPositionIndex++;
-            if (currentPositionIndex >= positions.Length) {
+            if (currentPositionIndex >= positions.Count) {
                 currentPositionIndex = 0;
             }
         
