@@ -651,6 +651,14 @@
       <Project>{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{CB3CF4C2-ACB4-FC6B-FC0E-5C562D507E47}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{0F6A83A0-203E-28DD-3A62-ACBD8CF3E876}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
