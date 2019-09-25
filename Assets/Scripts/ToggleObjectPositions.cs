@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ToggleObjectPositions : MonoBehaviour
 {
-    [SerializeField] private GameObject parentOfPositionChildren; // should not change dynamically
+    public GameObject parentOfPositionChildren; // should not change dynamically
     private List<Transform> positions; //only should be changed in start
     private int currentPositionIndex;
     
