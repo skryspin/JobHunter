@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public Slider healthBar;
     public Button btn;
+    
+    //Death
+    private bool dieOnNextUpdate = false; 
 
 
     // Start is called before the first frame update
@@ -43,9 +46,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         doMovement();
-        if (currentHealth == 0) {
+        if ((currentHealth == 0) || (dieOnNextUpdate)) {
             GameOver();
+            dieOnNextUpdate = false ;
         }
+        
     }
     
 
@@ -212,6 +217,11 @@ public class Player : MonoBehaviour
             score++;
             Debug.Log(score);
         }
+        else if (cuddleBuddy.CompareTag("InstaDeath")) {
+           dieOnNextUpdate = true;  
+        }
+        
+        
     }
 
 
