@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     public float jumpSpeed;
     public float gravity;
     public float pushPower;
+    public string mode; 
 
     //Combat
     public int currentHealth;
@@ -41,7 +43,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         doMovement();
+        if (currentHealth == 0) {
+            GameOver();
+        }
     }
+    
 
     private void FixedUpdate()
     {
@@ -73,13 +79,81 @@ public class Player : MonoBehaviour
         }
 
     }
+    
+    private int normalizeInput(float inputValue) {
+        if (inputValue > 0) {
+            inputValue = 1;
+        }
+        else if (inputValue < 0) {
+            inputValue = -1;
+        }
+        else {
+            inputValue = 0;
+        }
+        return (int) inputValue;
+    }
+    
+    private int getVerticalInput() {
+        if (mode == "Keyboard") {
+            if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.DownArrow)) 
+                return 0; 
+            else if (Input.GetKey(KeyCode.UpArrow)) {
+                return 1;
+            }
+            else if (Input.GetKey(KeyCode.DownArrow)) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else if (mode == "Joycon") {
+            float rawVerticalInput = Input.GetAxis("Vertical");
+            Debug.Log("Vertical: " + rawVerticalInput);
+            int verticalInput = normalizeInput(rawVerticalInput);
+            Debug.Log("Vertical: " + verticalInput);
+            return verticalInput; 
+        }
+        else {
+            Debug.LogError("Invalid control mode"); 
+            return 0; 
+         }
+    
+    }
+    
+    private int getHorizontalInput() {
+        if (mode == "Keyboard") {
+            if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow)) 
+                return 0; 
+            else if (Input.GetKey(KeyCode.RightArrow)) {
+                return 1;
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow)) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else if (mode == "Joycon") {
+            float rawHorizontalInput = Input.GetAxis("Horizontal");
+            Debug.Log("Horizontal: " + rawHorizontalInput);
+            int horizontalInput = normalizeInput(rawHorizontalInput);
+            Debug.Log("Horizontal: " + horizontalInput);
+            return horizontalInput; 
+        }
+        else {
+            Debug.LogError("Invalid control mode"); 
+            return 0; 
+         }
+    
+    }
 
     private void doMovement()
     {
-        float verticalInput = Input.GetAxis("Vertical");
-        //Debug.Log("Vertical: " + verticalInput);
-        float horizontalInput = Input.GetAxis("Horizontal");
-        //Debug.Log("Horizontal: " + horizontalInput);
+
+        int verticalInput = getVerticalInput();
+        int horizontalInput = getHorizontalInput();
 
         Vector3 up_direction = new Vector3(my_camera.transform.forward.x, 0, my_camera.transform.forward.z);
         Vector3 right_direction = new Vector3(my_camera.transform.right.x, 0, my_camera.transform.right.z);
@@ -167,5 +241,14 @@ public class Player : MonoBehaviour
 
         // Apply the push
         body.AddForce(pushDir * pushPower);
+    }
+    
+    private void GameOver() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //reload the current scene
+        // you should probably change this to reset the player to the last spawn point
+        // maybe spawn points save the player's state? and then you return to that state if you die.
+        
+    
+    
     }
 }
