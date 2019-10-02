@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VisionCollider : MonoBehaviour
 {
-    public Alligorithm body; // the body that owns this vision collider 
+    public SightedEnemy body; // the body that owns this vision collider 
     
     // Start is called before the first frame update
     void Start()

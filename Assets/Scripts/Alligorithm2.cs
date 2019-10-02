@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.AI;
 
-public class Alligorithm : SightedEnemy
+public class Alligorithm2 : SightedEnemy
 {
 
     private Collider visionCollider; 
@@ -43,28 +43,21 @@ public class Alligorithm : SightedEnemy
     // Update is called once per frame
     public override void Update()
     {
-        if (goal != null) {
-        //if (goal != null && buffer > 0) {
-            //navMeshAgent.destination = goal; 
+        if (goal != null && buffer > 0) {
+            navMeshAgent.destination = goal; 
             buffer--;
-        //}
         }
-        
     }
     
     public override void setGoal(Vector3 goal) {
         this.goal = goal;
         buffer = 120; 
-        Debug.Log(anim);
-        anim.SetTrigger("SawPlayer");
     }
     
     private void OnTriggerStay(Collider other)
     {
         GameObject cuddleBuddy = other.gameObject;
         //Debug.Log("Alligorithm collided with: " + cuddleBuddy);
-
-
         
         if (cuddleBuddy.GetComponent<Player>() != null)
         {
