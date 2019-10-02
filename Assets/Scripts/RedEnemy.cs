@@ -9,7 +9,6 @@ public class RedEnemy : Enemy
         currentHealth = 1;
         maxHealth = 1; 
         contact_damage = 1; 
-        Debug.Log("Script active");
 
     }
 

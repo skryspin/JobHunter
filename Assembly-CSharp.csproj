@@ -62,6 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Alligorithm.cs" />
+    <Compile Include="Assets\Scripts\AlligorithmOld.cs" />
+    <Compile Include="Assets\Scripts\DecrementIntegerParameter.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
     <Compile Include="Assets\Scripts\MoveToPlayer.cs" />
@@ -69,6 +72,9 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\RedEnemy.cs" />
     <Compile Include="Assets\Scripts\ToggleObjectPositions.cs" />
+    <Compile Include="Assets\Scripts\VisionCollider.cs" />
+    <Compile Include="Assets\SetIntegerParameterToValue.cs" />
+    <Compile Include="Assets\Test.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

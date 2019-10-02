@@ -179,7 +179,7 @@ public class Player : MonoBehaviour
             if (lastMovement.y > 0)
             { //this is important - we don't want the velocity reset to 0 if he is already falling!
                 movement.y = 0;
-                Debug.Log("STOP");
+                //Debug.Log("STOP");
             }
             else
             {
