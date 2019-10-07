@@ -30,7 +30,7 @@ public class VisionCollider : MonoBehaviour
             //Debug.Log("VisionCollider found player"); 
             Debug.Log(player);
             Debug.Log(player.transform.position);
-            body.setGoal(player.transform.position);
+            body.sawPlayer(player.transform.position);
         }
     }
 }

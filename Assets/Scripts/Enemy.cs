@@ -11,4 +11,5 @@ public abstract class Enemy : MonoBehaviour
     
     // Update is called once per frame
     public abstract void Update();
+    
 }

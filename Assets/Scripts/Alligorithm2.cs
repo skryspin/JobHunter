@@ -2,15 +2,15 @@
 using System.Collections;
 using UnityEngine.AI;
 
-public class Alligorithm2 : SightedEnemy
+public class Alligorithm2 : NavigableEnemy
 {
 
     private Collider visionCollider; 
     private NavMeshAgent navMeshAgent; 
-    private Vector3 goal; 
-    private Animator anim; 
+    private Animator anim;
+
     
-    private int buffer = 0;
+    
     
     // Use this for initialization
     public override void Start()
@@ -49,11 +49,19 @@ public class Alligorithm2 : SightedEnemy
         }
     }
     
-    public override void setGoal(Vector3 goal) {
-        this.goal = goal;
-        buffer = 120; 
+    //public override void setGoal(Vector3 goal) {
+        //if (currentDestinationMarker != null) 
+        //    Destroy(currentDestinationMarker);
+        //this.goal = goal;
+        //currentDestinationMarker = Instantiate(destinationMarkerPrefab, goal, Quaternion.identity);
+        //buffer = 120; 
+    //}
+
+    public override void sawPlayer(Vector3 goal)
+    {
+        //do nothing
     }
-    
+
     private void OnTriggerStay(Collider other)
     {
         GameObject cuddleBuddy = other.gameObject;

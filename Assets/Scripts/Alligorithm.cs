@@ -2,16 +2,13 @@
 using System.Collections;
 using UnityEngine.AI;
 
-public class Alligorithm : SightedEnemy
+public class Alligorithm : NavigableEnemy
 {
 
     private Collider visionCollider; 
     private NavMeshAgent navMeshAgent; 
-    private Vector3 goal; 
     private Animator anim; 
-    
-    private int buffer = 0;
-    
+        
     // Use this for initialization
     public override void Start()
     {
@@ -52,11 +49,10 @@ public class Alligorithm : SightedEnemy
         
     }
     
-    public override void setGoal(Vector3 goal) {
-        this.goal = goal;
-        buffer = 120; 
-        Debug.Log(anim);
-        anim.SetTrigger("SawPlayer");
+    public override void sawPlayer(Vector3 position) {
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Charge")) { //don't try to charge if already charging!
+            anim.SetTrigger("SawPlayer");
+        }
     }
     
     private void OnTriggerStay(Collider other)
@@ -68,10 +64,8 @@ public class Alligorithm : SightedEnemy
         
         if (cuddleBuddy.GetComponent<Player>() != null)
         {
-            Debug.Log("setting goal..."); 
             Player player = cuddleBuddy.GetComponent<Player>(); 
-            //player.TakeDamage(contact_damage);
-            setGoal(player.transform.position);
+            player.TakeDamage(contact_damage);
         }
     }
     

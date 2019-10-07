@@ -4,16 +4,16 @@ using System.Collections;
 public abstract class SightedEnemy : Enemy
 {
     // Use this for initialization
-    void Start()
-    {
+    //override void Start()
+    //{
 
-    }
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
 
-    }
+    //}
     
-    abstract public void setGoal(Vector3 goal);
+    abstract public void sawPlayer(Vector3 goal);
 }
