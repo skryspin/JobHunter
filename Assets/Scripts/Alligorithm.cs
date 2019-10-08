@@ -6,7 +6,6 @@ public class Alligorithm : NavigableEnemy
 {
 
     private Collider visionCollider; 
-    private NavMeshAgent navMeshAgent; 
     private Animator anim; 
         
     // Use this for initialization
@@ -33,21 +32,23 @@ public class Alligorithm : NavigableEnemy
         if (anim is null) {
             anim = this.gameObject.GetComponent<Animator>(); 
         }
-        Debug.Log("Script active");
+        //Debug.Log("Script active");
 
     }
 
     // Update is called once per frame
     public override void Update()
     {
-        if (goal != null) {
-        //if (goal != null && buffer > 0) {
-            //navMeshAgent.destination = goal; 
-            buffer--;
-        //}
-        }
+        doNavigate(); 
         
     }
+    
+    public void doNavigate() {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("NavigateToSpawn")) {
+            setGoal(spawnLocation);  
+        
+        }
+    } 
     
     public override void sawPlayer(Vector3 position) {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Charge")) { //don't try to charge if already charging!

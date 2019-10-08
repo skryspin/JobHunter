@@ -28,8 +28,8 @@ public class VisionCollider : MonoBehaviour
         {
             Player player = cuddleBuddy.GetComponent<Player>(); 
             //Debug.Log("VisionCollider found player"); 
-            Debug.Log(player);
-            Debug.Log(player.transform.position);
+            //Debug.Log(player);
+            //Debug.Log(player.transform.position);
             body.sawPlayer(player.transform.position);
         }
     }

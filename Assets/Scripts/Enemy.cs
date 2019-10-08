@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
     public int currentHealth;
     public int maxHealth; 
     public int contact_damage; 
+    public Vector3 spawnLocation; 
     
     public abstract void Start(); 
     

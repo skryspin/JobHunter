@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
+
 
 public abstract class NavigableEnemy : SightedEnemy
 {
     private GameObject currentDestinationMarker; 
     public GameObject destinationMarkerPrefab; 
+    protected NavMeshAgent navMeshAgent; 
     protected Vector3 goal; 
     protected int buffer = 0;
 
@@ -25,7 +28,9 @@ public abstract class NavigableEnemy : SightedEnemy
         if (currentDestinationMarker != null) 
             Destroy(currentDestinationMarker);
         this.goal = goal;
+        navMeshAgent.destination = goal; 
         currentDestinationMarker = Instantiate(destinationMarkerPrefab, goal, Quaternion.identity);
         buffer = 120; 
     }
+    
 }

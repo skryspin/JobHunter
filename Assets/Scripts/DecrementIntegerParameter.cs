@@ -10,7 +10,7 @@ public class DecrementIntegerParameter : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetInteger(intParamName, animator.GetInteger(intParamName)-1);
-        Debug.Log(animator.GetInteger(intParamName));
+        //Debug.Log(animator.GetInteger(intParamName));
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

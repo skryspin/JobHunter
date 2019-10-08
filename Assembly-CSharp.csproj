@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
     <Compile Include="Assets\Scripts\MoveToPlayer.cs" />
+    <Compile Include="Assets\Scripts\NavigableEnemy.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\RedEnemy.cs" />

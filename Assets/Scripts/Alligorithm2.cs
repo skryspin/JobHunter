@@ -6,7 +6,7 @@ public class Alligorithm2 : NavigableEnemy
 {
 
     private Collider visionCollider; 
-    private NavMeshAgent navMeshAgent; 
+    //private NavMeshAgent navMeshAgent; 
     private Animator anim;
 
     
@@ -36,6 +36,8 @@ public class Alligorithm2 : NavigableEnemy
         if (anim is null) {
             anim = this.gameObject.GetComponent<Animator>(); 
         }
+        
+        spawnLocation = this.gameObject.transform.position; 
         Debug.Log("Script active");
 
     }

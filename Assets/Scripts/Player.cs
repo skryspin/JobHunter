@@ -208,14 +208,14 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject cuddleBuddy = other.gameObject;
-        Debug.Log("Collision detected with: " + cuddleBuddy);
+        //Debug.Log("Collision detected with: " + cuddleBuddy);
 
 
         if (cuddleBuddy.CompareTag("Collectable"))
         {
             Destroy(cuddleBuddy);
             score++;
-            Debug.Log(score);
+            //Debug.Log(score);
         }
         else if (cuddleBuddy.CompareTag("InstaDeath")) {
            dieOnNextUpdate = true;  
