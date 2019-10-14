@@ -32,6 +32,9 @@ public class Alligorithm : NavigableEnemy
         if (anim is null) {
             anim = this.gameObject.GetComponent<Animator>(); 
         }
+        spawnLocation = this.gameObject.transform.position; 
+        spawnRotation = this.gameObject.transform.rotation.eulerAngles;
+
         //Debug.Log("Script active");
 
     }
@@ -40,13 +43,26 @@ public class Alligorithm : NavigableEnemy
     public override void Update()
     {
         doNavigate(); 
+        if (rotating) {
+            Vector3 goal = spawnRotation;
+            if (Vector3.Distance(transform.rotation.eulerAngles, goal) < 0.01f) {
+                transform.eulerAngles = goal; 
+                rotating = false; 
+            }
+            else {
+                transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, goal, Time.deltaTime);
+          
+            }
+        }
         
     }
     
     public void doNavigate() {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("NavigateToSpawn")) {
-            setGoal(spawnLocation);  
         
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("NavigateToSpawn") && reachedDestination() && !rotating) {
+            removeGoal();
+            Debug.Log("Reached destination.");
+            anim.SetTrigger("ExitNavigation");
         }
     } 
     
@@ -69,6 +85,8 @@ public class Alligorithm : NavigableEnemy
             player.TakeDamage(contact_damage);
         }
     }
+    
+    
     
 }
 

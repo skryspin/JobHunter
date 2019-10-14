@@ -9,6 +9,7 @@ public abstract class NavigableEnemy : SightedEnemy
     public GameObject destinationMarkerPrefab; 
     protected NavMeshAgent navMeshAgent; 
     protected Vector3 goal; 
+    public bool rotating = false; 
     protected int buffer = 0;
 
 
@@ -22,7 +23,12 @@ public abstract class NavigableEnemy : SightedEnemy
     //void Update()
     //{
 
-    //}
+    //}{
+    
+    public void removeGoal() {
+        Destroy(currentDestinationMarker);
+        navMeshAgent.ResetPath();
+    }
     
     public void setGoal(Vector3 goal) {
         if (currentDestinationMarker != null) 
@@ -31,6 +37,18 @@ public abstract class NavigableEnemy : SightedEnemy
         navMeshAgent.destination = goal; 
         currentDestinationMarker = Instantiate(destinationMarkerPrefab, goal, Quaternion.identity);
         buffer = 120; 
+    }
+    
+    /* from https://answers.unity.com/questions/324589/how-can-i-tell-when-a-navmesh-has-reached-its-dest.html */
+    public bool reachedDestination() {
+        if (!navMeshAgent.pathPending) {
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance) {
+                if (navMeshAgent.velocity.sqrMagnitude == 0f) {
+                    return true; 
+                }
+            }
+        }
+        return false;
     }
     
 }
