@@ -7,12 +7,12 @@ public class Alligorithm : NavigableEnemy
 
     private Collider visionCollider; 
     private Animator anim; 
+    public BoxCollider hitbox; 
         
     // Use this for initialization
     public override void Start()
     {
-        currentHealth = 1;
-        maxHealth = 1; 
+        currentHealth = 3;
         contact_damage = 1; 
         if (visionCollider is null) {
             foreach (Collider x in this.gameObject.GetComponentsInChildren<Collider>()) {
@@ -42,24 +42,31 @@ public class Alligorithm : NavigableEnemy
     // Update is called once per frame
     public override void Update()
     {
+        if(dieOnNextFrame) {
+            Destroy(this.gameObject); 
+        } 
         doNavigate(); 
         if (rotating) {
             Vector3 goal = spawnRotation;
-            if (Vector3.Distance(transform.rotation.eulerAngles, goal) < 0.01f) {
+            if (Vector3.Distance(transform.rotation.eulerAngles, goal) < 0.8f) {
                 transform.eulerAngles = goal; 
-                rotating = false; 
+                Debug.Log("Stop rotating!");
+                anim.SetTrigger("StopRotating");  
             }
             else {
+                Debug.Log("Rotating...");
                 transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, goal, Time.deltaTime);
           
             }
         }
         
+        
+        
     }
     
     public void doNavigate() {
         
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("NavigateToSpawn") && reachedDestination() && !rotating) {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("NavigateToSpawn") && reachedDestination()) {
             removeGoal();
             Debug.Log("Reached destination.");
             anim.SetTrigger("ExitNavigation");

@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
     public int currentHealth;
     public int maxHealth;
     public Slider healthBar;
-    public Button btn;
     
     //Death
     private bool dieOnNextUpdate = false; 
@@ -36,7 +35,6 @@ public class Player : MonoBehaviour
     {
         characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
-        btn.onClick.AddListener(() => TakeDamage(1));
         //pushPower = 25.0f;
 
     }
@@ -45,6 +43,7 @@ public class Player : MonoBehaviour
     /* Note: Much of this code was referenced from the Unity manual */
     void Update()
     {
+        toggleMode(); 
         doMovement();
         if ((currentHealth == 0) || (dieOnNextUpdate)) {
             GameOver();
@@ -114,9 +113,9 @@ public class Player : MonoBehaviour
         }
         else if (mode == "Joycon") {
             float rawVerticalInput = Input.GetAxis("Vertical");
-            Debug.Log("Vertical: " + rawVerticalInput);
+           // Debug.Log("Vertical: " + rawVerticalInput);
             int verticalInput = normalizeInput(rawVerticalInput);
-            Debug.Log("Vertical: " + verticalInput);
+          //  Debug.Log("Vertical: " + verticalInput);
             return verticalInput; 
         }
         else {
@@ -142,15 +141,29 @@ public class Player : MonoBehaviour
         }
         else if (mode == "Joycon") {
             float rawHorizontalInput = Input.GetAxis("Horizontal");
-            Debug.Log("Horizontal: " + rawHorizontalInput);
+          //  Debug.Log("Horizontal: " + rawHorizontalInput);
             int horizontalInput = normalizeInput(rawHorizontalInput);
-            Debug.Log("Horizontal: " + horizontalInput);
+          //  Debug.Log("Horizontal: " + horizontalInput);
             return horizontalInput; 
         }
         else {
             Debug.LogError("Invalid control mode"); 
             return 0; 
          }
+    
+    }
+    
+    private bool toggleMode() {
+        if ((mode == "Keyboard") && (Input.GetAxis("Horizontal") != 0)) {
+            mode = "Joycon";
+            return true; 
+        }
+        else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
+            mode = "Keyboard";
+            return true; 
+        }
+        return false; 
+    
     
     }
 

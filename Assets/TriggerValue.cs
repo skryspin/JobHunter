@@ -11,7 +11,7 @@ public class TriggerValue : StateMachineBehaviour
         if (temp != null) {
             temp.setGoal(temp.spawnLocation);
             Debug.Log("Set goal to " + temp.spawnLocation + "."); 
-            temp.rotating = true; 
+            //temp.rotating = true; 
         }
     }
 
@@ -21,11 +21,14 @@ public class TriggerValue : StateMachineBehaviour
     //    
     //}
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+       NavigableEnemy temp = animator.gameObject.GetComponent<NavigableEnemy>();
+       temp.rotating = false; 
+       temp.removeGoal(); 
+
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
