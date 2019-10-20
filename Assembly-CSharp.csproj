@@ -62,12 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Hitbox.cs" />
-    <Compile Include="Assets\Rotate.cs" />
+    <Compile Include="Assets\AnimationTrigger.cs" />
+    <Compile Include="Assets\OpenableBook.cs" />
     <Compile Include="Assets\Scripts\Alligorithm.cs" />
     <Compile Include="Assets\Scripts\Alligorithm2.cs" />
     <Compile Include="Assets\Scripts\DecrementIntegerParameter.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Hitbox.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
     <Compile Include="Assets\Scripts\MoveToPlayer.cs" />
     <Compile Include="Assets\Scripts\NavigableEnemy.cs" />
@@ -75,11 +76,13 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\RedEnemy.cs" />
     <Compile Include="Assets\Scripts\RemoveGoal.cs" />
+    <Compile Include="Assets\Scripts\Rotate.cs" />
+    <Compile Include="Assets\Scripts\SetIntegerParameterToValue.cs" />
     <Compile Include="Assets\Scripts\SightedEnemy.cs" />
     <Compile Include="Assets\Scripts\ToggleObjectPositions.cs" />
+    <Compile Include="Assets\Scripts\TriggerValue.cs" />
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
-    <Compile Include="Assets\SetIntegerParameterToValue.cs" />
-    <Compile Include="Assets\TriggerValue.cs" />
+    <Compile Include="Assets\TriggerCamera.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

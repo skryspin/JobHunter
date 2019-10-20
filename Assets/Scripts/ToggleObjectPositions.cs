@@ -30,10 +30,11 @@ public class ToggleObjectPositions : MonoBehaviour
             if (currentPositionIndex >= positions.Count) {
                 currentPositionIndex = 0;
             }
+            this.gameObject.transform.position = positions[currentPositionIndex].transform.position;
+            this.gameObject.transform.rotation = positions[currentPositionIndex].transform.rotation;
+            this.gameObject.transform.localScale = positions[currentPositionIndex].transform.localScale;
         
         }
-        this.gameObject.transform.position = positions[currentPositionIndex].transform.position;
-        this.gameObject.transform.rotation = positions[currentPositionIndex].transform.rotation;
-        this.gameObject.transform.localScale = positions[currentPositionIndex].transform.localScale;
+        
     }
 }
