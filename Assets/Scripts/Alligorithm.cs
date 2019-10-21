@@ -50,11 +50,11 @@ public class Alligorithm : NavigableEnemy
             Vector3 goal = spawnRotation;
             if (Vector3.Distance(transform.rotation.eulerAngles, goal) < 0.8f) {
                 transform.eulerAngles = goal; 
-                Debug.Log("Stop rotating!");
+             //   Debug.Log("Stop rotating!");
                 anim.SetTrigger("StopRotating");  
             }
             else {
-                Debug.Log("Rotating...");
+             //   Debug.Log("Rotating...");
                 transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, goal, Time.deltaTime);
           
             }
@@ -68,7 +68,7 @@ public class Alligorithm : NavigableEnemy
         
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("NavigateToSpawn") && reachedDestination()) {
             removeGoal();
-            Debug.Log("Reached destination.");
+          //  Debug.Log("Reached destination.");
             anim.SetTrigger("ExitNavigation");
         }
     } 

@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\RedEnemy.cs" />
     <Compile Include="Assets\Scripts\RemoveGoal.cs" />
+    <Compile Include="Assets\Scripts\ResumeHitbox.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\SetIntegerParameterToValue.cs" />
     <Compile Include="Assets\Scripts\SightedEnemy.cs" />

@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class Enemy : MonoBehaviour
 {
     public int maxHealth; 
-    protected int currentHealth;
+    public int currentHealth;
     protected int contact_damage; 
     public Vector3 spawnLocation;  
     public Vector3 spawnRotation;   
