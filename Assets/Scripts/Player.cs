@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public Slider healthBar;
     
+    //Resume Throw
+    public GameObject resumePrefab; 
+    
     //Death
     private bool dieOnNextUpdate = false; 
 
@@ -35,6 +38,9 @@ public class Player : MonoBehaviour
     {
         characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
+        if (resumePrefab == null) {
+            Debug.LogError("No resume prefab assigned to Player of name" + gameObject.name); 
+        }
         //pushPower = 25.0f;
 
     }
@@ -49,6 +55,7 @@ public class Player : MonoBehaviour
             GameOver();
             dieOnNextUpdate = false ;
         }
+        doResumeThrow();
         
     }
     
@@ -56,6 +63,13 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
 
+    }
+    
+    public void doResumeThrow() {
+        if (Input.GetButtonDown("Throw")) {
+            Resume resume = Instantiate(resumePrefab, this.transform.position, new Quaternion()).GetComponent<Resume>();
+            resume.SetDirection(lastMovement);  //TODO:  change to facingDireciton
+       }
     }
 
     /* Applies dmg points of damage to the player's health, and 

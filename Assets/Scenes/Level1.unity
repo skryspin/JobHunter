@@ -2355,6 +2355,12 @@ PrefabInstance:
       propertyPath: btn
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resumePrefab
+      value: 
+      objectReference: {fileID: 8056076364973629266, guid: b7d892e33ad644c2c85959f03f5c0697,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824f227be99c24f2bb42056e79fd04ed, type: 3}
 --- !u!114 &1257263782 stripped

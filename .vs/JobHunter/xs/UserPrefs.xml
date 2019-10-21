@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TriggerCamera.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="12" Column="44" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="60" Column="14" />
       <File FileName="Assets/OpenableBook.cs" Line="7" Column="33" />
       <File FileName="Assets/AnimationTrigger.cs" Line="27" Column="10" />
-      <File FileName="Assets/Scripts/ToggleObjectPositions.cs" Line="19" Column="34" />
-      <File FileName="Assets/TriggerCamera.cs" Line="7" Column="12" />
+      <File FileName="Assets/Scripts/ToggleObjectPositions.cs" Line="35" Column="13" />
+      <File FileName="Assets/TriggerCamera.cs" Line="24" Column="63" />
+      <File FileName="Assets/Scripts/Player.cs" Line="70" Column="15" />
+      <File FileName="Assets/DestroySelf.cs" Line="10" Column="49" />
+      <File FileName="Assets/Resume.cs" Line="16" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
