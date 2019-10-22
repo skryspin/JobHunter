@@ -22,10 +22,28 @@ public class Resume : MonoBehaviour
       //  Debug.Log(div);
       //  Debug.Log("x, y, z,: " + (direction.x / div) + (direction.y / div) +  (direction.z / div));
         this.transform.position += new Vector3(direction.x / div, direction.y / div, direction.z / div); 
+        transform.rotation = Quaternion.LookRotation(direction); 
+        Debug.Log("Resume direction: " + direction); 
+        Vector3 forward=  Quaternion.AngleAxis(90, Vector3.up) * direction;
+        Debug.Log("Desired direction of forward: " + forward); 
+        transform.rotation = Quaternion.LookRotation(forward); 
+        Debug.Log("New forward: " + transform.forward); 
+         Debug.Log("forward: " + transform.forward); 
+
+
     }
     
-    public void SetDirection(Vector3 dir) {
+    public void SetDirection(Vector3 dir, Transform transform) {
         direction = Vector3.Normalize(dir);
+        Debug.DrawRay(this.transform.position, direction, Color.red); 
+        Debug.Log("Resume direction: " + direction); 
+        Vector3 forward=  Quaternion.AngleAxis(90, Vector3.up) * direction;
+        Debug.Log("Desired direction of forward: " + forward); 
+        transform.rotation = Quaternion.LookRotation(forward); 
+        Debug.Log("New forward: " + transform.forward); 
+        
+
+        
     }
 
     private void OnTriggerEnter(Collider other)

@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
     public void doResumeThrow() {
         if (Input.GetButtonDown("Throw")) {
             Resume resume = Instantiate(resumePrefab, this.transform.position, new Quaternion()).GetComponent<Resume>();
-            resume.SetDirection(lastMovementDirection);  
+            resume.SetDirection(lastMovementDirection, this.transform);  
             Debug.DrawRay(transform.position, lastMovementDirection, Color.cyan); 
        }
     }
@@ -196,10 +196,10 @@ public class Player : MonoBehaviour
 
         Vector3 up_direction = Vector3.Normalize(new Vector3(my_camera.transform.forward.x, 0, my_camera.transform.forward.z));
         //Debug.DrawRay(this.transform.position, Vector3.Normalize(up_direction)*3, Color.blue); 
-        Debug.Log("Up magnitude" + up_direction.magnitude); 
+        //Debug.Log("Up magnitude" + up_direction.magnitude); 
         Vector3 right_direction = Vector3.Normalize(new Vector3(my_camera.transform.right.x, 0, my_camera.transform.right.z));
         //Debug.DrawRay(this.transform.position, Vector3.Normalize(right_direction)*3, Color.red); 
-        Debug.Log("Right magnitude" + right_direction.magnitude); 
+        //Debug.Log("Right magnitude" + right_direction.magnitude); 
         
         
 
