@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System; 
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
     private CharacterController characterController;
     private GameObject my_camera;
     private Vector3 lastMovement;
+    private Vector3 lastMovementDirection;
     private int score;
 
 
@@ -55,6 +57,7 @@ public class Player : MonoBehaviour
             GameOver();
             dieOnNextUpdate = false ;
         }
+        turnToMovement(); 
         doResumeThrow();
         
     }
@@ -65,10 +68,13 @@ public class Player : MonoBehaviour
 
     }
     
+    
+    
     public void doResumeThrow() {
         if (Input.GetButtonDown("Throw")) {
             Resume resume = Instantiate(resumePrefab, this.transform.position, new Quaternion()).GetComponent<Resume>();
-            resume.SetDirection(lastMovement);  //TODO:  change to facingDireciton
+            resume.SetDirection(lastMovementDirection);  
+            Debug.DrawRay(transform.position, lastMovementDirection, Color.cyan); 
        }
     }
 
@@ -181,16 +187,32 @@ public class Player : MonoBehaviour
     
     }
 
+    /* Does the player movement, and updates lastMovementDirection .*/ 
     private void doMovement()
     {
 
         int verticalInput = getVerticalInput();
         int horizontalInput = getHorizontalInput();
 
-        Vector3 up_direction = new Vector3(my_camera.transform.forward.x, 0, my_camera.transform.forward.z);
-        Vector3 right_direction = new Vector3(my_camera.transform.right.x, 0, my_camera.transform.right.z);
+        Vector3 up_direction = Vector3.Normalize(new Vector3(my_camera.transform.forward.x, 0, my_camera.transform.forward.z));
+        //Debug.DrawRay(this.transform.position, Vector3.Normalize(up_direction)*3, Color.blue); 
+        Debug.Log("Up magnitude" + up_direction.magnitude); 
+        Vector3 right_direction = Vector3.Normalize(new Vector3(my_camera.transform.right.x, 0, my_camera.transform.right.z));
+        //Debug.DrawRay(this.transform.position, Vector3.Normalize(right_direction)*3, Color.red); 
+        Debug.Log("Right magnitude" + right_direction.magnitude); 
+        
+        
 
         Vector3 movement = up_direction * verticalInput + right_direction * horizontalInput;
+        lastMovementDirection = movement; 
+        Debug.DrawRay(this.transform.position, movement*3, Color.red); 
+
+
+        
+        if (movement.magnitude != 0) {
+            lastMovementDirection = movement; 
+        }
+        
         movement *= speed;
 
         if (characterController.isGrounded)
@@ -229,6 +251,14 @@ public class Player : MonoBehaviour
 
         characterController.Move(movement * Time.deltaTime);
         lastMovement = movement;
+       // Debug.DrawRay(transform.position, lastMovement, Color.blue);
+
+        
+    }
+    
+    /* Rotates the player to face the movement direction */
+    public void turnToMovement() {
+        transform.LookAt(transform.position + lastMovementDirection);
 
     }
 
