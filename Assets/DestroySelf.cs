@@ -7,6 +7,7 @@ public class DestroySelf : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GameObject.Destroy(animator.gameObject.transform.parent.gameObject); 
         GameObject.Destroy(animator.gameObject);
     }
 

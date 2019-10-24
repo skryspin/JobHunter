@@ -293,6 +293,7 @@
 "Assets/DestroySelf.cs"
 "Assets/OpenableBook.cs"
 "Assets/Resume.cs"
+"Assets/ResumeCollider.cs"
 "Assets/Scripts/Alligorithm.cs"
 "Assets/Scripts/Alligorithm2.cs"
 "Assets/Scripts/DecrementIntegerParameter.cs"

@@ -204,13 +204,14 @@ public class Player : MonoBehaviour
         
 
         Vector3 movement = up_direction * verticalInput + right_direction * horizontalInput;
-        lastMovementDirection = movement; 
-        Debug.DrawRay(this.transform.position, movement*3, Color.red); 
+        //lastMovementDirection = movement; 
 
 
         
         if (movement.magnitude != 0) {
             lastMovementDirection = movement; 
+            Debug.DrawRay(this.transform.position, movement*3, Color.red); 
+
         }
         
         movement *= speed;

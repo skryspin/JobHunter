@@ -66,6 +66,7 @@
     <Compile Include="Assets\DestroySelf.cs" />
     <Compile Include="Assets\OpenableBook.cs" />
     <Compile Include="Assets\Resume.cs" />
+    <Compile Include="Assets\ResumeCollider.cs" />
     <Compile Include="Assets\Scripts\Alligorithm.cs" />
     <Compile Include="Assets\Scripts\Alligorithm2.cs" />
     <Compile Include="Assets\Scripts\DecrementIntegerParameter.cs" />

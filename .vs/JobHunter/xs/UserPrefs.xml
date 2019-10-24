@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resume.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ResumeCollider.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="7" Column="11" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="51" Column="33" />
@@ -9,9 +9,10 @@
       <File FileName="Assets/TriggerCamera.cs" Line="24" Column="63" />
       <File FileName="Assets/Scripts/Player.cs" Line="76" Column="74" />
       <File FileName="Assets/DestroySelf.cs" Line="10" Column="49" />
-      <File FileName="Assets/Resume.cs" Line="25" Column="9" />
+      <File FileName="Assets/Resume.cs" Line="52" Column="19" />
       <File FileName="Assets/Scripts/ResumeHitbox.cs" Line="25" Column="10" />
       <File FileName="Assets/Scripts/NavigableEnemy.cs" Line="6" Column="23" />
+      <File FileName="Assets/ResumeCollider.cs" Line="19" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
