@@ -3,17 +3,16 @@
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="7" Column="11" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="51" Column="33" />
-      <File FileName="Assets/OpenableBook.cs" Line="7" Column="33" />
-      <File FileName="Assets/AnimationTrigger.cs" Line="27" Column="10" />
+      <File FileName="Assets/Scripts/OpenableBook.cs" Line="7" Column="33" />
+      <File FileName="Assets/Scripts/AnimationTrigger.cs" Line="27" Column="10" />
       <File FileName="Assets/Scripts/ToggleObjectPositions.cs" Line="35" Column="13" />
-      <File FileName="Assets/TriggerCamera.cs" Line="24" Column="63" />
+      <File FileName="Assets/Scenes/TriggerCamera.cs" Line="24" Column="63" />
       <File FileName="Assets/Scripts/Player.cs" Line="15" Column="42" />
-      <File FileName="Assets/DestroySelf.cs" Line="10" Column="76" />
-      <File FileName="Assets/Resume.cs" Line="54" Column="30" />
+      <File FileName="Assets/Scripts/DestroySelf.cs" Line="10" Column="76" />
+      <File FileName="Assets/Scripts/Resume.cs" Line="54" Column="30" />
       <File FileName="Assets/Scripts/ResumeHitbox.cs" Line="25" Column="10" />
       <File FileName="Assets/Scripts/NavigableEnemy.cs" Line="6" Column="23" />
-      <File FileName="Assets/ResumeCollider.cs" Line="32" Column="71" />
-      <File FileName="Assets/Scripts/Alligorithm2.cs.meta" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/ResumeCollider.cs" Line="32" Column="71" />
       <File FileName="Assets/Scripts/MoveToPlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
