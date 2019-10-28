@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
         return (int) inputValue;
     }
     
-    private int getVerticalInput() {
+    private float getVerticalInput() {
         if (mode == "Keyboard") {
             if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.DownArrow)) 
                 return 0; 
@@ -134,7 +134,7 @@ public class Player : MonoBehaviour
         else if (mode == "Joycon") {
             float rawVerticalInput = Input.GetAxis("Vertical");
            // Debug.Log("Vertical: " + rawVerticalInput);
-            int verticalInput = normalizeInput(rawVerticalInput);
+            float verticalInput = rawVerticalInput; // normalizeInput(rawVerticalInput);
           //  Debug.Log("Vertical: " + verticalInput);
             return verticalInput; 
         }
@@ -145,7 +145,7 @@ public class Player : MonoBehaviour
     
     }
     
-    private int getHorizontalInput() {
+    private float getHorizontalInput() {
         if (mode == "Keyboard") {
             if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow)) 
                 return 0; 
@@ -161,9 +161,9 @@ public class Player : MonoBehaviour
         }
         else if (mode == "Joycon") {
             float rawHorizontalInput = Input.GetAxis("Horizontal");
-          //  Debug.Log("Horizontal: " + rawHorizontalInput);
-            int horizontalInput = normalizeInput(rawHorizontalInput);
-          //  Debug.Log("Horizontal: " + horizontalInput);
+            Debug.Log("RawHorizontal: " + rawHorizontalInput);
+            float horizontalInput = rawHorizontalInput; // normalizeInput(rawHorizontalInput);
+            Debug.Log("NormHorizontal: " + horizontalInput);
             return horizontalInput; 
         }
         else {
@@ -191,8 +191,8 @@ public class Player : MonoBehaviour
     private void doMovement()
     {
 
-        int verticalInput = getVerticalInput();
-        int horizontalInput = getHorizontalInput();
+        float verticalInput = getVerticalInput();
+        float horizontalInput = getHorizontalInput();
 
         Vector3 up_direction = Vector3.Normalize(new Vector3(my_camera.transform.forward.x, 0, my_camera.transform.forward.z));
         //Debug.DrawRay(this.transform.position, Vector3.Normalize(up_direction)*3, Color.blue); 
