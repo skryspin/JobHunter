@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         //}
         
         
-        //Handles an EARLY jump
+        /*Handles an EARLY jump*/
         void earlyJumpBuffer() {
             if (Input.GetButtonDown("Jump")) { //only store the jump on Button Down 
                                                // - otherwise, player could hold down jump to jump every time they hit the ground!
@@ -114,6 +114,7 @@ public class Player : MonoBehaviour
             }
         }
         
+       /*Handles a LATE jump*/
         void lateJumpBuffer() {
             if(characterController.isGrounded) {
                 storedGround = true; 
