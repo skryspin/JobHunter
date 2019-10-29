@@ -14,6 +14,22 @@ public class Player : MonoBehaviour
     private Vector3 lastMovement;
     private Vector3 lastMovementDirection;
     private int score;
+    
+    /* Jump Buffering
+     * These variables are used to allow the player to jump slightly late or slightly early;
+     * as in, if they hit jump within BUFFER frames of being on the ground (Early or late), 
+     * then they will jump. Of course, due to the rules of time, if they hit the jump late,
+     * they will jump slightly late, but this is better than the jump not registering at all.
+     * In contrast, if they jump early, the jump will not register until they actually hit the
+     * ground, to prevent them from jumping higher than normal. Also, we need to do that because
+     * we cannot /predict/ if a player will in the ground; we simply wait and see if it happens.
+     * */ 
+    private const int BUFFER = 6; 
+    private int framesRemainingForStoredJump; //stores how many frames until a stored jump is disregarded
+    private bool storedJump; // did the player hit jump within the past BUFFER frames?
+    private bool storedGround; // was the player on the ground in the last BUFFER frames?
+    private int framesRemainingForStoredGround; //stores how many frames until a stored ground in disregarded 
+    
 
 
     //Movement (public)
@@ -38,19 +54,21 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Testing...");
         characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
         if (resumePrefab == null) {
             Debug.LogError("No resume prefab assigned to Player of name" + gameObject.name); 
         }
+        mode = "Keyboard";
         //pushPower = 25.0f;
 
     }
 
     // Update is called once per frame
-    /* Note: Much of this code was referenced from the Unity manual */
     void Update()
     {
+        jumpBuffer(); // handles jump buffering for EARLY jump commands
         toggleMode(); 
         doMovement();
         if ((currentHealth == 0) || (dieOnNextUpdate)) {
@@ -67,6 +85,53 @@ public class Player : MonoBehaviour
     {
 
     }
+    
+    private void jumpBuffer() {
+    
+        earlyJumpBuffer(); 
+        //if (Input.GetKey(KeyCode.B)) {
+        lateJumpBuffer(); 
+        //}
+        
+        
+        //Handles an EARLY jump
+        void earlyJumpBuffer() {
+            if (Input.GetButtonDown("Jump")) { //only store the jump on Button Down 
+                                               // - otherwise, player could hold down jump to jump every time they hit the ground!
+                storedJump = true; 
+                Debug.Log("Storing jump with BUFFER = " + BUFFER); 
+                framesRemainingForStoredJump = BUFFER; //set frames since stored Jump to the max
+            }
+            else {
+                if (framesRemainingForStoredJump > 0) {
+                    framesRemainingForStoredJump--; //decrement
+                    Debug.Log("framesRemainingForStoredJump: " + framesRemainingForStoredJump); 
+                    if (framesRemainingForStoredJump == 0) {
+                        storedJump = false; 
+                    } 
+                }
+                
+            }
+        }
+        
+        void lateJumpBuffer() {
+            if(characterController.isGrounded) {
+                storedGround = true; 
+                Debug.Log("Storing ground with BUFFER = " + BUFFER);
+                framesRemainingForStoredGround = BUFFER; 
+            } 
+            else {
+                if (framesRemainingForStoredGround > 0) {
+                    framesRemainingForStoredGround--; 
+                    Debug.Log("framesRemainingForStoredGround: " + framesRemainingForStoredGround);
+                    if (framesRemainingForStoredGround == 0) {
+                        storedGround = false; 
+                    }
+                }
+            
+            }
+        } 
+    } 
     
     
     
@@ -133,9 +198,9 @@ public class Player : MonoBehaviour
         }
         else if (mode == "Joycon") {
             float rawVerticalInput = Input.GetAxis("Vertical");
-           // Debug.Log("Vertical: " + rawVerticalInput);
+            Debug.Log("Vertical: " + rawVerticalInput);
             float verticalInput = rawVerticalInput; // normalizeInput(rawVerticalInput);
-          //  Debug.Log("Vertical: " + verticalInput);
+            Debug.Log("Vertical: " + verticalInput);
             return verticalInput; 
         }
         else {
@@ -161,9 +226,9 @@ public class Player : MonoBehaviour
         }
         else if (mode == "Joycon") {
             float rawHorizontalInput = Input.GetAxis("Horizontal");
-            Debug.Log("RawHorizontal: " + rawHorizontalInput);
+           // Debug.Log("RawHorizontal: " + rawHorizontalInput);
             float horizontalInput = rawHorizontalInput; // normalizeInput(rawHorizontalInput);
-            Debug.Log("NormHorizontal: " + horizontalInput);
+           // Debug.Log("NormHorizontal: " + horizontalInput);
             return horizontalInput; 
         }
         else {
@@ -174,12 +239,17 @@ public class Player : MonoBehaviour
     }
     
     private bool toggleMode() {
+       // Debug.Log("Inside toggle mode.");
+       // Debug.Log(Input.GetAxis("Horizontal")); 
         if ((mode == "Keyboard") && (Input.GetAxis("Horizontal") != 0)) {
             mode = "Joycon";
+           // Debug.Log("Joycon mode..."); 
             return true; 
         }
         else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
             mode = "Keyboard";
+          //  Debug.Log("Keyboard mode..."); 
+
             return true; 
         }
         return false; 
@@ -218,11 +288,18 @@ public class Player : MonoBehaviour
 
         if (characterController.isGrounded)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") || (storedJump && Input.GetButton("Jump")) )
             {
                 //Debug.Log("jump detected!");
                 movement.y = jumpSpeed;
+                storedJump = false; 
+                storedGround = false; 
             }
+        }
+        else if (storedGround && Input.GetButton("Jump")) {
+            movement.y = jumpSpeed; 
+            storedJump = false; 
+            storedGround = false; 
         }
         else if (Input.GetButtonUp("Jump"))
         {

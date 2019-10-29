@@ -8376,7 +8376,12 @@ PrefabInstance:
     - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
         type: 3}
       propertyPath: jumpSpeed
-      value: 17
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: mode
+      value: Joycon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824f227be99c24f2bb42056e79fd04ed, type: 3}
