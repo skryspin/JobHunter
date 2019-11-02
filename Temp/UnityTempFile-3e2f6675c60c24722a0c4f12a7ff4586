@@ -317,6 +317,7 @@
 "Assets/Scripts/Resume.cs"
 "Assets/Scripts/ResumeHitbox.cs"
 "Assets/Scripts/Rotate.cs"
+"Assets/Scripts/SendTriggersToParents.cs"
 "Assets/Scripts/SetIntegerParameterToValue.cs"
 "Assets/Scripts/SightedEnemy.cs"
 "Assets/Scripts/ToggleObjectPositions.cs"

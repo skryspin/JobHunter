@@ -12,6 +12,7 @@ public abstract class Enemy : MonoBehaviour
     public Vector3 spawnRotation;   
     
     protected bool dieOnNextFrame = false; 
+    
     public abstract void Start(); 
     
     
@@ -24,7 +25,25 @@ public abstract class Enemy : MonoBehaviour
             dieOnNextFrame = true; 
 
         }
-
+    }
+    
+    public void OnTriggerEnter(Collider other) {
+        GameObject cuddleBuddy = other.gameObject;
+        //Debug.Log("Alligorithm collided with: " + cuddleBuddy);
+        
+        if (cuddleBuddy.GetComponent<Player>() != null)
+        {
+            Player player = cuddleBuddy.GetComponent<Player>(); 
+            player.TakeDamage(contact_damage);
+        }
+    }
+    
+    public void OnTriggerStay(Collider other) {
+       //
+    }
+    
+    public void OnTriggerExit(Collider other) {
+        //
     }
     
 }

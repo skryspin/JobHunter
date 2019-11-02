@@ -72,20 +72,6 @@ public class Alligorithm : NavigableEnemy
         }
     }
     
-    private void OnTriggerStay(Collider other)
-    {
-        GameObject cuddleBuddy = other.gameObject;
-        //Debug.Log("Alligorithm collided with: " + cuddleBuddy);
-
-
-        
-        if (cuddleBuddy.GetComponent<Player>() != null)
-        {
-            Player player = cuddleBuddy.GetComponent<Player>(); 
-            player.TakeDamage(contact_damage);
-        }
-    }
-    
     
     
 }

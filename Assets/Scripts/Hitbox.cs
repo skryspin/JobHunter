@@ -15,12 +15,14 @@ public class Hitbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.GetComponent<Player>() != null) {
+            Debug.Log("Player exiting from Hitbox"); 
+
             parent.GetComponent<Enemy>().takeDamage(1); 
         }
     }

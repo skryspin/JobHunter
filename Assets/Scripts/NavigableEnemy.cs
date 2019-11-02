@@ -15,10 +15,11 @@ public abstract class NavigableEnemy : Enemy
 
 
     // Use this for initialization
-    //void Start()
-    //{
+    override public void Start()
+    {
+        contact_damage = 1; 
 
-    //}
+    }
 
     //// Update is called once per frame
     //void Update()
@@ -44,9 +45,10 @@ public abstract class NavigableEnemy : Enemy
     public bool reachedDestination() {
         if (!navMeshAgent.pathPending) {
             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance) {
-                if (navMeshAgent.velocity.sqrMagnitude == 0f) {
+                removeGoal();
+                //if (navMeshAgent.velocity.sqrMagnitude == 0f) {
                     return true; 
-                }
+                //}
             }
         }
         return false;

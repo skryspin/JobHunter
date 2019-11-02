@@ -6,6 +6,7 @@ using UnityEngine;
 public class Eraspider : NavigableEnemy
 {
 
+    public GameObject heldItem; 
 
 
     public override void Start()
@@ -28,10 +29,18 @@ public class Eraspider : NavigableEnemy
     
     override public void Update()
     {
-        setGoal(target.transform.position); 
         if (reachedDestination()) {
-            Debug.Log("Eraspider Reached destination."); 
+           // Debug.Log("Eraspider Reached destination."); 
         }
+        setGoal(target.transform.position);
+        if(dieOnNextFrame) {
+            removeGoal(); 
+            Destroy(this.gameObject); 
+        } 
+        
+        heldItem.transform.position = this.gameObject.transform.position + new Vector3(0, 3.5f, 0); 
+
+    
     }
     
     

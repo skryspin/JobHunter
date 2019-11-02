@@ -99,13 +99,13 @@ public class Player : MonoBehaviour
             if (Input.GetButtonDown("Jump")) { //only store the jump on Button Down 
                                                // - otherwise, player could hold down jump to jump every time they hit the ground!
                 storedJump = true; 
-                Debug.Log("Storing jump with BUFFER = " + BUFFER); 
+            //    Debug.Log("Storing jump with BUFFER = " + BUFFER); 
                 framesRemainingForStoredJump = BUFFER; //set frames since stored Jump to the max
             }
             else {
                 if (framesRemainingForStoredJump > 0) {
                     framesRemainingForStoredJump--; //decrement
-                    Debug.Log("framesRemainingForStoredJump: " + framesRemainingForStoredJump); 
+                //    Debug.Log("framesRemainingForStoredJump: " + framesRemainingForStoredJump); 
                     if (framesRemainingForStoredJump == 0) {
                         storedJump = false; 
                     } 
@@ -118,13 +118,13 @@ public class Player : MonoBehaviour
         void lateJumpBuffer() {
             if(characterController.isGrounded) {
                 storedGround = true; 
-                Debug.Log("Storing ground with BUFFER = " + BUFFER);
+            //    Debug.Log("Storing ground with BUFFER = " + BUFFER);
                 framesRemainingForStoredGround = BUFFER; 
             } 
             else {
                 if (framesRemainingForStoredGround > 0) {
                     framesRemainingForStoredGround--; 
-                    Debug.Log("framesRemainingForStoredGround: " + framesRemainingForStoredGround);
+            //       Debug.Log("framesRemainingForStoredGround: " + framesRemainingForStoredGround);
                     if (framesRemainingForStoredGround == 0) {
                         storedGround = false; 
                     }
@@ -199,9 +199,9 @@ public class Player : MonoBehaviour
         }
         else if (mode == "Joycon") {
             float rawVerticalInput = Input.GetAxis("Vertical");
-            Debug.Log("Vertical: " + rawVerticalInput);
+           // Debug.Log("Vertical: " + rawVerticalInput);
             float verticalInput = rawVerticalInput; // normalizeInput(rawVerticalInput);
-            Debug.Log("Vertical: " + verticalInput);
+           // Debug.Log("Vertical: " + verticalInput);
             return verticalInput; 
         }
         else {

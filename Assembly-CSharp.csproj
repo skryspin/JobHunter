@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Resume.cs" />
     <Compile Include="Assets\Scripts\ResumeHitbox.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
+    <Compile Include="Assets\Scripts\SendTriggersToParents.cs" />
     <Compile Include="Assets\Scripts\SetIntegerParameterToValue.cs" />
     <Compile Include="Assets\Scripts\SightedEnemy.cs" />
     <Compile Include="Assets\Scripts\ToggleObjectPositions.cs" />
