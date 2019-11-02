@@ -15,5 +15,4 @@ public abstract class SightedEnemy : Enemy
 
     //}
     
-    abstract public void sawPlayer(Vector3 goal);
 }

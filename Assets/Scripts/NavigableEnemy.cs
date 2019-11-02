@@ -3,11 +3,12 @@ using System.Collections;
 using UnityEngine.AI;
 
 
-public abstract class NavigableEnemy : SightedEnemy
+public abstract class NavigableEnemy : Enemy
 {
     private GameObject currentDestinationMarker; 
     public GameObject destinationMarkerPrefab; 
     protected NavMeshAgent navMeshAgent; 
+    public GameObject target; 
     protected Vector3 goal; 
     public bool rotating = false; 
     protected int buffer = 0;

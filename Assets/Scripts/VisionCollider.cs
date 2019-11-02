@@ -30,7 +30,9 @@ public class VisionCollider : MonoBehaviour
             //Debug.Log("VisionCollider found player"); 
             //Debug.Log(player);
             //Debug.Log(player.transform.position);
-            body.sawPlayer(player.transform.position);
+            if (!body.anim.GetCurrentAnimatorStateInfo(0).IsName("Charge")) //don't try to charge if already charging!
+                body.anim.SetTrigger("SawPlayer"); 
+            
         }
     }
 }

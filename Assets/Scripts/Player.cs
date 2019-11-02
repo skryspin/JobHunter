@@ -287,7 +287,7 @@ public class Player : MonoBehaviour
         
         movement *= speed;
 
-        if (characterController.isGrounded)
+        if (characterController.isGrounded) //controls Early Jump
         {
             if (Input.GetButtonDown("Jump") || (storedJump && Input.GetButton("Jump")) )
             {
@@ -297,7 +297,7 @@ public class Player : MonoBehaviour
                 storedGround = false; 
             }
         }
-        else if (storedGround && Input.GetButton("Jump")) {
+        else if (storedGround && Input.GetButtonDown("Jump")) { //controls Late Jump
             movement.y = jumpSpeed; 
             storedJump = false; 
             storedGround = false; 

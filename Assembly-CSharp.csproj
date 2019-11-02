@@ -66,6 +66,7 @@
     <Compile Include="Assets\AxisTest.cs" />
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
     <Compile Include="Assets\DisableIfButtonsPressed.cs" />
+    <Compile Include="Assets\Eraspider.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
     <Compile Include="Assets\Scenes\TriggerCamera.cs" />
     <Compile Include="Assets\Scripts\Alligorithm.cs" />

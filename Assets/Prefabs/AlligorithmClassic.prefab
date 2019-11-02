@@ -328,7 +328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  currentHealth: 0
+  currentHealth: 3
+  anim: {fileID: 483409910337825897}
   spawnLocation: {x: 2.62, y: 0, z: -10.13}
   spawnRotation: {x: 0, y: 0, z: 0}
   destinationMarkerPrefab: {fileID: 2529184466787245158, guid: 558927f28b1f74a9e99b94aee17172dd,
@@ -473,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474a248d64b9e4bb2ae886be74639298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 483409910337825900}
+  body: {fileID: 0}
 --- !u!1 &483409910569469542
 GameObject:
   m_ObjectHideFlags: 0

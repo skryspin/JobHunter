@@ -6,7 +6,6 @@ public class Alligorithm : NavigableEnemy
 {
 
     private Collider visionCollider; 
-    private Animator anim; 
     public BoxCollider hitbox; 
         
     // Use this for initialization
@@ -70,12 +69,6 @@ public class Alligorithm : NavigableEnemy
             removeGoal();
           //  Debug.Log("Reached destination.");
             anim.SetTrigger("ExitNavigation");
-        }
-    } 
-    
-    public override void sawPlayer(Vector3 position) {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Charge")) { //don't try to charge if already charging!
-            anim.SetTrigger("SawPlayer");
         }
     }
     

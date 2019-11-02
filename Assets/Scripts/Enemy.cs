@@ -6,6 +6,8 @@ public abstract class Enemy : MonoBehaviour
     public int maxHealth; 
     public int currentHealth;
     protected int contact_damage; 
+    public Animator anim; 
+
     public Vector3 spawnLocation;  
     public Vector3 spawnRotation;   
     
