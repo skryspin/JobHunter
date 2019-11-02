@@ -92,15 +92,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b84d23041264468d9dbd79b7127b576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
-  jumpSpeed: 15
+  speed: 8.5
+  jumpSpeed: 16
   gravity: 35
   pushPower: 40
-  mode: Keyboard
+  mode: Joycon
   currentHealth: 10
   maxHealth: 10
   healthBar: {fileID: 0}
-  btn: {fileID: 0}
+  resumePrefab: {fileID: 8056076364973629266, guid: b7d892e33ad644c2c85959f03f5c0697,
+    type: 3}
 --- !u!143 &3444328029392469930
 CharacterController:
   m_ObjectHideFlags: 0

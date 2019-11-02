@@ -6,7 +6,8 @@ using UnityEngine;
 public class Eraspider : NavigableEnemy
 {
 
-    public GameObject heldItem; 
+    public Pickup heldItem; 
+    
 
 
     public override void Start()
@@ -38,9 +39,29 @@ public class Eraspider : NavigableEnemy
             Destroy(this.gameObject); 
         } 
         
-        heldItem.transform.position = this.gameObject.transform.position + new Vector3(0, 3.5f, 0); 
+        if (heldItem != null) {
+            heldItem.isHeld = true; 
+            heldItem.transform.position = this.gameObject.transform.position + new Vector3(0, 3.5f, 0); 
+        }
 
     
+    }
+    
+    
+    override public void takeDamage(int x) {
+        base.takeDamage(x);
+        
+        if (heldItem != null) {
+            dropPickup();
+        }
+    }
+    
+    public void dropPickup() {
+        heldItem.GetComponent<SphereCollider>().enabled = true; 
+        heldItem.GetComponent<BoxCollider>().isTrigger = false;
+        heldItem.isHeld = false;  
+        heldItem = null;
+        
     }
     
     

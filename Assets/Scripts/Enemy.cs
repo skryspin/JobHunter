@@ -19,7 +19,7 @@ public abstract class Enemy : MonoBehaviour
     // Update is called once per frame
     public abstract void Update();
     
-    public void takeDamage(int x) {
+    virtual public void takeDamage(int x) {
         currentHealth = currentHealth - x; 
         if (currentHealth <= 0) {
             dieOnNextFrame = true; 

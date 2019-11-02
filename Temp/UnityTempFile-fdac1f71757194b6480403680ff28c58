@@ -310,6 +310,7 @@
 "Assets/Scripts/MoveToPlayer.cs"
 "Assets/Scripts/NavigableEnemy.cs"
 "Assets/Scripts/OpenableBook.cs"
+"Assets/Scripts/Pickup.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RedEnemy.cs"

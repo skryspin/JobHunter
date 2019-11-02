@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
      * they will jump slightly late, but this is better than the jump not registering at all.
      * In contrast, if they jump early, the jump will not register until they actually hit the
      * ground, to prevent them from jumping higher than normal. Also, we need to do that because
-     * we cannot /predict/ if a player will in the ground; we simply wait and see if it happens.
+     * we cannot /predict/ if a player will hit the ground; we simply wait and see if it happens.
      * */ 
     private const int BUFFER = 6; 
     private int framesRemainingForStoredJump; //stores how many frames until a stored jump is disregarded
@@ -49,13 +49,18 @@ public class Player : MonoBehaviour
     
     //Death
     private bool dieOnNextUpdate = false; 
-
+    
+    //Picking and placing items
+    public Pickup helditem; 
+    private Vector3 holdOffset = new Vector3(0, 1.8f, 0); //the offset from the center of the player at which pickups should be health
+    public Pickup nearbyItem; 
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Testing...");
-        characterController = this.GetComponent<CharacterController>();
+  
+      characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
         if (resumePrefab == null) {
             Debug.LogError("No resume prefab assigned to Player of name" + gameObject.name); 
@@ -77,6 +82,15 @@ public class Player : MonoBehaviour
         }
         turnToMovement(); 
         doResumeThrow();
+        if (Input.GetButtonDown("Lift / Throw / Place")) {
+            Debug.Log("its being presssed ") ;
+            if (nearbyItem != null) {
+                Debug.Log("pick up plz"); 
+            }
+        }
+        placeItem(); // handles picking up or placing a pickup. 
+        holdItem(); // handles holding a pickup
+        
         
     }
     
@@ -84,6 +98,35 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
 
+    }
+    
+    /* pick up or place an item */
+    private void placeItem() {
+        
+        if (helditem != null) {
+            if (Input.GetButtonDown("Lift / Throw / Place")) { //place the item
+                Debug.Log("Putting down the item!"); 
+                helditem.GetComponent<SphereCollider>().enabled = true; //enable the trigger
+                helditem.transform.SetParent(this.transform); 
+                helditem.transform.localPosition = new Vector3(0, -0.2f, 1.5f); 
+                helditem.transform.SetParent(null); 
+                helditem = null; 
+            } 
+        }
+        else if (Input.GetButtonDown("Lift / Throw / Place") && nearbyItem != null) {
+            Debug.Log("Trying to pick up.");
+            this.helditem = nearbyItem; //the nearby item is now held!
+            helditem.GetComponent<SphereCollider>().enabled = false; //disable the sphere collider
+            //(do some kind of animation, but for now we will just place it above the player...)
+            helditem.transform.position = this.transform.position + holdOffset;
+        }
+    } 
+    
+    private void holdItem() {
+        if (helditem != null) {
+            Debug.Log("holding item");
+            helditem.transform.position = this.transform.position + holdOffset; 
+        }
     }
     
     private void jumpBuffer() {
@@ -341,14 +384,10 @@ public class Player : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other) {
         GameObject cuddleBuddy = other.gameObject;
         //Debug.Log("Collision detected with: " + cuddleBuddy);
-
-
-        if (cuddleBuddy.CompareTag("Collectable"))
-        {
+        if (cuddleBuddy.CompareTag("Collectable")) {
             Destroy(cuddleBuddy);
             score++;
             //Debug.Log(score);
@@ -356,9 +395,33 @@ public class Player : MonoBehaviour
         else if (cuddleBuddy.CompareTag("InstaDeath")) {
            dieOnNextUpdate = true;  
         }
-        
-        
     }
+    
+    private void OnTriggerStay(Collider other) {
+        Pickup cuddleBuddy = other.gameObject.GetComponent<Pickup>(); 
+        
+        
+        
+        if (cuddleBuddy != null && cuddleBuddy.CompareTag("Pickupable")) { //if we find a pickupable object
+            Debug.Log("Player is within range of a pickup.");
+            
+            
+            if (!cuddleBuddy.isHeld) {
+                this.nearbyItem = cuddleBuddy; 
+                Debug.Log("writing to nearby item!"); 
+            }
+        }
+            
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == nearbyItem) {
+            Debug.Log("Exiting from nearby item"); 
+            nearbyItem = null; 
+        }
+    }
+
 
 
     // this script pushes all rigidbodies that the character touches    
