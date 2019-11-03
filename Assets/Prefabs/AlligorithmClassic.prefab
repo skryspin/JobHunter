@@ -334,7 +334,9 @@ MonoBehaviour:
   spawnRotation: {x: 0, y: 0, z: 0}
   destinationMarkerPrefab: {fileID: 2529184466787245158, guid: 558927f28b1f74a9e99b94aee17172dd,
     type: 3}
+  target: {fileID: 0}
   rotating: 0
+  displayDestination: 0
   hitbox: {fileID: 0}
 --- !u!65 &483409910337825903
 BoxCollider:

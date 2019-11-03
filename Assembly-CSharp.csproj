@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
     <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\PointAtCamera.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
     <Compile Include="Assets\Scenes\TriggerCamera.cs" />
     <Compile Include="Assets\Scripts\AddTagToChildren.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\DestroySelf.cs" />
     <Compile Include="Assets\Scripts\DisableIfButtonsPressed.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Eraspider.cs" />
     <Compile Include="Assets\Scripts\Hitbox.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Assets\Scripts\TriggerValue.cs" />
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
     <Compile Include="Assets\TriggerNavigation.cs" />
+    <Compile Include="Assets\UIFloat.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
