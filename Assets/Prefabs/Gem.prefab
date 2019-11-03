@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 3917949213137472299}
   - component: {fileID: 2904791888742841195}
   - component: {fileID: 7450174889900254861}
-  - component: {fileID: 6229131227148370967}
+  - component: {fileID: 236879517}
   m_Layer: 0
   m_Name: Gem
-  m_TagString: Untagged
+  m_TagString: RequiredCollectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &6229131227148370967
+--- !u!54 &236879517
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

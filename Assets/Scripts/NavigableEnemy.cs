@@ -12,6 +12,7 @@ public abstract class NavigableEnemy : Enemy
     protected Vector3 goal; 
     public bool rotating = false; 
     protected int buffer = 0;
+    public bool displayDestination; //display destination marker or not
 
 
     // Use this for initialization
@@ -37,7 +38,9 @@ public abstract class NavigableEnemy : Enemy
             Destroy(currentDestinationMarker);
         this.goal = goal;
         navMeshAgent.destination = goal; 
-        currentDestinationMarker = Instantiate(destinationMarkerPrefab, goal, Quaternion.identity);
+        if (displayDestination) {
+            currentDestinationMarker = Instantiate(destinationMarkerPrefab, goal, Quaternion.identity);
+        }
         buffer = 120; 
     }
     

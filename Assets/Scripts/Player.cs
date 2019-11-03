@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private GameObject my_camera;
     private Vector3 lastMovement;
     private Vector3 lastMovementDirection;
-    private int score;
+    public int score;
     
     /* Jump Buffering
      * These variables are used to allow the player to jump slightly late or slightly early;
@@ -387,10 +387,10 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         GameObject cuddleBuddy = other.gameObject;
         //Debug.Log("Collision detected with: " + cuddleBuddy);
-        if (cuddleBuddy.CompareTag("Collectable")) {
+        if (cuddleBuddy.CompareTag("RequiredCollectable")) {
             Destroy(cuddleBuddy);
             score++;
-            //Debug.Log(score);
+            Debug.Log(score);
         }
         else if (cuddleBuddy.CompareTag("InstaDeath")) {
            dieOnNextUpdate = true;  

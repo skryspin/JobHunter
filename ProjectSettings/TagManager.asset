@@ -8,6 +8,7 @@ TagManager:
   - Playable
   - InstaDeath
   - Pickupable
+  - RequiredCollectable
   layers:
   - Default
   - TransparentFX

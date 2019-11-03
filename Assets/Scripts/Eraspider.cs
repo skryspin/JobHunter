@@ -30,10 +30,12 @@ public class Eraspider : NavigableEnemy
     
     override public void Update()
     {
-        if (reachedDestination()) {
-           // Debug.Log("Eraspider Reached destination."); 
+        if (navMeshAgent.enabled) {
+            if (reachedDestination()) {
+               // Debug.Log("Eraspider Reached destination."); 
+            }
+            setGoal(target.transform.position);
         }
-        setGoal(target.transform.position);
         if(dieOnNextFrame) {
             removeGoal(); 
             Destroy(this.gameObject); 
