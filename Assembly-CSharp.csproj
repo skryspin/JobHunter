@@ -63,7 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
+    <Compile Include="Assets\DontDestroyOnLoad.cs" />
+    <Compile Include="Assets\EnableObjectOnSelected.cs" />
     <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\LoadSceneOnButtonDown.cs" />
     <Compile Include="Assets\PointAtCamera.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
     <Compile Include="Assets\Scenes\TriggerCamera.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Assets\Scripts\Eraspider.cs" />
     <Compile Include="Assets\Scripts\Hitbox.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
+    <Compile Include="Assets\Scripts\LoadLevelOnSubmit.cs" />
     <Compile Include="Assets\Scripts\MoveToPlayer.cs" />
     <Compile Include="Assets\Scripts\NavigableEnemy.cs" />
     <Compile Include="Assets\Scripts\OpenableBook.cs" />
@@ -99,6 +103,25 @@
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
     <Compile Include="Assets\TriggerNavigation.cs" />
     <Compile Include="Assets\UIFloat.cs" />
+    <Compile Include="Assets\UnloadSceneOnSubmit.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
