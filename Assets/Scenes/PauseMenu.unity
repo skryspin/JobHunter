@@ -267,6 +267,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6661645087206546470, guid: 3e8eab8d4d27c4262b69f7e1e364ee1b,
+        type: 3}
+      propertyPath: sceneName
+      value: LevelSelect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8eab8d4d27c4262b69f7e1e364ee1b, type: 3}
 --- !u!224 &778061254 stripped
@@ -586,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 1
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

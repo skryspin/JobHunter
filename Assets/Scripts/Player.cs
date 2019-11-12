@@ -241,7 +241,7 @@ public class Player : MonoBehaviour
             }
         }
         else if (mode == "Joycon") {
-            float rawVerticalInput = Input.GetAxis("Vertical");
+            float rawVerticalInput = Input.GetAxis("VerticalJoy");
            // Debug.Log("Vertical: " + rawVerticalInput);
             float verticalInput = rawVerticalInput; // normalizeInput(rawVerticalInput);
            // Debug.Log("Vertical: " + verticalInput);
@@ -269,7 +269,7 @@ public class Player : MonoBehaviour
             }
         }
         else if (mode == "Joycon") {
-            float rawHorizontalInput = Input.GetAxis("Horizontal");
+            float rawHorizontalInput = Input.GetAxis("HorizontalJoy");
            // Debug.Log("RawHorizontal: " + rawHorizontalInput);
             float horizontalInput = rawHorizontalInput; // normalizeInput(rawHorizontalInput);
            // Debug.Log("NormHorizontal: " + horizontalInput);
@@ -285,7 +285,7 @@ public class Player : MonoBehaviour
     private bool toggleMode() {
        // Debug.Log("Inside toggle mode.");
        // Debug.Log(Input.GetAxis("Horizontal")); 
-        if ((mode == "Keyboard") && (Input.GetAxis("Horizontal") != 0)) {
+        if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
             mode = "Joycon";
            // Debug.Log("Joycon mode..."); 
             return true; 
@@ -296,6 +296,9 @@ public class Player : MonoBehaviour
 
             return true; 
         }
+        //else if (Input.GetKey("a")) {
+        //    Debug.Log("The test worked");
+        //}
         return false; 
     
     
