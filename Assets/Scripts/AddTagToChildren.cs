@@ -10,7 +10,9 @@ public class AddTagToChildren : MonoBehaviour
     void Start()
     {
         foreach (Transform child in this.transform.GetComponentsInChildren<Transform>()) {
-            child.tag = TagToAdd; 
+            if (child.transform != this.transform) {
+                child.tag = TagToAdd; 
+            }
         
         }
     }

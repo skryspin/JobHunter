@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6661645087206546467}
   - component: {fileID: 6661645087206546468}
   - component: {fileID: 6661645087206546470}
-  - component: {fileID: 6661645087206546471}
   m_Layer: 5
   m_Name: GuiButton
   m_TagString: Untagged
@@ -163,19 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a888bfd2018814805ab54d890c7eb624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6661645087206546471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6661645087206546465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7708125232cc443829c1f8d86e161d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToEnable: {fileID: 0}
+  sceneName: 
 --- !u!1 &6661645087425618259
 GameObject:
   m_ObjectHideFlags: 0

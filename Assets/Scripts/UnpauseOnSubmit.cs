@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement; 
 
-public class UnloadLevelOnSubmit : MonoBehaviour
+public class UnpauseOnSubmit : MonoBehaviour
 {
     public string sceneName; 
     // Start is called before the first frame update
@@ -21,6 +21,7 @@ public class UnloadLevelOnSubmit : MonoBehaviour
                 this.gameObject.GetComponent<Animator>().SetTrigger("Pressed"); 
                 Debug.Log("submitting");
                 SceneManager.UnloadSceneAsync(sceneName); 
+                PauseGameOnButtonDown.TogglePause(); 
             }
         }
     }

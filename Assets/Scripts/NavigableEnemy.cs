@@ -37,7 +37,10 @@ public abstract class NavigableEnemy : Enemy
         if (currentDestinationMarker != null) 
             Destroy(currentDestinationMarker);
         this.goal = goal;
-        navMeshAgent.destination = goal; 
+        
+        if (navMeshAgent.isOnNavMesh) {
+            navMeshAgent.destination = goal; 
+        }
         if (displayDestination) {
             currentDestinationMarker = Instantiate(destinationMarkerPrefab, goal, Quaternion.identity);
         }

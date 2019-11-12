@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1355053021196326551}
   m_Layer: 0
   m_Name: Opens
-  m_TagString: Untagged
+  m_TagString: DisableOnPause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

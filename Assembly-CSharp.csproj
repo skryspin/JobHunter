@@ -67,6 +67,7 @@
     <Compile Include="Assets\EnableObjectOnSelected.cs" />
     <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\LoadSceneOnButtonDown.cs" />
+    <Compile Include="Assets\PauseGameOnButtonDown.cs" />
     <Compile Include="Assets\PointAtCamera.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
     <Compile Include="Assets\Scenes\TriggerCamera.cs" />
@@ -100,10 +101,10 @@
     <Compile Include="Assets\Scripts\SightedEnemy.cs" />
     <Compile Include="Assets\Scripts\ToggleObjectPositions.cs" />
     <Compile Include="Assets\Scripts\TriggerValue.cs" />
+    <Compile Include="Assets\Scripts\UnpauseOnSubmit.cs" />
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
     <Compile Include="Assets\TriggerNavigation.cs" />
     <Compile Include="Assets\UIFloat.cs" />
-    <Compile Include="Assets\UnloadSceneOnSubmit.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

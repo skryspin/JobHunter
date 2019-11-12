@@ -9,15 +9,15 @@ public class EnemyHealth : MonoBehaviour
     public Enemy enemyScript;
     private Slider mySlider; 
     private int BUFFER = 60;
-    private int currentBuffer = 0; 
-    
+    private int currentBuffer = 0;     
     // Start is called before the first frame update
     void Start()
     {
         mySlider = this.GetComponent<Slider>();
         mySlider.minValue = 0;    
         mySlider.value = enemyScript.currentHealth; 
-        mySlider.maxValue = enemyScript.maxHealth;     
+        mySlider.maxValue = enemyScript.maxHealth;   
+       // firstframe = true; 
     
     }
 

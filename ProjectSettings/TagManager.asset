@@ -9,6 +9,8 @@ TagManager:
   - InstaDeath
   - Pickupable
   - RequiredCollectable
+  - DoNotDisableOnPause
+  - DisableOnPause
   layers:
   - Default
   - TransparentFX

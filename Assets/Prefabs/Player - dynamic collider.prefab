@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3444328029392469930}
   m_Layer: 0
   m_Name: Player - dynamic collider
-  m_TagString: Untagged
+  m_TagString: DisableOnPause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b84d23041264468d9dbd79b7127b576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   speed: 8.5
   jumpSpeed: 16
   gravity: 35
@@ -102,6 +103,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   resumePrefab: {fileID: 8056076364973629266, guid: b7d892e33ad644c2c85959f03f5c0697,
     type: 3}
+  helditem: {fileID: 0}
+  nearbyItem: {fileID: 0}
 --- !u!143 &3444328029392469930
 CharacterController:
   m_ObjectHideFlags: 0
