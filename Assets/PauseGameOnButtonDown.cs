@@ -30,7 +30,7 @@ public class PauseGameOnButtonDown : MonoBehaviour
                     if (script.enabled && !script.gameObject.CompareTag("DoNotDisableOnPause")) {
                         script.enabled = false; 
                     }
-                    else {
+                    else if (!script.gameObject.CompareTag("DoNotDisableOnPause")) { //ONLY mess with this if pause is allowed
                         script.enabled = true; 
                     }
                 }
@@ -40,7 +40,7 @@ public class PauseGameOnButtonDown : MonoBehaviour
                     if (mesh.enabled && !mesh.gameObject.CompareTag("DoNotDisableOnPause")) {
                         mesh.enabled = false; 
                     }
-                    else {
+                    else if (!mesh.gameObject.CompareTag("DoNotDisableOnPause")){
                         mesh.enabled = true; 
                     }
                 }
@@ -50,7 +50,7 @@ public class PauseGameOnButtonDown : MonoBehaviour
                     if (anim.enabled && !anim.gameObject.CompareTag("DoNotDisableOnPause") ) {
                         anim.enabled = false; 
                     }
-                    else {
+                    else if (!anim.gameObject.CompareTag("DoNotDisableOnPause")) {
                         anim.enabled = true; 
                     }
                 }

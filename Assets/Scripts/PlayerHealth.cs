@@ -21,7 +21,9 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mySlider.maxValue = playerScript.maxHealth;
-        mySlider.value = playerScript.currentHealth;
+        if (playerScript != null) {
+            mySlider.maxValue = playerScript.maxHealth;
+            mySlider.value = playerScript.currentHealth;
+        }
     }
 }

@@ -9365,6 +9365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHealth
       objectReference: {fileID: 0}
+    - target: {fileID: 7212535539288977115, guid: 39b847d2186854daba88569e20660d5a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1519636959306269468, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16725,6 +16730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlligorithmHealth
       objectReference: {fileID: 0}
+    - target: {fileID: 7212535539288977115, guid: 39b847d2186854daba88569e20660d5a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1519636959306269468, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17032,6 +17042,91 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695103977260475, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: DoNotDisableOnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105601928303, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105601928303, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105601928303, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105601928303, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105601928303, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105601928303, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105601928302, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105549936026, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105549936029, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: DoNotDisableOnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105008965424, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105561432347, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695104992342566, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695104992342569, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: DoNotDisableOnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105008965427, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: DoNotDisableOnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105561432346, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: DoNotDisableOnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807695105275898319, guid: 455d9c395f4d7416a9132035fee588c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: DoNotDisableOnPause
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455d9c395f4d7416a9132035fee588c4, type: 3}
