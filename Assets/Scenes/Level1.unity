@@ -2127,6 +2127,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258914752}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &273566956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251057986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca274e79bb92247ab8e229fc98f960dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &286884000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8423378244925899668, guid: 64624eac33d494defb1357b9bad7601f,
@@ -3403,6 +3415,11 @@ PrefabInstance:
       propertyPath: currentHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 483409910337825900, guid: 524906eae7cf14ee090c0d9e713769f6,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 683669330}
     - target: {fileID: 830191224120765145, guid: 524906eae7cf14ee090c0d9e713769f6,
         type: 3}
       propertyPath: m_IsTrigger
@@ -5840,6 +5857,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 681037342}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &683669330 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1519636959036106692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca274e79bb92247ab8e229fc98f960dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &683944397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17539,6 +17568,11 @@ PrefabInstance:
       propertyPath: heldItem
       value: 
       objectReference: {fileID: 3917949212770067833}
+    - target: {fileID: 650364188452241091, guid: 64624eac33d494defb1357b9bad7601f,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 273566956}
     - target: {fileID: 2112235521, guid: 64624eac33d494defb1357b9bad7601f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -7.9729867

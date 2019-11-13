@@ -24,24 +24,25 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (enemyScript.currentHealth <= 0 || enemyScript == null) {
-            Destroy(this.gameObject); 
-        }
-        else {
-            if (mySlider.value != enemyScript.currentHealth) {
-                currentBuffer = BUFFER;  
-                enableChildren(); 
-            } 
-            mySlider.maxValue = enemyScript.maxHealth;
-            mySlider.value = enemyScript.currentHealth;
-        }
-        
+        Debug.Log(currentBuffer); 
         if (currentBuffer > 0) {
             currentBuffer--; 
         } 
         else {
             disableChildren();
         }
+        
+        if (enemyScript.currentHealth == 0) {
+            GameObject.Destroy(this.gameObject); 
+        }
+    }
+    
+    public void display() {
+        currentBuffer = BUFFER;  
+        enableChildren(); 
+        mySlider.maxValue = enemyScript.maxHealth;
+        mySlider.value = enemyScript.currentHealth;
+
     }
     
     private void disableChildren() {

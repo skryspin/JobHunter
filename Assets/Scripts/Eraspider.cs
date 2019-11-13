@@ -12,7 +12,7 @@ public class Eraspider : NavigableEnemy
 
     public override void Start()
     {
-        contact_damage = 1; 
+        base.Start(); 
 
         if (navMeshAgent is null) {
             foreach (NavMeshAgent x in this.gameObject.GetComponentsInChildren<NavMeshAgent>()) {

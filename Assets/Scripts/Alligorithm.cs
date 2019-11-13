@@ -11,6 +11,7 @@ public class Alligorithm : NavigableEnemy
     // Use this for initialization
     public override void Start()
     {
+        base.Start(); 
         currentHealth = 3;
         contact_damage = 1; 
         if (visionCollider is null) {

@@ -7,13 +7,19 @@ public abstract class Enemy : MonoBehaviour
     public int currentHealth;
     protected int contact_damage; 
     public Animator anim; 
+    public EnemyHealth healthBar; 
 
     public Vector3 spawnLocation;  
     public Vector3 spawnRotation;   
     
     protected bool dieOnNextFrame = false; 
     
-    public abstract void Start(); 
+    public virtual void Start() {
+        if (healthBar == null) {
+            Debug.LogError("Must assign a healthBar to this object in the editor.");
+        }
+
+    }
     
     
     // Update is called once per frame
@@ -23,8 +29,11 @@ public abstract class Enemy : MonoBehaviour
         currentHealth = currentHealth - x; 
         if (currentHealth <= 0) {
             dieOnNextFrame = true; 
-
         }
+        else { 
+            healthBar.display(); 
+        }
+
     }
     
     public void OnTriggerEnter(Collider other) {

@@ -18,6 +18,7 @@ public abstract class NavigableEnemy : Enemy
     // Use this for initialization
     override public void Start()
     {
+        base.Start(); 
         contact_damage = 1; 
 
     }
