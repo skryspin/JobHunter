@@ -66,6 +66,7 @@
     <Compile Include="Assets\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\EnableObjectOnSelected.cs" />
     <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\LevelController.cs" />
     <Compile Include="Assets\LoadSceneOnButtonDown.cs" />
     <Compile Include="Assets\PauseGameOnButtonDown.cs" />
     <Compile Include="Assets\PointAtCamera.cs" />

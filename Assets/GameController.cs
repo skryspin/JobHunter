@@ -1,41 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
+
+/* This class holds data vital to the overall game: Levels locked and unlocked, completed, and control settings */
 public class GameController : MonoBehaviour
 {
-    Player player; 
-    GameObject[] requiredCollectables; 
-    public Pickup requiredItem; 
+    static public string mode = "Keyboard"; 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindObjectOfType<Player>(); 
-        Debug.Log(player); 
-        requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable"); 
-        Debug.Log(requiredCollectables[0]); 
-                Debug.Log(requiredCollectables[1]); 
-        Debug.Log(requiredCollectables[2]); 
-
+        GameObject.DontDestroyOnLoad(this.gameObject); //we must keep this during the whole game! (even save it)
         
     }
 
     // Update is called once per frame
-    void Update()
+     void Update()
     {
+        toggleMode(); //handles toggling control method
        
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<Player>() == player) {
-            if (player.score == requiredCollectables.Length && player.helditem == requiredItem) {
-                levelComplete(); 
-            }
-        }
-    }
     
-    private void levelComplete() {
-        Debug.Log("Level complete!"); 
+    static private bool toggleMode() {
+        Debug.Log("Inside toggle"); 
+        if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
+            mode = "Joycon";
+            return true; 
+        }
+        else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
+            mode = "Keyboard";
+            return true; 
+        }
+        return false; 
     }
+
+  
 }

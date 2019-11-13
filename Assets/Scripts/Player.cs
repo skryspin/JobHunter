@@ -54,18 +54,28 @@ public class Player : MonoBehaviour
     public Pickup helditem; 
     private Vector3 holdOffset = new Vector3(0, 1.8f, 0); //the offset from the center of the player at which pickups should be health
     public Pickup nearbyItem; 
+    
+    public GameController gc; 
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Testing...");
   
-      characterController = this.GetComponent<CharacterController>();
+        characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
         if (resumePrefab == null) {
             Debug.LogError("No resume prefab assigned to Player of name" + gameObject.name); 
         }
-        mode = "Keyboard";
+        
+        gc = GameObject.Find("GameController").GetComponent<GameController>();
+        if (gc == null) {
+            Debug.LogError("No GameController object found. Mode will stay 'Keyboard'"); 
+            mode = "Keyboard"; 
+         } 
+        else {
+            mode = GameController.mode;
+        }
         //pushPower = 25.0f;
 
     }
@@ -74,7 +84,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         jumpBuffer(); // handles jump buffering for EARLY jump commands
-        toggleMode(); 
+        mode = GameController.mode; // get mode from GameController
         doMovement();
         if ((currentHealth == 0) || (dieOnNextUpdate)) {
             GameOver();
@@ -282,27 +292,25 @@ public class Player : MonoBehaviour
     
     }
     
-    private bool toggleMode() {
-       // Debug.Log("Inside toggle mode.");
-       // Debug.Log(Input.GetAxis("Horizontal")); 
-        if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
-            mode = "Joycon";
-           // Debug.Log("Joycon mode..."); 
-            return true; 
-        }
-        else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
-            mode = "Keyboard";
-          //  Debug.Log("Keyboard mode..."); 
+    //private bool toggleMode() {
+    //   // Debug.Log("Inside toggle mode.");
+    //   // Debug.Log(Input.GetAxis("Horizontal")); 
+    //    if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
+    //        mode = "Joycon";
+    //       // Debug.Log("Joycon mode..."); 
+    //        return true; 
+    //    }
+    //    else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
+    //        mode = "Keyboard";
+    //      //  Debug.Log("Keyboard mode..."); 
 
-            return true; 
-        }
-        //else if (Input.GetKey("a")) {
-        //    Debug.Log("The test worked");
-        //}
-        return false; 
-    
-    
-    }
+    //        return true; 
+    //    }
+    //    //else if (Input.GetKey("a")) {
+    //    //    Debug.Log("The test worked");
+    //    //}
+    //    return false; 
+    //}
 
     /* Does the player movement, and updates lastMovementDirection .*/ 
     private void doMovement()
