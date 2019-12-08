@@ -16,6 +16,9 @@ public class MainCamera : MonoBehaviour
     {
         this.gameObject.transform.position = CameraPosition.position;
         this.gameObject.transform.rotation = CameraPosition.rotation;
+        if (Input.GetButtonDown("Jump")) {
+            this.gameObject.GetComponent<Animator>().SetTrigger("SkipCutscene");
+        }
 
     }
     
