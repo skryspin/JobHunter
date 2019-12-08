@@ -7,10 +7,15 @@ using UnityEngine.SceneManagement;
 /* This class holds data vital to the overall game: Levels locked and unlocked, completed, and control settings */
 public class GameController : MonoBehaviour
 {
-    static public string mode = "Keyboard"; 
+    static public string mode = "Joycon"; 
     // Start is called before the first frame update
     void Start()
     {
+        this.gameObject.tag = "GameController"; 
+        if (GameObject.Find("GameController") != this.gameObject) {
+            GameObject.Destroy(this.gameObject); 
+        }
+        
         GameObject.DontDestroyOnLoad(this.gameObject); //we must keep this during the whole game! (even save it)
         
     }
@@ -23,13 +28,18 @@ public class GameController : MonoBehaviour
     }
     
     static private bool toggleMode() {
+        Debug.Log("before: " + mode);
+
         Debug.Log("Inside toggle"); 
         if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
             mode = "Joycon";
+            Debug.Log(mode);
             return true; 
         }
         else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
             mode = "Keyboard";
+            Debug.Log(mode);
+
             return true; 
         }
         return false; 

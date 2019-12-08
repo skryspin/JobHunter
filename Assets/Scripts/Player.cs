@@ -44,6 +44,10 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public Slider healthBar;
     
+    //Dmg Red color
+    private const int RED_BUFFER = 6;
+    private int framesRemainingForRed = -1; 
+    
     //Resume Throw
     public GameObject resumePrefab; 
     
@@ -84,6 +88,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         jumpBuffer(); // handles jump buffering for EARLY jump commands
+        damageIndicator(); //turns player red when damaged for RED_BUFFER many frames
         mode = GameController.mode; // get mode from GameController
         doMovement();
         if ((currentHealth == 0) || (dieOnNextUpdate)) {
@@ -108,6 +113,28 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
 
+    }
+    
+    /* Decides whether damage has recently taken place, and if so, displays a
+     visual indicator of damage (for example, the model will turn red) */ 
+    private void damageIndicator() {
+         Color test = Color.red + Color.white; 
+        //change to use red_buffer not strict values
+        //invincible frames? 
+        if (framesRemainingForRed > 4) {
+            this.gameObject.GetComponent<MeshRenderer>().material.color = Color.red; 
+        } 
+        else if (framesRemainingForRed > 2) {
+            this.gameObject.GetComponent<MeshRenderer>().material.color = test; 
+
+        }
+        else if (framesRemainingForRed == 0) {
+            this.gameObject.GetComponent<MeshRenderer>().material.color = Color.white; 
+        }
+        
+        framesRemainingForRed--; 
+
+    
     }
     
     /* pick up or place an item */
@@ -198,7 +225,9 @@ public class Player : MonoBehaviour
     }
 
     /* Applies dmg points of damage to the player's health, and 
-     * returns current health of player, between 0 and maxHealth */
+     * returns current health of player, between 0 and maxHealth
+     * 
+     * Additionally, sets framesRemaingForRed to Red_Buffer. */
     public int TakeDamage(int dmg)
     {
         if (dmg < 0)
@@ -211,6 +240,7 @@ public class Player : MonoBehaviour
             currentHealth = 0;
             Debug.Log("You took " + dmg + " damage.");
             Debug.Log("Current health: " + currentHealth);
+            framesRemainingForRed = RED_BUFFER; 
             return 0;
         }
         else
@@ -218,6 +248,7 @@ public class Player : MonoBehaviour
             currentHealth = currentHealth - dmg;
             Debug.Log("You took " + dmg + " damage.");
             Debug.Log("Current health: " + currentHealth);
+            framesRemainingForRed = RED_BUFFER; 
             return currentHealth;
         }
 

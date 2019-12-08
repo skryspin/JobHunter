@@ -9413,6 +9413,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
+        type: 3}
+      propertyPath: enemyScript
+      value: 
+      objectReference: {fileID: 448979667}
     - target: {fileID: 1519636959306269468, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9548,11 +9553,6 @@ PrefabInstance:
       propertyPath: go
       value: 
       objectReference: {fileID: 448979665}
-    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
-        type: 3}
-      propertyPath: enemyScript
-      value: 
-      objectReference: {fileID: 448979667}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b847d2186854daba88569e20660d5a, type: 3}
 --- !u!224 &1251057987 stripped
@@ -16778,6 +16778,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
+        type: 3}
+      propertyPath: enemyScript
+      value: 
+      objectReference: {fileID: 773090699}
     - target: {fileID: 1519636959306269468, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16913,11 +16918,6 @@ PrefabInstance:
       propertyPath: go
       value: 
       objectReference: {fileID: 773090696}
-    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
-        type: 3}
-      propertyPath: enemyScript
-      value: 
-      objectReference: {fileID: 773090699}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b847d2186854daba88569e20660d5a, type: 3}
 --- !u!1001 &1571642105364600750
