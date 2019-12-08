@@ -21,7 +21,7 @@ public class UnpauseOnSubmit : MonoBehaviour
                 this.gameObject.GetComponent<Animator>().SetTrigger("Pressed"); 
                 Debug.Log("submitting");
                 SceneManager.UnloadSceneAsync(sceneName); 
-                PauseGameOnButtonDown.TogglePause(); 
+                PauseGameOnButtonDown.UnPause(); 
             }
         }
     }
