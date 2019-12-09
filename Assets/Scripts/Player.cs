@@ -63,9 +63,7 @@ public class Player : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        Debug.Log("Testing...");
-  
+    {  
         characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
         if (resumePrefab == null) {
@@ -98,9 +96,7 @@ public class Player : MonoBehaviour
         turnToMovement(); 
         doResumeThrow();
         if (Input.GetButtonDown("Lift / Throw / Place")) {
-            Debug.Log("its being presssed ") ;
             if (nearbyItem != null) {
-                Debug.Log("pick up plz"); 
             }
         }
         placeItem(); // handles picking up or placing a pickup. 
@@ -433,6 +429,18 @@ public class Player : MonoBehaviour
             Destroy(cuddleBuddy);
             score++;
             Debug.Log(score);
+        }
+        else if (cuddleBuddy.CompareTag("Collectable")) {  
+            HealDrop obj = cuddleBuddy.gameObject.GetComponent<HealDrop>(); 
+            if (obj != null) {
+                int val = obj.value;
+                currentHealth += val;
+                if (currentHealth > maxHealth) {
+                    currentHealth = maxHealth; 
+                }
+                Destroy(cuddleBuddy);
+            }
+            
         }
         else if (cuddleBuddy.CompareTag("InstaDeath")) {
            dieOnNextUpdate = true;  

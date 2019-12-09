@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class Dialogue : MonoBehaviour
 {
 
+    public GameObject textObject; 
     private Text text; 
     public GameObject[] disableOrEnable; 
     // Start is called before the first frame update
     void Start()
     {
-        text = this.GetComponent<Text>();
+        text = textObject.GetComponent<Text>();
         hide();
     
     }
