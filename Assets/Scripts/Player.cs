@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     
     //Death
     private bool dieOnNextUpdate = false; 
+    private Vector3 spawnpoint = new Vector3(0, 1.7f, 0); 
     
     //Picking and placing items
     public Pickup helditem; 
@@ -85,22 +86,25 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jumpBuffer(); // handles jump buffering for EARLY jump commands
-        damageIndicator(); //turns player red when damaged for RED_BUFFER many frames
-        mode = GameController.mode; // get mode from GameController
-        doMovement();
         if ((currentHealth == 0) || (dieOnNextUpdate)) {
             GameOver();
             dieOnNextUpdate = false ;
         }
-        turnToMovement(); 
-        doResumeThrow();
-        if (Input.GetButtonDown("Lift / Throw / Place")) {
-            if (nearbyItem != null) {
+        else {
+            jumpBuffer(); // handles jump buffering for EARLY jump commands
+            damageIndicator(); //turns player red when damaged for RED_BUFFER many frames
+            mode = GameController.mode; // get mode from GameController
+            doMovement();
+          
+            turnToMovement(); 
+            doResumeThrow();
+            if (Input.GetButtonDown("Lift / Throw / Place")) {
+                if (nearbyItem != null) {
+                }
             }
+            placeItem(); // handles picking up or placing a pickup. 
+            holdItem(); // handles holding a pickup
         }
-        placeItem(); // handles picking up or placing a pickup. 
-        holdItem(); // handles holding a pickup
         
         
     }
@@ -444,6 +448,7 @@ public class Player : MonoBehaviour
         }
         else if (cuddleBuddy.CompareTag("InstaDeath")) {
            dieOnNextUpdate = true;  
+           Debug.Log("Touched Instadeath!"); 
         }
     }
     
@@ -460,6 +465,10 @@ public class Player : MonoBehaviour
                 this.nearbyItem = cuddleBuddy; 
                 Debug.Log("writing to nearby item!"); 
             }
+        }
+        else if (other.gameObject.CompareTag("InstaDeath")) {
+           dieOnNextUpdate = true;  
+           Debug.Log("Touched Instadeath!"); 
         }
             
     }
@@ -503,11 +512,23 @@ public class Player : MonoBehaviour
     }
     
     private void GameOver() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //reload the current scene
-        // you should probably change this to reset the player to the last spawn point
-        // maybe spawn points save the player's state? and then you return to that state if you die.
+        //TODO: Separate GameOver() and Respawn();
+        Debug.Log("You died!");
+        lastMovement = new Vector3(0, 0, 0);  
+        
+        //Respawn() 
+        this.currentHealth = maxHealth; 
+        this.gameObject.transform.position = spawnpoint; //set position
+        Debug.Log("Spawnpoint: " + spawnpoint); // maybe spawn points save the player's state? and then you return to that state if you die.
+        Debug.Log("GameOver");
+        
         
     
+    
+    }
+    
+    public void SetSpawn(Vector3 position) {
+        this.spawnpoint = position; 
     
     }
 }

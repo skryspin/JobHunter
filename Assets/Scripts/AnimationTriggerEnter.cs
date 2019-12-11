@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Attach to an object to trigger, or specify trigger object in editor
 public class AnimationTriggerEnter : MonoBehaviour
 {
     
@@ -33,7 +35,9 @@ public class AnimationTriggerEnter : MonoBehaviour
             if (debug == true) {
                 Debug.Log("Setting trigger " + paramToTrigger); 
             }
-            targetAnimator.SetTrigger(paramToTrigger);
+            if (targetAnimator != null) {
+                targetAnimator.SetTrigger(paramToTrigger);
+            }
             if (otherAnimator != null) {
                 otherAnimator.SetTrigger(otherObjectParamToTrigger); 
             }
