@@ -294,6 +294,7 @@
 /define:CSHARP_7_3_OR_NEWER
 "Assets/Controller Tester/Scripts/DetectUnknownControllerMappings.cs"
 "Assets/PausePlayerControl.cs"
+"Assets/RespawnOnSubmit.cs"
 "Assets/Scenes/ResumeCollider.cs"
 "Assets/Scenes/TriggerCamera.cs"
 "Assets/Scripts/AddTagToChildren.cs"
@@ -342,3 +343,4 @@
 "Assets/Scripts/UIFloat.cs"
 "Assets/Scripts/UnpauseOnSubmit.cs"
 "Assets/Scripts/VisionCollider.cs"
+"Assets/SetCheckpoint.cs"

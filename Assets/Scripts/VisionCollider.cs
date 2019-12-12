@@ -27,9 +27,9 @@ public class VisionCollider : MonoBehaviour
         if (cuddleBuddy.GetComponent<Player>() != null)
         {
             Player player = cuddleBuddy.GetComponent<Player>(); 
-            Debug.Log("VisionCollider found player"); 
-            Debug.Log(player);
-            Debug.Log(player.transform.position);
+            //Debug.Log("VisionCollider found player"); 
+            //Debug.Log(player);
+            //Debug.Log(player.transform.position);
             if (!body.anim.GetCurrentAnimatorStateInfo(0).IsName("Charge")) //don't try to charge if already charging!
                 body.anim.SetTrigger("SawPlayer"); 
             

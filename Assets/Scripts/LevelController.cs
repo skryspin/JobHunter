@@ -11,11 +11,11 @@ public class LevelController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindObjectOfType<Player>(); 
-        Debug.Log(player); 
+        //Debug.Log(player); 
         requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable"); 
-        Debug.Log(requiredCollectables[0]); 
-                Debug.Log(requiredCollectables[1]); 
-        Debug.Log(requiredCollectables[2]); 
+        //Debug.Log(requiredCollectables[0]); 
+        //        Debug.Log(requiredCollectables[1]); 
+        //Debug.Log(requiredCollectables[2]); 
 
         
     }

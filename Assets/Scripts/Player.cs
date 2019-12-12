@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
     //Death
     private bool dieOnNextUpdate = false; 
     private Vector3 spawnpoint = new Vector3(0, 1.7f, 0); 
+    public bool isDead = false; //becomes true when GameOver is called, becomes false when respawn is over
     
     //Picking and placing items
     public Pickup helditem; 
@@ -432,7 +433,7 @@ public class Player : MonoBehaviour
         if (cuddleBuddy.CompareTag("RequiredCollectable")) {
             Destroy(cuddleBuddy);
             score++;
-            Debug.Log(score);
+            //Debug.Log(score);
         }
         else if (cuddleBuddy.CompareTag("Collectable")) {  
             HealDrop obj = cuddleBuddy.gameObject.GetComponent<HealDrop>(); 
@@ -446,7 +447,7 @@ public class Player : MonoBehaviour
             }
             
         }
-        else if (cuddleBuddy.CompareTag("InstaDeath")) {
+        else if (cuddleBuddy.CompareTag("InstaDeath") && !isDead) {
            dieOnNextUpdate = true;  
            Debug.Log("Touched Instadeath!"); 
         }
@@ -466,7 +467,7 @@ public class Player : MonoBehaviour
                 Debug.Log("writing to nearby item!"); 
             }
         }
-        else if (other.gameObject.CompareTag("InstaDeath")) {
+        else if (other.gameObject.CompareTag("InstaDeath") && !isDead) {
            dieOnNextUpdate = true;  
            Debug.Log("Touched Instadeath!"); 
         }
@@ -511,22 +512,29 @@ public class Player : MonoBehaviour
         body.AddForce(pushDir * pushPower);
     }
     
+    //Loads the death screen
     private void GameOver() {
-        //TODO: Separate GameOver() and Respawn();
+        SceneManager.LoadSceneAsync("DeathScreen", LoadSceneMode.Additive);
+        isDead = true; 
         Debug.Log("You died!");
         lastMovement = new Vector3(0, 0, 0);  
-        
-        //Respawn() 
+        PauseGameOnButtonDown.Pause(); 
         this.currentHealth = maxHealth; 
         this.gameObject.transform.position = spawnpoint; //set position
-        Debug.Log("Spawnpoint: " + spawnpoint); // maybe spawn points save the player's state? and then you return to that state if you die.
-        Debug.Log("GameOver");
-        
-        
-    
-    
+        framesRemainingForRed = 0;
+        framesRemainingForStoredJump = 0;
+        framesRemainingForStoredGround = 0;
     }
     
+    //Respawns the player at the last spawn point
+    public void Respawn() {
+        Debug.Log("Start respawn!");
+   
+        SceneManager.UnloadSceneAsync("DeathScreen");
+        PauseGameOnButtonDown.UnPause(); 
+        isDead = false; 
+    }
+  
     public void SetSpawn(Vector3 position) {
         this.spawnpoint = position; 
     

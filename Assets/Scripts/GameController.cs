@@ -27,17 +27,17 @@ public class GameController : MonoBehaviour
     }
     
     static private bool toggleMode() {
-        Debug.Log("before: " + mode);
+        //Debug.Log("before: " + mode);
 
-        Debug.Log("Inside toggle"); 
+        //Debug.Log("Inside toggle"); 
         if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
             mode = "Joycon";
-            Debug.Log(mode);
+            //Debug.Log(mode);
             return true; 
         }
         else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
             mode = "Keyboard";
-            Debug.Log(mode);
+            //Debug.Log(mode);
 
             return true; 
         }

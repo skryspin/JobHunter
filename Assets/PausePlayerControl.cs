@@ -8,14 +8,14 @@ public class PausePlayerControl : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         GameObject.FindWithTag("Player").GetComponent<Player>().enabled = false;
-        Debug.Log("DISABLING!");
+        //Debug.Log("DISABLING!");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         GameObject.FindWithTag("Player").GetComponent<Player>().enabled = false; 
-        Debug.Log("DISABLING!");
+        //Debug.Log("DISABLING!");
 
     }
 

@@ -24,7 +24,7 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentBuffer); 
+        //Debug.Log(currentBuffer); 
         if (currentBuffer > 0) {
             currentBuffer--; 
         } 

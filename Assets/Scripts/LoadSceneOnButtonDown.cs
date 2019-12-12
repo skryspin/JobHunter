@@ -21,7 +21,7 @@ public class LoadSceneOnButtonDown : MonoBehaviour
                 SceneManager.LoadScene(sceneName, LoadSceneMode.Additive); 
             }
             else {
-                Debug.Log(SceneManager.GetSceneByName(sceneName).name); 
+                //Debug.Log(SceneManager.GetSceneByName(sceneName).name); 
                 SceneManager.UnloadSceneAsync(sceneName); 
             }
         }
