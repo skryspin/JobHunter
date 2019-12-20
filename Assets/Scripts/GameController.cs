@@ -30,14 +30,14 @@ public class GameController : MonoBehaviour
         //Debug.Log("before: " + mode);
 
         //Debug.Log("Inside toggle"); 
-        if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
+        if ((mode == "Keyboard") && (Input.GetButton("Jump"))) {
             mode = "Joycon";
-            //Debug.Log(mode);
+            Debug.Log(mode);
             return true; 
         }
         else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
             mode = "Keyboard";
-            //Debug.Log(mode);
+            Debug.Log(mode);
 
             return true; 
         }
