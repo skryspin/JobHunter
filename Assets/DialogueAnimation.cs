@@ -32,27 +32,27 @@ public class DialogueAnimation : MonoBehaviour
         foreach (string speech in dialogue) {
             string clipname = "say" + i; 
             
-            // creates a 3s animation clip with no movement using 2 keyframes
+            // creates a 2.5s animation clip with no movement using 2 keyframes
             AnimationClip clip = new AnimationClip(); 
             Keyframe[] keys;
-            keys = new Keyframe[3];
+            keys = new Keyframe[2];
             keys[0] = new Keyframe(0.0f, 0.0f);
-            keys[2] = new Keyframe(3.0f, 0.0f);
+            keys[1] = new Keyframe(2.5f, 0.0f);
             AnimationCurve curve = new AnimationCurve(keys);
             clip.SetCurve("", typeof(Transform), "localPosition.x", curve);
             clip.name = clipname; 
             clip.legacy = true; // must be marked as legacy to use with animation component
             
             
-            //creates an animation event calling Say at 1.0 
+            //creates an animation event calling Say at 0.0 
             AnimationEvent sayEvent = new AnimationEvent();
             sayEvent.stringParameter = speech;
-            sayEvent.time = 1.0f; 
+            sayEvent.time = 0.0f; 
             sayEvent.functionName = "Say"; 
             
-            //creates an animation event calling Say at 1.0 
+            //creates an animation event calling Mute at 2.5 
             AnimationEvent muteEvent = new AnimationEvent();
-            muteEvent.time = 3.0f; 
+            muteEvent.time = 2.5f; 
             muteEvent.functionName = "Mute"; 
             
             clip.AddEvent(sayEvent);
