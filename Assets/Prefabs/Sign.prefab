@@ -71,13 +71,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press "SPACE" or A on the controller to jump!
+  m_Text: Press X to JUMP
 --- !u!114 &3313591324129343869
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     private int framesRemainingForStoredGround; //stores how many frames until a stored ground in disregarded 
     
 
+    //Dialogue
+    public DialogueAnimation dialogueAnimation; 
 
     //Movement (public)
     public float speed;

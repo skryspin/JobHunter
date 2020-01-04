@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIFloat : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject go; 
+    public GameObject anchor; 
     public Vector3 offset; 
     
     void Start()
@@ -16,8 +16,8 @@ public class UIFloat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (go != null) {
-            Vector3 pos = Camera.main.WorldToScreenPoint(go.transform.position);
+        if (anchor != null) {
+            Vector3 pos = Camera.main.WorldToScreenPoint(anchor.transform.position);
             this.gameObject.GetComponent<RectTransform>().position = pos + offset; 
         }
     }
