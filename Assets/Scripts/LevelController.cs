@@ -2,40 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelController : MonoBehaviour
+public static class LevelController
 {
-    Player player; 
-    GameObject[] requiredCollectables; 
-    public Pickup requiredItem; 
+    static Player player; 
+    static int requiredCollectables; 
+
     // Start is called before the first frame update
-    void Start()
+    static LevelController()
     {
         player = GameObject.FindObjectOfType<Player>(); 
-        //Debug.Log(player); 
-        requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable"); 
-        //Debug.Log(requiredCollectables[0]); 
-        //        Debug.Log(requiredCollectables[1]); 
-        //Debug.Log(requiredCollectables[2]); 
-
-        
+        requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable").Length; 
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void PlayerHasRequiredItems()
     {
-       
-    }
+        Debug.Log("Checking if player has required items."); 
+        Debug.Log("Score: " + player.score);
+        Debug.Log("RequiredCount: " + requiredCollectables); 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<Player>() == player) {
-            if (player.score == requiredCollectables.Length && player.helditem == requiredItem) {
-                levelComplete(); 
-            }
+        if (player.score == requiredCollectables) {
+                Debug.Log("Score: " + player.score);
+                Debug.Log("RequiredCount: " + requiredCollectables); 
+                levelComplete();
         }
     }
     
-    private void levelComplete() {
-        Debug.Log("Level complete!"); 
+    private static void levelComplete() {
+        Debug.Log("Level Complete!"); 
+        GameObject.Find("LevelComplete").GetComponent<Animator>().SetTrigger("Complete");
     }
 }

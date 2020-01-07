@@ -31,6 +31,7 @@ public class AnimationTriggerEnter : MonoBehaviour
     }
     
     public void OnTriggerEnter(Collider other) {
+        Debug.Log("Trigger entered..."); 
         if ((other.gameObject.GetComponent<Player>() != null) || NonPlayerCanTrigger) {
             if (debug == true) {
                 Debug.Log("Setting trigger " + paramToTrigger); 

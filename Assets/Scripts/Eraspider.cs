@@ -43,7 +43,7 @@ public class Eraspider : NavigableEnemy
         
         if (heldItem != null) {
             heldItem.isHeld = true; 
-            heldItem.transform.position = this.gameObject.transform.position + new Vector3(0, 3.5f, 0); 
+            heldItem.transform.position = this.gameObject.transform.position + new Vector3(0, 2.5f, 0); 
         }
 
     
@@ -59,9 +59,10 @@ public class Eraspider : NavigableEnemy
     }
     
     public void dropPickup() {
+        Debug.Log("Eraspider drops the pickup."); 
         heldItem.GetComponent<SphereCollider>().enabled = true; 
-        heldItem.GetComponent<BoxCollider>().isTrigger = false;
-        heldItem.isHeld = false;  
+        heldItem.isHeld = false; 
+        Debug.Log(heldItem.isHeld);
         heldItem = null;
         
     }

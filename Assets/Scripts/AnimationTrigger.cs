@@ -12,7 +12,12 @@ public class AnimationTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targetAnimator = targetObject.GetComponent<Animator>();
+        if (targetAnimator == null) {
+            targetAnimator = this.GetComponent<Animator>();
+        }
+        else {
+            targetAnimator = targetObject.GetComponent<Animator>(); 
+        }
     }
 
     // Update is called once per frame

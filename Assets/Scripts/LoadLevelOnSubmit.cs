@@ -20,7 +20,8 @@ public class LoadLevelOnSubmit : MonoBehaviour
             if (Input.GetButton("Submit")) {
                 this.gameObject.GetComponent<Animator>().SetTrigger("Pressed"); 
                 Debug.Log("submitting");
-                SceneManager.LoadScene(sceneName); 
+                SceneManager.LoadScene(sceneName);
+                LevelController.LevelController();  
             }
         }
     }

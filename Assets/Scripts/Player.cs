@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     
     //Picking and placing items
     public Pickup helditem; 
-    private Vector3 holdOffset = new Vector3(0, 1.8f, 0); //the offset from the center of the player at which pickups should be health
+    private Vector3 holdOffset = new Vector3(0, 1.8f, 0); //the offset from the center of the player at which pickups should be held
     public Pickup nearbyItem; 
     
     public GameController gc; 
@@ -146,6 +146,7 @@ public class Player : MonoBehaviour
         if (helditem != null) {
             if (Input.GetButtonDown("Lift / Throw / Place")) { //place the item
                 Debug.Log("Putting down the item!"); 
+                helditem.isHeld = false; 
                 helditem.GetComponent<SphereCollider>().enabled = true; //enable the trigger
                 helditem.transform.SetParent(this.transform); 
                 helditem.transform.localPosition = new Vector3(0, -0.2f, 1.5f); 
@@ -157,6 +158,7 @@ public class Player : MonoBehaviour
             Debug.Log("Trying to pick up.");
             this.helditem = nearbyItem; //the nearby item is now held!
             helditem.GetComponent<SphereCollider>().enabled = false; //disable the sphere collider
+            helditem.isHeld = true; 
             //(do some kind of animation, but for now we will just place it above the player...)
             helditem.transform.position = this.transform.position + holdOffset;
         }
