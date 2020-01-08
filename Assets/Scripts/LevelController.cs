@@ -1,20 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public static class LevelController
+public class LevelController
 {
-    static Player player; 
-    static int requiredCollectables; 
+    Player player; 
+    int requiredCollectables; 
 
     // Start is called before the first frame update
-    static LevelController()
+    public LevelController()
     {
+        Debug.Log("Level constructor for scene " + SceneManager.GetActiveScene().name); 
         player = GameObject.FindObjectOfType<Player>(); 
-        requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable").Length; 
+        requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable").Length;
+        PlayerHasRequiredItems();
+
     }
 
-    public static void PlayerHasRequiredItems()
+
+    public void PlayerHasRequiredItems()
     {
         Debug.Log("Checking if player has required items."); 
         Debug.Log("Score: " + player.score);
@@ -27,7 +32,7 @@ public static class LevelController
         }
     }
     
-    private static void levelComplete() {
+    private void levelComplete() {
         Debug.Log("Level Complete!"); 
         GameObject.Find("LevelComplete").GetComponent<Animator>().SetTrigger("Complete");
     }

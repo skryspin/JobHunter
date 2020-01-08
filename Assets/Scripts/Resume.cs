@@ -43,17 +43,4 @@ public class Resume : MonoBehaviour
 
         
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //ResumeHitbox temp = other.gameObject.GetComponent<ResumeHitbox>();
-        //if (temp != null) {
-        //    Debug.Log("A resume hitbox was hit!"); 
-        //    Enemy temp2 = temp.parent.GetComponent<Enemy>();
-        //    if (temp != null) {
-        //        Debug.Log("An enemy IS IN this resume's TRIGGER!"); 
-        //        temp2.takeDamage(dmg);
-        //    }
-        //}
-    }
 }

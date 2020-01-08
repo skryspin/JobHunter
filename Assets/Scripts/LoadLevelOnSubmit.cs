@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class LoadLevelOnSubmit : MonoBehaviour
 {
     public string sceneName; 
+
     // Start is called before the first frame update
     void Start()
     {
-    
     }
 
     // Update is called once per frame
@@ -20,8 +20,7 @@ public class LoadLevelOnSubmit : MonoBehaviour
             if (Input.GetButton("Submit")) {
                 this.gameObject.GetComponent<Animator>().SetTrigger("Pressed"); 
                 Debug.Log("submitting");
-                SceneManager.LoadScene(sceneName);
-                LevelController.LevelController();  
+                GameController.LoadLevel(sceneName); 
             }
         }
     }

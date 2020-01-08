@@ -110,6 +110,7 @@ public class Player : MonoBehaviour
         }
         
         
+        
     }
     
 
@@ -327,26 +328,6 @@ public class Player : MonoBehaviour
          }
     
     }
-    
-    //private bool toggleMode() {
-    //   // Debug.Log("Inside toggle mode.");
-    //   // Debug.Log(Input.GetAxis("Horizontal")); 
-    //    if ((mode == "Keyboard") && (Input.GetKey("joystick button 16"))) {
-    //        mode = "Joycon";
-    //       // Debug.Log("Joycon mode..."); 
-    //        return true; 
-    //    }
-    //    else if ((mode == "Joycon") && ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) ) {
-    //        mode = "Keyboard";
-    //      //  Debug.Log("Keyboard mode..."); 
-
-    //        return true; 
-    //    }
-    //    //else if (Input.GetKey("a")) {
-    //    //    Debug.Log("The test worked");
-    //    //}
-    //    return false; 
-    //}
 
     /* Does the player movement, and updates lastMovementDirection .*/ 
     private void doMovement()
@@ -433,11 +414,12 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         GameObject cuddleBuddy = other.gameObject;
-        //Debug.Log("Collision detected with: " + cuddleBuddy);
         if (cuddleBuddy.CompareTag("RequiredCollectable")) {
             Destroy(cuddleBuddy);
             score++;
-            //Debug.Log(score);
+            Debug.Log("Score: " + score);
+            Debug.Log("Collision detected with " + cuddleBuddy + " resulting in score increase.");
+
         }
         else if (cuddleBuddy.CompareTag("Collectable")) {  
             HealDrop obj = cuddleBuddy.gameObject.GetComponent<HealDrop>(); 

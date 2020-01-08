@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/submit.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="34" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="74" Column="6" />
@@ -19,11 +19,11 @@
       <File FileName="Assets/Scripts/NavigableEnemy.cs" Line="6" Column="23" />
       <File FileName="Assets/Scripts/SendTriggersToParents.cs" Line="29" Column="8" />
       <File FileName="Assets/Scripts/Hitbox.cs" Line="24" Column="54" />
-      <File FileName="Assets/Scripts/LevelController.cs" Line="25" Column="46" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="11" Column="12" />
       <File FileName="Assets/Scripts/TriggerNavigation.cs" Line="33" Column="18" />
       <File FileName="Assets/Scripts/PointAtCamera.cs" Line="8" Column="24" />
       <File FileName="Assets/Scripts/UIFloat.cs" Line="17" Column="18" />
-      <File FileName="Assets/Scripts/LoadLevelOnSubmit.cs" Line="25" Column="14" />
+      <File FileName="Assets/Scripts/LoadLevelOnSubmit.cs" Line="24" Column="60" />
       <File FileName="Assets/Scripts/LoadSceneOnButtonDown.cs" Line="24" Column="32" />
       <File FileName="Assets/Scripts/PauseGameOnButtonDown.cs" Line="8" Column="2" />
       <File FileName="Assets/Scripts/DialogueTrigger.cs" Line="43" Column="1" />
@@ -38,7 +38,8 @@
       <File FileName="Assets/DialogueAnimation.cs" Line="53" Column="54" />
       <File FileName="Assets/Scripts/Pickup.cs" Line="36" Column="85" />
       <File FileName="Assets/Scripts/AnimationTrigger.cs" Line="20" Column="10" />
-      <File FileName="Assets/CheckForCompletion.cs" Line="16" Column="19" />
+      <File FileName="Assets/CheckForCompletion.cs" Line="11" Column="27" />
+      <File FileName="Assets/submit.cs" Line="21" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

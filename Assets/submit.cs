@@ -18,6 +18,6 @@ public class submit : MonoBehaviour
     
     public void CheckWinCondition() {
         Debug.Log("Checking win condition");
-        LevelController.PlayerHasRequiredItems(); 
+        //LevelController.PlayerHasRequiredItems(); 
     }
 }
