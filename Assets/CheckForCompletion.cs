@@ -8,7 +8,7 @@ public class CheckForCompletion : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Debug.Log("Calling on state enter"); 
-        //LevelController.PlayerHasRequiredItems(); 
+        GameController.currentLevelController.PlayerHasRequiredItems(); 
 
     }
 

@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/submit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoadScene.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="34" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="74" Column="6" />
       <File FileName="Assets/Scripts/OpenableBook.cs" Line="7" Column="33" />
       <File FileName="Assets/Scripts/ToggleObjectPositions.cs" Line="35" Column="13" />
       <File FileName="Assets/Scenes/TriggerCamera.cs" Line="25" Column="85" />
-      <File FileName="Assets/Scripts/Player.cs" Line="439" Column="18" />
+      <File FileName="Assets/Scripts/Player.cs" Line="111" Column="9" />
       <File FileName="Assets/Scripts/SetCameraPosition.cs" Line="23" Column="80" />
-      <File FileName="Assets/Scripts/Resume.cs" Line="54" Column="30" />
+      <File FileName="Assets/Scripts/Resume.cs" Line="45" Column="6" />
       <File FileName="Assets/Scripts/ResumeHitbox.cs" Line="25" Column="10" />
       <File FileName="Assets/Scenes/ResumeCollider.cs" Line="32" Column="71" />
-      <File FileName="Assets/Scripts/MoveToPlayer.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/MoveToPlayer.cs" Line="8" Column="23" />
       <File FileName="Assets/Scripts/AddTagToChildren.cs" Line="15" Column="14" />
       <File FileName="Assets/Scripts/AxisTest.cs" Line="17" Column="59" />
       <File FileName="Assets/Scripts/Eraspider.cs" Line="61" Column="17" />
@@ -19,18 +19,18 @@
       <File FileName="Assets/Scripts/NavigableEnemy.cs" Line="6" Column="23" />
       <File FileName="Assets/Scripts/SendTriggersToParents.cs" Line="29" Column="8" />
       <File FileName="Assets/Scripts/Hitbox.cs" Line="24" Column="54" />
-      <File FileName="Assets/Scripts/LevelController.cs" Line="11" Column="12" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="17" Column="9" />
       <File FileName="Assets/Scripts/TriggerNavigation.cs" Line="33" Column="18" />
       <File FileName="Assets/Scripts/PointAtCamera.cs" Line="8" Column="24" />
       <File FileName="Assets/Scripts/UIFloat.cs" Line="17" Column="18" />
-      <File FileName="Assets/Scripts/LoadLevelOnSubmit.cs" Line="24" Column="60" />
+      <File FileName="Assets/Scripts/LoadLevelOnSubmit.cs" Line="7" Column="14" />
       <File FileName="Assets/Scripts/LoadSceneOnButtonDown.cs" Line="24" Column="32" />
       <File FileName="Assets/Scripts/PauseGameOnButtonDown.cs" Line="8" Column="2" />
-      <File FileName="Assets/Scripts/DialogueTrigger.cs" Line="43" Column="1" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="14" Column="5" />
+      <File FileName="Assets/Scripts/DialogueTrigger.cs" Line="14" Column="11" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="39" Column="62" />
       <File FileName="Assets/Scripts/MainCamera.cs" Line="17" Column="33" />
       <File FileName="Assets/PausePlayerControl.cs" Line="18" Column="31" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="4" Column="22" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="9" Column="23" />
       <File FileName="Assets/Scripts/HealDrop.cs" Line="19" Column="9" />
       <File FileName="Assets/SetCheckpoint.cs" Line="11" Column="49" />
       <File FileName="Assets/RespawnOnSubmit.cs" Line="22" Column="10" />
@@ -38,8 +38,9 @@
       <File FileName="Assets/DialogueAnimation.cs" Line="53" Column="54" />
       <File FileName="Assets/Scripts/Pickup.cs" Line="36" Column="85" />
       <File FileName="Assets/Scripts/AnimationTrigger.cs" Line="20" Column="10" />
-      <File FileName="Assets/CheckForCompletion.cs" Line="11" Column="27" />
+      <File FileName="Assets/CheckForCompletion.cs" Line="11" Column="62" />
       <File FileName="Assets/submit.cs" Line="21" Column="51" />
+      <File FileName="Assets/LoadScene.cs" Line="19" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
