@@ -30,6 +30,7 @@ public class  GameController : MonoBehaviour
     {
         toggleMode(); //handles toggling control method
         checkLevelLoaded(); 
+        Debug.Log("currentLevelController: " + currentLevelController);
     }
     
     static private bool toggleMode() {
@@ -65,6 +66,7 @@ public class  GameController : MonoBehaviour
     static public void checkLevelLoaded() {
         if (levelBeingLoaded != null) {
             if (SceneManager.GetSceneByName(levelBeingLoaded).isLoaded) {
+                Debug.Log("Instantiating level controller") ;
                 LevelController lvl = new LevelController();
                 GameController.currentLevelController = lvl; 
                 levelBeingLoaded = null; 

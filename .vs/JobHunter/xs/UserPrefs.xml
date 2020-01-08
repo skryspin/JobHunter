@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoadScene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoadSceneOnSubmit.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="34" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="74" Column="6" />
@@ -27,20 +27,21 @@
       <File FileName="Assets/Scripts/LoadSceneOnButtonDown.cs" Line="24" Column="32" />
       <File FileName="Assets/Scripts/PauseGameOnButtonDown.cs" Line="8" Column="2" />
       <File FileName="Assets/Scripts/DialogueTrigger.cs" Line="14" Column="11" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="39" Column="62" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="60" Column="1" />
       <File FileName="Assets/Scripts/MainCamera.cs" Line="17" Column="33" />
       <File FileName="Assets/PausePlayerControl.cs" Line="18" Column="31" />
       <File FileName="Assets/Scripts/PlayerHealth.cs" Line="9" Column="23" />
       <File FileName="Assets/Scripts/HealDrop.cs" Line="19" Column="9" />
       <File FileName="Assets/SetCheckpoint.cs" Line="11" Column="49" />
-      <File FileName="Assets/RespawnOnSubmit.cs" Line="22" Column="10" />
+      <File FileName="Assets/RespawnOnSubmit.cs" Line="18" Column="8" />
       <File FileName="Assets/Scripts/EnemyHealth.cs" Line="27" Column="34" />
       <File FileName="Assets/DialogueAnimation.cs" Line="53" Column="54" />
       <File FileName="Assets/Scripts/Pickup.cs" Line="36" Column="85" />
       <File FileName="Assets/Scripts/AnimationTrigger.cs" Line="20" Column="10" />
       <File FileName="Assets/CheckForCompletion.cs" Line="11" Column="62" />
       <File FileName="Assets/submit.cs" Line="21" Column="51" />
-      <File FileName="Assets/LoadScene.cs" Line="19" Column="19" />
+      <File FileName="Assets/LoadScene.cs" Line="20" Column="52" />
+      <File FileName="Assets/LoadSceneOnSubmit.cs" Line="17" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

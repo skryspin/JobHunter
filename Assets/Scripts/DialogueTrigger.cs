@@ -38,6 +38,20 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
     
+    public void OnTriggerStay(Collider other) {
+        if (proximityPlayOnly) {
+            if (other.gameObject.GetComponent<Player>() != null) { //only trigger if its the player!
+                if (!proximityPlayOnly) {
+                    dialogueAnimationToTrigger.StartDialogue(dialogue); 
+                    Debug.Log("Triggering dialogue sequence..."); 
+                }
+                else {
+                    dialogueAnimationToTrigger.Say(dialogue[0]);
+                }
+            }
+        }
+    }
+    
     public void OnTriggerExit(Collider other) {
         if (proximityPlayOnly) {
             dialogueAnimationToTrigger.Mute();

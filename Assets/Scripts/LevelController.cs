@@ -7,15 +7,17 @@ public class LevelController
 {
     Player player; 
     int requiredCollectables; 
+    
+    public DialogueTrigger missingRequirements; 
 
     // Start is called before the first frame update
     public LevelController()
     {
+        missingRequirements = GameObject.Find("MissingRequirements").GetComponent<DialogueTrigger>(); 
+        Debug.Log(missingRequirements.name);
         Debug.Log("Level constructor for scene " + SceneManager.GetActiveScene().name); 
         player = GameObject.FindObjectOfType<Player>(); 
         requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable").Length;
-        PlayerHasRequiredItems();
-
     }
 
 
@@ -29,6 +31,9 @@ public class LevelController
                 Debug.Log("Score: " + player.score);
                 Debug.Log("RequiredCount: " + requiredCollectables); 
                 levelComplete();
+        }
+        else if (player.score < requiredCollectables) {
+            missingRequirements.enabled = true; 
         }
     }
     

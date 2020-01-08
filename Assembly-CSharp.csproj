@@ -66,6 +66,7 @@
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
     <Compile Include="Assets\DialogueAnimation.cs" />
     <Compile Include="Assets\LoadScene.cs" />
+    <Compile Include="Assets\LoadSceneOnSubmit.cs" />
     <Compile Include="Assets\PausePlayerControl.cs" />
     <Compile Include="Assets\RespawnOnSubmit.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
