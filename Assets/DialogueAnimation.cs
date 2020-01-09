@@ -72,6 +72,7 @@ public class DialogueAnimation : MonoBehaviour
         this.GetComponentInChildren<Text>().text = words;
         foreach (Image x in this.GetComponentsInChildren<Image>()) {
             x.enabled = true; 
+            x.GetComponent<UIFloat>().enabled = true; 
         }
 
         Debug.Log("Called say with " + words); 
