@@ -2458,6 +2458,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 70618753}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &184696369 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3962789554972460858, guid: a4940a957d9944403873604d7fb42562,
+    type: 3}
+  m_PrefabInstance: {fileID: 70618753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &194874004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6961,6 +6967,12 @@ MeshFilter:
 --- !u!1 &559213285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6517542748767702726, guid: a4940a957d9944403873604d7fb42562,
+    type: 3}
+  m_PrefabInstance: {fileID: 3392301565526861497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &559213286 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3962789554972460858, guid: a4940a957d9944403873604d7fb42562,
     type: 3}
   m_PrefabInstance: {fileID: 3392301565526861497}
   m_PrefabAsset: {fileID: 0}
@@ -15591,6 +15603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
         type: 3}
+      propertyPath: resetOnRespawn.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1257263782}
@@ -15599,6 +15616,41 @@ PrefabInstance:
       propertyPath: dialogueAnimation
       value: 
       objectReference: {fileID: 708221146}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resetOnRespawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 559213286}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resetOnRespawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 1778318186}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resetOnRespawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 184696369}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resetOnRespawn.Array.data[3]
+      value: 
+      objectReference: {fileID: 3322065184325683567}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resetOnRespawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 731427985}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resetOnRespawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 1480063239}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: resetOnRespawn.Array.data[6]
+      value: 
+      objectReference: {fileID: 1976442109}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824f227be99c24f2bb42056e79fd04ed, type: 3}
 --- !u!1 &1204201216
@@ -22596,6 +22648,12 @@ Transform:
 --- !u!1 &1778318185 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6517542748767702726, guid: a4940a957d9944403873604d7fb42562,
+    type: 3}
+  m_PrefabInstance: {fileID: 1165541051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1778318186 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3962789554972460858, guid: a4940a957d9944403873604d7fb42562,
     type: 3}
   m_PrefabInstance: {fileID: 1165541051}
   m_PrefabAsset: {fileID: 0}

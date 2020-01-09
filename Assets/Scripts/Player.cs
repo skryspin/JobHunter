@@ -63,6 +63,9 @@ public class Player : MonoBehaviour
     private Vector3 holdOffset = new Vector3(0, 1.8f, 0); //the offset from the center of the player at which pickups should be held
     public Pickup nearbyItem; 
     
+    //Respawn
+    public List<Animator> resetOnRespawn; 
+    
     public GameController gc; 
 
     // Start is called before the first frame update
@@ -146,7 +149,7 @@ public class Player : MonoBehaviour
         
         if (helditem != null) {
             if (Input.GetButtonDown("Lift / Throw / Place")) { //place the item
-                Debug.Log("Putting down the item!"); 
+                //Debug.Log("Putting down the item!"); 
                 helditem.isHeld = false; 
                 helditem.GetComponent<SphereCollider>().enabled = true; //enable the trigger
                 helditem.transform.SetParent(this.transform); 
@@ -156,7 +159,7 @@ public class Player : MonoBehaviour
             } 
         }
         else if (Input.GetButtonDown("Lift / Throw / Place") && nearbyItem != null) {
-            Debug.Log("Trying to pick up.");
+            //Debug.Log("Trying to pick up.");
             this.helditem = nearbyItem; //the nearby item is now held!
             helditem.GetComponent<SphereCollider>().enabled = false; //disable the sphere collider
             helditem.isHeld = true; 
@@ -167,7 +170,7 @@ public class Player : MonoBehaviour
     
     private void holdItem() {
         if (helditem != null) {
-            Debug.Log("holding item");
+            //Debug.Log("holding item");
             helditem.transform.position = this.transform.position + holdOffset; 
         }
     }
@@ -238,22 +241,22 @@ public class Player : MonoBehaviour
     {
         if (dmg < 0)
         {
-            Debug.Log("Error: Incorrect damage value given!");
+            Debug.LogError("Error: Incorrect damage value given!");
             return -1;
         }
         if ((currentHealth - dmg) < 0)
         {
             currentHealth = 0;
-            Debug.Log("You took " + dmg + " damage.");
-            Debug.Log("Current health: " + currentHealth);
+            //Debug.Log("You took " + dmg + " damage.");
+            //Debug.Log("Current health: " + currentHealth);
             framesRemainingForRed = RED_BUFFER; 
             return 0;
         }
         else
         {
             currentHealth = currentHealth - dmg;
-            Debug.Log("You took " + dmg + " damage.");
-            Debug.Log("Current health: " + currentHealth);
+            //Debug.Log("You took " + dmg + " damage.");
+            //Debug.Log("Current health: " + currentHealth);
             framesRemainingForRed = RED_BUFFER; 
             return currentHealth;
         }
@@ -417,7 +420,7 @@ public class Player : MonoBehaviour
         if (cuddleBuddy.CompareTag("RequiredCollectable")) {
             Destroy(cuddleBuddy);
             score++;
-            Debug.Log("Score: " + score);
+            //Debug.Log("Score: " + score);
             Debug.Log("Collision detected with " + cuddleBuddy + " resulting in score increase.");
 
         }
@@ -435,7 +438,7 @@ public class Player : MonoBehaviour
         }
         else if (cuddleBuddy.CompareTag("InstaDeath") && !isDead) {
            dieOnNextUpdate = true;  
-           Debug.Log("Touched Instadeath!"); 
+           //Debug.Log("Touched Instadeath!"); 
         }
     }
     
@@ -445,17 +448,17 @@ public class Player : MonoBehaviour
         
         
         if (cuddleBuddy != null && cuddleBuddy.CompareTag("Pickupable")) { //if we find a pickupable object
-            Debug.Log("Player is within range of a pickup.");
+            //Debug.Log("Player is within range of a pickup.");
             
             
             if (!cuddleBuddy.isHeld) {
                 this.nearbyItem = cuddleBuddy; 
-                Debug.Log("writing to nearby item!"); 
+                //Debug.Log("writing to nearby item!"); 
             }
         }
         else if (other.gameObject.CompareTag("InstaDeath") && !isDead) {
            dieOnNextUpdate = true;  
-           Debug.Log("Touched Instadeath!"); 
+           //Debug.Log("Touched Instadeath!"); 
         }
             
     }
@@ -463,7 +466,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject == nearbyItem) {
-            Debug.Log("Exiting from nearby item"); 
+            //Debug.Log("Exiting from nearby item"); 
             nearbyItem = null; 
         }
     }
@@ -502,7 +505,7 @@ public class Player : MonoBehaviour
     private void GameOver() {
         SceneManager.LoadSceneAsync("DeathScreen", LoadSceneMode.Additive);
         isDead = true; 
-        Debug.Log("You died!");
+        //Debug.Log("You died!");
         lastMovement = new Vector3(0, 0, 0);  
         PauseGameOnButtonDown.Pause(); 
         this.currentHealth = maxHealth; 
@@ -514,8 +517,11 @@ public class Player : MonoBehaviour
     
     //Respawns the player at the last spawn point
     public void Respawn() {
-        Debug.Log("Start respawn!");
-   
+    
+        foreach (Animator x in resetOnRespawn) {
+            x.SetTrigger("Reset");              //reset these animations
+            Debug.Log("Reseting animator for " + x.gameObject.name); 
+        }
         SceneManager.UnloadSceneAsync("DeathScreen");
         PauseGameOnButtonDown.UnPause(); 
         isDead = false; 
