@@ -14,7 +14,6 @@ public class LevelController
     public LevelController()
     {
         missingRequirements = GameObject.Find("MissingRequirements").GetComponent<DialogueTrigger>(); 
-        Debug.Log(missingRequirements.name);
         Debug.Log("Level constructor for scene " + SceneManager.GetActiveScene().name); 
         player = GameObject.FindObjectOfType<Player>(); 
         requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable").Length;

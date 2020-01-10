@@ -20,6 +20,7 @@ public class  GameController : MonoBehaviour
         if (GameObject.Find("GameController") != this.gameObject) {
             GameObject.Destroy(this.gameObject); 
         }
+        currentLevelController = new LevelController(); //instantiate on scene load
         
         GameObject.DontDestroyOnLoad(this.gameObject); //we must keep this during the whole game! (even save it)
         
