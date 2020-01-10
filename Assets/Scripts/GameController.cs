@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
+using UnityEngine.EventSystems;
 
 
 /* This class holds data vital to the overall game: Levels locked and unlocked, completed, and control settings */
@@ -30,13 +31,36 @@ public class  GameController : MonoBehaviour
      void Update()
     {
         toggleMode(); //handles toggling control method
+        setAxis();
         checkLevelLoaded(); 
         Debug.Log("currentLevelController: " + currentLevelController);
     }
     
+    /* Sets the horizontal axis of the EventSystem based on the current mode */ 
+    static private void setAxis() {
+        EventSystem eventSystem = EventSystem.current;
+        if (eventSystem != null) {
+            StandaloneInputModule inputModule = eventSystem.gameObject.GetComponent<StandaloneInputModule>();
+            string before = inputModule.horizontalAxis; 
+            if (mode == "Joycon") {
+                inputModule.horizontalAxis = "HorizontalJoy";
+                inputModule.verticalAxis = "VerticalJoy"; 
+
+            }
+            else if (mode == "Keyboard") {
+                inputModule.horizontalAxis = "Horizontal";
+                inputModule.verticalAxis = "Vertical"; 
+ 
+            }
+            if (before != inputModule.horizontalAxis) {
+                Debug.Log("Changed axis to " + inputModule.horizontalAxis);
+            }
+        }
+    }
+    
     static private bool toggleMode() {
         //Debug.Log("before: " + mode);
-        Debug.Log("mode: " + mode); 
+        //Debug.Log("mode: " + mode); 
         //Debug.Log("Inside toggle"); 
         if ((mode == "Keyboard") && (Input.GetButton("JumpJoy"))) {
             mode = "Joycon";

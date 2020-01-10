@@ -178,14 +178,14 @@ public class Player : MonoBehaviour
     private void jumpBuffer() {
     
         earlyJumpBuffer(); 
-        //if (Input.GetKey(KeyCode.B)) {
         lateJumpBuffer(); 
-        //}
         
-        
+
         /*Handles an EARLY jump*/
         void earlyJumpBuffer() {
-            if (Input.GetButtonDown("Jump")) { //only store the jump on Button Down 
+            string jumpName = getJumpName(); 
+
+            if (Input.GetButtonDown(jumpName)) { //only store the jump on Button Down 
                                                // - otherwise, player could hold down jump to jump every time they hit the ground!
                 storedJump = true; 
             //    Debug.Log("Storing jump with BUFFER = " + BUFFER); 
@@ -332,9 +332,23 @@ public class Player : MonoBehaviour
     
     }
 
+    /*Returns the button name for the jump, depending on what mode of control is active*/ 
+    private string getJumpName() {
+        string jumpName; 
+
+        if (mode == "Joycon") {
+            jumpName = "JumpJoy"; 
+        }
+        else {
+            jumpName = "Jump";
+        }
+        return jumpName; 
+    }
+    
     /* Does the player movement, and updates lastMovementDirection .*/ 
     private void doMovement()
     {
+        
 
         float verticalInput = getVerticalInput();
         float horizontalInput = getHorizontalInput();
@@ -361,9 +375,11 @@ public class Player : MonoBehaviour
         
         movement *= speed;
 
+        string jumpName = getJumpName(); 
+        
         if (characterController.isGrounded) //controls Early Jump
         {
-            if (Input.GetButtonDown("Jump") || (storedJump && Input.GetButton("Jump")) )
+            if (Input.GetButtonDown(jumpName) || (storedJump && Input.GetButton(jumpName)) )
             {
                 //Debug.Log("jump detected!");
                 movement.y = jumpSpeed;
@@ -371,12 +387,12 @@ public class Player : MonoBehaviour
                 storedGround = false; 
             }
         }
-        else if (storedGround && Input.GetButtonDown("Jump")) { //controls Late Jump
+        else if (storedGround && Input.GetButtonDown(jumpName)) { //controls Late Jump
             movement.y = jumpSpeed; 
             storedJump = false; 
             storedGround = false; 
         }
-        else if (Input.GetButtonUp("Jump"))
+        else if (Input.GetButtonUp(jumpName))
         {
             if (lastMovement.y > 0)
             { //this is important - we don't want the velocity reset to 0 if he is already falling!
