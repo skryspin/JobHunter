@@ -19,6 +19,7 @@ public class UIFloat : MonoBehaviour
         if (anchor != null) {
             Vector3 pos = Camera.main.WorldToScreenPoint(anchor.transform.position);
             this.gameObject.GetComponent<RectTransform>().position = pos + offset; 
+            Debug.Log("The resulting position is literally " + this.gameObject.GetComponent<RectTransform>().position + " for " + this.gameObject.name); 
         }
         
         

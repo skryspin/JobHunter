@@ -63,9 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CheckForCompletion.cs" />
+    <Compile Include="Assets\Complete.cs" />
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
     <Compile Include="Assets\DialogueAnimation.cs" />
     <Compile Include="Assets\JoystickNavigation.cs" />
+    <Compile Include="Assets\LevelButton.cs" />
     <Compile Include="Assets\LoadScene.cs" />
     <Compile Include="Assets\LoadSceneOnSubmit.cs" />
     <Compile Include="Assets\PausePlayerControl.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Assets\Scripts\HealDrop.cs" />
     <Compile Include="Assets\Scripts\Hitbox.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
+    <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\LoadLevelOnSubmit.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnButtonDown.cs" />
@@ -121,6 +124,7 @@
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
     <Compile Include="Assets\SetCheckpoint.cs" />
     <Compile Include="Assets\submit.cs" />
+    <Compile Include="Assets\UnlockLevel.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

@@ -8,7 +8,7 @@ public class MainCamera : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        this.gameObject.GetComponent<Animator>().keepAnimatorControllerStateOnDisable = true;
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class MainCamera : MonoBehaviour
     {
         this.gameObject.transform.position = CameraPosition.position;
         this.gameObject.transform.rotation = CameraPosition.rotation;
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("JumpJoy")){
             this.gameObject.GetComponent<Animator>().SetTrigger("SkipCutscene");
         }
 

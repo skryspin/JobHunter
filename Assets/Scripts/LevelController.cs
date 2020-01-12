@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System; 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,12 +9,18 @@ public class LevelController
     Player player; 
     int requiredCollectables; 
     
+    
     public DialogueTrigger missingRequirements; 
 
     // Start is called before the first frame update
     public LevelController()
     {
+        try {
         missingRequirements = GameObject.Find("MissingRequirements").GetComponent<DialogueTrigger>(); 
+        }
+        catch (NullReferenceException e) {
+            Debug.Log("missingRequirements is null"); 
+        }
         Debug.Log("Level constructor for scene " + SceneManager.GetActiveScene().name); 
         player = GameObject.FindObjectOfType<Player>(); 
         requiredCollectables = GameObject.FindGameObjectsWithTag("RequiredCollectable").Length;
@@ -36,8 +43,9 @@ public class LevelController
         }
     }
     
-    private void levelComplete() {
+    public void levelComplete() {
         Debug.Log("Level Complete!"); 
+        GameController.unlockLevelAfter(SceneManager.GetActiveScene().name);
         GameObject.Find("LevelComplete").GetComponent<Animator>().SetTrigger("Complete");
     }
 }

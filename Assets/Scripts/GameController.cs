@@ -11,30 +11,99 @@ public class  GameController : MonoBehaviour
     static public string mode = "Joycon"; 
     static public string levelBeingLoaded = null; 
     static public LevelController currentLevelController; 
-    static private string[] validLevelNames = {"Level1"}; 
+    static private string[] validLevelNames = {"Level1", "Level2", "Boss"};
+    
+    static private List<string> newLevels;
+    static private List<string> oldLevels;
+
+
+
+    
+    /* Unlocks the level that comes after scenename */ 
+    static public void unlockLevelAfter(string levelname) {
+            switch (levelname) {
+                case "Level1":
+                    if (!oldLevels.Contains("Level2") && !newLevels.Contains("Level2")) {
+                        newLevels.Add("Level2");
+                    }
+                    break;
+                case "Level2":
+                    if (!oldLevels.Contains("Boss") && !newLevels.Contains("Boss"))
+                        newLevels.Add("Boss");
+                    break;
+                default:
+                    
+                    break; 
+            }
+    }
+    
+    /* Plays the unlock animation for new levels, but sets old levels to already be unlocked */ 
+    static public void unlockLevels() {
+        foreach (string x in newLevels) {
+            GameObject.Find(x).GetComponent<Level>().unlock();
+        }
+        foreach (string x in oldLevels) {
+            GameObject.Find(x).GetComponent<Level>().alreadyUnlocked();
+        }
+        foreach (string x in newLevels) {
+            if (!oldLevels.Contains(x)) {
+                oldLevels.Add(x);
+            }
+        }
+        newLevels.Clear();  //all new levels have been added, hurray
+    }
+    
+       
     
     
     // Start is called before the first frame update
     void Start()
     {
-    
+        /* Creates the 2 unlockable levels */
         if (GameObject.Find("GameController") != this.gameObject) {
             GameObject.Destroy(this.gameObject); 
         }
-        currentLevelController = new LevelController(); //instantiate on scene load
-        
-        GameObject.DontDestroyOnLoad(this.gameObject); //we must keep this during the whole game! (even save it)
+        else {
+            newLevels = new List<string>(); 
+            oldLevels = new List<string>(); 
+            currentLevelController = new LevelController(); //instantiate on scene load
+            GameObject.DontDestroyOnLoad(this.gameObject); //we must keep this during the whole game! (even save it)
+        }
         
     }
+    
+    
 
+    
+    /* Debugging method */ 
+    void printLevels() {
+        Debug.Log("printing levels"); 
+        string n = "new: ";
+        string o = "old: ";
+        foreach (string x in newLevels) {
+            n = n + x + " "; 
+        }
+        foreach (string x in oldLevels) {
+            o = o + x + " "; 
+            
+        }
+        Debug.Log(n);
+        Debug.Log(o); 
+    } 
+    
     // Update is called once per frame
      void Update()
     {
         toggleMode(); //handles toggling control method
         setAxis();
         checkLevelLoaded(); 
-        Debug.Log("currentLevelController: " + currentLevelController);
+        Debug.Log("active scene: " + SceneManager.GetActiveScene().name); 
+        if (SceneManager.GetActiveScene().name == "LevelSelect") {
+            unlockLevels();
+        }
     }
+    
+   
     
     /* Sets the horizontal axis of the EventSystem based on the current mode */ 
     static private void setAxis() {
@@ -91,7 +160,6 @@ public class  GameController : MonoBehaviour
     static public void checkLevelLoaded() {
         if (levelBeingLoaded != null) {
             if (SceneManager.GetSceneByName(levelBeingLoaded).isLoaded) {
-                Debug.Log("Instantiating level controller") ;
                 LevelController lvl = new LevelController();
                 GameController.currentLevelController = lvl; 
                 levelBeingLoaded = null; 
@@ -110,5 +178,10 @@ public class  GameController : MonoBehaviour
         return false; 
     }
 
-  
+    private void OnDestroy()
+    {
+        Debug.Log("Destroying GC with ID" + this.GetInstanceID());
+    }
+
+
 }

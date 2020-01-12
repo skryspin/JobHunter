@@ -293,9 +293,11 @@
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
 "Assets/CheckForCompletion.cs"
+"Assets/Complete.cs"
 "Assets/Controller Tester/Scripts/DetectUnknownControllerMappings.cs"
 "Assets/DialogueAnimation.cs"
 "Assets/JoystickNavigation.cs"
+"Assets/LevelButton.cs"
 "Assets/LoadScene.cs"
 "Assets/LoadSceneOnSubmit.cs"
 "Assets/PausePlayerControl.cs"
@@ -321,6 +323,7 @@
 "Assets/Scripts/HealDrop.cs"
 "Assets/Scripts/Hitbox.cs"
 "Assets/Scripts/Hover.cs"
+"Assets/Scripts/Level.cs"
 "Assets/Scripts/LevelController.cs"
 "Assets/Scripts/LoadLevelOnSubmit.cs"
 "Assets/Scripts/LoadSceneOnButtonDown.cs"
@@ -351,3 +354,4 @@
 "Assets/Scripts/VisionCollider.cs"
 "Assets/SetCheckpoint.cs"
 "Assets/submit.cs"
+"Assets/UnlockLevel.cs"
