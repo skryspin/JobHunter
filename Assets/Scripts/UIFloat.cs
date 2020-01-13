@@ -10,22 +10,24 @@ public class UIFloat : MonoBehaviour
     
     void Start()
     {
+        this.gameObject.GetComponent<RectTransform>().anchorMin = new Vector2(0f, 0f);
+        this.gameObject.GetComponent<RectTransform>().anchorMax = new Vector2(0f, 0f);
+
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (anchor != null) {
             Vector3 pos = Camera.main.WorldToScreenPoint(anchor.transform.position);
-            this.gameObject.GetComponent<RectTransform>().position = pos + offset; 
-            Debug.Log("The resulting position is literally " + this.gameObject.GetComponent<RectTransform>().position + " for " + this.gameObject.name); 
-        }
-        
-        
-        if (this.gameObject.name == "BlackOutlinePlayer" || this.gameObject.name == "WhiteBGPlayer") {
-            Debug.Log("Anchored to " + anchor.name + "; coordinates " + this.gameObject.GetComponent<RectTransform>().position.ToString() + "; pos " + anchor.transform.position + "; ");
-        }
+            Debug.Log("pos: " + pos); 
+            this.gameObject.GetComponent<RectTransform>().anchoredPosition3D = pos + offset; 
+            //this.gameObject.SetActive(true); 
+            //Debug.Log("The resulting position is literally " + this.gameObject.GetComponent<RectTransform>().position + " for " + this.gameObject.name);
+            //Debug.Log("The resulting anchoredPosition is " + this.gameObject.GetComponent<RectTransform>().anchoredPosition + " for " + this.gameObject.name); 
+            //Debug.Log("The resulting anchoredPosition3D is " + this.gameObject.GetComponent<RectTransform>().anchoredPosition3D + " for " + this.gameObject.name); 
 
+ 
     }
+
 }

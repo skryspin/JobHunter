@@ -8,8 +8,13 @@ public class DialogueTrigger : MonoBehaviour
 
     public GameObject dialogueAnimation; 
     private DialogueAnimation dialogueAnimationToTrigger;
+    private bool triggered = false;
+    
+    public bool triggerOnlyOnce; 
     public string[] dialogue; 
     public bool proximityPlayOnly = false; //use for one-line text that should only play while player is in range
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,26 +32,30 @@ public class DialogueTrigger : MonoBehaviour
     }
     
     public void OnTriggerEnter(Collider other) {
-    if (this.enabled) {
-            if (other.gameObject.GetComponent<Player>() != null) { //only trigger if its the player!
-                if (!proximityPlayOnly) {
-                    dialogueAnimationToTrigger.StartDialogue(dialogue); 
-                    Debug.Log("Triggering dialogue sequence..."); 
-                }
-                else {
-                    dialogueAnimationToTrigger.Say(dialogue[0]);
+    if ((triggerOnlyOnce && !triggered) || (!triggerOnlyOnce)) {
+        if (this.enabled) {
+                if (other.gameObject.GetComponent<Player>() != null && playerEnabled()) { //only trigger if its the player!
+                    if (!proximityPlayOnly) {
+                        dialogueAnimationToTrigger.StartDialogue(dialogue); 
+                        Debug.Log("Triggering dialogue sequence..."); 
+                        triggered = true;                     
+                    }
+                    else {
+                        dialogueAnimationToTrigger.Say(dialogue[0]);
+                    }
                 }
             }
         }
     }
     
     public void OnTriggerStay(Collider other) {
-        if (this.enabled) {
-            if (proximityPlayOnly) {
-                if (other.gameObject.GetComponent<Player>() != null) { //only trigger if its the player!
+        if ((triggerOnlyOnce && !triggered) || (!triggerOnlyOnce)) {
+            if (this.enabled) {
+                if (other.gameObject.GetComponent<Player>() != null && playerEnabled()) { //only trigger if its the player!
                     if (!proximityPlayOnly) {
                         dialogueAnimationToTrigger.StartDialogue(dialogue); 
                         Debug.Log("Triggering dialogue sequence..."); 
+                        triggered = true; 
                     }
                     else {
                         dialogueAnimationToTrigger.Say(dialogue[0]);
@@ -57,10 +66,23 @@ public class DialogueTrigger : MonoBehaviour
     }
     
     public void OnTriggerExit(Collider other) {
-        if (this.enabled) {
-            if (proximityPlayOnly) {
-                dialogueAnimationToTrigger.Mute();
+        if ((triggerOnlyOnce && !triggered) || (!triggerOnlyOnce)) {
+            if (this.enabled) {
+                if (proximityPlayOnly) {
+                    if (other.gameObject.GetComponent<Player>() != null && playerEnabled()) { //only trigger if its the player!
+                        dialogueAnimationToTrigger.Mute();
+                    }
+                }
             }
+        }
+    }
+    
+    private bool playerEnabled() {
+        if (GameObject.FindWithTag("Player").gameObject.GetComponent<Player>().enabled) {
+            return true;
+        }
+        else {
+            return false; 
         }
     }
     
