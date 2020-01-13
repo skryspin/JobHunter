@@ -40,14 +40,14 @@ public class  GameController : MonoBehaviour
     /* Plays the unlock animation for new levels, but sets old levels to already be unlocked */ 
     static public void unlockLevels() {
         foreach (string x in newLevels) {
-            GameObject.Find(x).GetComponent<Level>().unlock();
+            GameObject.Find(x).GetComponent<Level>().unlock();  //plays unlock for new levels
         }
         foreach (string x in oldLevels) {
-            GameObject.Find(x).GetComponent<Level>().alreadyUnlocked();
+            GameObject.Find(x).GetComponent<Level>().alreadyUnlocked(); //skips unlock animation and just displays level
         }
         foreach (string x in newLevels) {
             if (!oldLevels.Contains(x)) {
-                oldLevels.Add(x);
+                oldLevels.Add(x);           //adds newlevel to oldlevel
             }
         }
         newLevels.Clear();  //all new levels have been added, hurray

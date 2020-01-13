@@ -8,6 +8,7 @@ public class UnlockLevel : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Debug.Log("Statemachinebehaviour being called by " + animator.gameObject.name);
         animator.gameObject.GetComponent<Image>().enabled = true;
         animator.gameObject.GetComponent<Button>().enabled = true;
         animator.gameObject.GetComponentInChildren<Text>().enabled = true; 
