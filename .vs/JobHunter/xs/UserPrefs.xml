@@ -51,7 +51,7 @@
       <File FileName="Assets/Scripts/LevelController.cs" Line="24" Column="1" />
       <File FileName="Assets/Complete.cs" Line="16" Column="25" />
       <File FileName="Assets/Scripts/DontDestroyOnLoad.cs" Line="5" Column="14" />
-      <File FileName="Assets/CheckForCompletionOnTrigger.cs" Line="19" Column="10" />
+      <File FileName="Assets/CheckForCompletionOnTrigger.cs" Line="21" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
