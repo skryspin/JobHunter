@@ -19,6 +19,7 @@ public class UIFloat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (! (anchor == null)) {
             Vector3 pos = Camera.main.WorldToScreenPoint(anchor.transform.position);
             Debug.Log("pos: " + pos); 
             this.gameObject.GetComponent<RectTransform>().anchoredPosition3D = pos + offset; 
@@ -26,7 +27,7 @@ public class UIFloat : MonoBehaviour
             //Debug.Log("The resulting position is literally " + this.gameObject.GetComponent<RectTransform>().position + " for " + this.gameObject.name);
             //Debug.Log("The resulting anchoredPosition is " + this.gameObject.GetComponent<RectTransform>().anchoredPosition + " for " + this.gameObject.name); 
             //Debug.Log("The resulting anchoredPosition3D is " + this.gameObject.GetComponent<RectTransform>().anchoredPosition3D + " for " + this.gameObject.name); 
-
+        }
  
     }
 

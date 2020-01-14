@@ -903,6 +903,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1885816328519625589, guid: 1e48f7c588ef7428d9ec11831fbe357d,
+        type: 3}
+      propertyPath: sceneName
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e48f7c588ef7428d9ec11831fbe357d, type: 3}
 --- !u!1 &1885816328836816009 stripped
@@ -1050,16 +1055,16 @@ PrefabInstance:
       propertyPath: sceneName
       value: Level1
       objectReference: {fileID: 0}
-    - target: {fileID: 6661645087206546471, guid: 3e8eab8d4d27c4262b69f7e1e364ee1b,
-        type: 3}
-      propertyPath: objectToEnable
-      value: 
-      objectReference: {fileID: 838369405}
     - target: {fileID: 6661645087425618259, guid: 3e8eab8d4d27c4262b69f7e1e364ee1b,
         type: 3}
       propertyPath: m_TagString
       value: DoNotDisableOnPause
       objectReference: {fileID: 0}
+    - target: {fileID: 6661645087206546471, guid: 3e8eab8d4d27c4262b69f7e1e364ee1b,
+        type: 3}
+      propertyPath: objectToEnable
+      value: 
+      objectReference: {fileID: 838369405}
     m_RemovedComponents:
     - {fileID: 1785319323820084456, guid: 3e8eab8d4d27c4262b69f7e1e364ee1b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e8eab8d4d27c4262b69f7e1e364ee1b, type: 3}

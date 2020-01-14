@@ -15699,6 +15699,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: spawnpoint.x
+      value: -31.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: spawnpoint.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: spawnpoint.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824f227be99c24f2bb42056e79fd04ed, type: 3}
 --- !u!1 &1204201216

@@ -14,6 +14,7 @@ public class TriggerNavigation : MonoBehaviour
             Debug.LogError("There is no trigger attached to this gameobject."); 
         }
         if (toEnable == null) {
+            Debug.LogError("my name is " + this.gameObject.name); 
             Debug.LogError("toEnable is null"); 
         }
         if (!trigger.isTrigger) {

@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 1519636959306269470}
   m_Layer: 5
   m_Name: EnemyHealth
-  m_TagString: DoNotDisableOnPause
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06690ff1247f04e42b8dfa0cec47324b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 0}
+  anchor: {fileID: 0}
   offset: {x: 0, y: -7, z: 0}
 --- !u!114 &1519636959306269470
 MonoBehaviour:

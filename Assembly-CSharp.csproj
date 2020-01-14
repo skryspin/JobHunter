@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CheckForCompletion.cs" />
+    <Compile Include="Assets\CheckForCompletionOnTrigger.cs" />
     <Compile Include="Assets\Complete.cs" />
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
     <Compile Include="Assets\DialogueAnimation.cs" />

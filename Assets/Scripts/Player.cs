@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
     
     //Death
     private bool dieOnNextUpdate = false; 
-    private Vector3 spawnpoint = new Vector3(-28.84f, 0.86f, 0); 
+    public Vector3 spawnpoint;
     public bool isDead = false; //becomes true when GameOver is called, becomes false when respawn is over
     
     //Picking and placing items

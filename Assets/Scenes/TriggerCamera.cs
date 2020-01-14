@@ -22,7 +22,9 @@ public class TriggerCamera : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Player>() != null) { //only change camera position if its the player!
-            MainCamera.GetComponent<MainCamera>().SetCameraPosition(CameraPosition);
+            if (MainCamera.GetComponent<MainCamera>() != null && MainCamera.GetComponent<MainCamera>().enabled) {
+                MainCamera.GetComponent<MainCamera>().SetCameraPosition(CameraPosition);
+            }
         }
         
     }
