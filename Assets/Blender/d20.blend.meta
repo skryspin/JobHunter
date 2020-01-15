@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: -6072158570504185522
     second: Icosphere.001|Icosphere.001Action.001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 3a9cd3733e1a647a0b423b309e077f9a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

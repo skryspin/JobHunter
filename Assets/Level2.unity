@@ -1468,8 +1468,8 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 5
   m_TerrainData: {fileID: 15600000, guid: de1c5e0d425664cc39aaea3530682ee8, type: 2}
-  m_TreeDistance: 2962
-  m_TreeBillboardDistance: 5
+  m_TreeDistance: 500
+  m_TreeBillboardDistance: 20
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 10
   m_DetailObjectDistance: 10
@@ -2885,11 +2885,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
-        type: 3}
-      propertyPath: enemyScript
-      value: 
-      objectReference: {fileID: 773090699}
     - target: {fileID: 1519636959306269468, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2995,6 +2990,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
+        type: 3}
+      propertyPath: enemyScript
+      value: 
+      objectReference: {fileID: 773090699}
     - target: {fileID: 6732696285355333433, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_AnchorMax.x
