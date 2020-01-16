@@ -9,7 +9,7 @@ public class SetCheckpoint : StateMachineBehaviour
     {
         Vector3 spawn = animator.gameObject.transform.position;
         spawn = new Vector3(spawn.x, spawn.y + 5, spawn.z); 
-        GameObject.FindWithTag("Player").GetComponent<Player>().SetSpawn(spawn); 
+        GameObject.FindWithTag("Player").GetComponent<Player>().SetSpawn(spawn, animator.gameObject.GetComponent<Checkpoint>().cameraPosition); 
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

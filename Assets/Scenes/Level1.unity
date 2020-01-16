@@ -17372,6 +17372,11 @@ PrefabInstance:
       propertyPath: spawnpoint.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3444328029392469935, guid: 824f227be99c24f2bb42056e79fd04ed,
+        type: 3}
+      propertyPath: spawnCamera
+      value: 
+      objectReference: {fileID: 1897143884}
     - target: {fileID: 2496096047728184661, guid: 824f227be99c24f2bb42056e79fd04ed,
         type: 3}
       propertyPath: m_Enabled
@@ -17875,11 +17880,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
-        type: 3}
-      propertyPath: enemyScript
-      value: 
-      objectReference: {fileID: 448979667}
     - target: {fileID: 1519636959306269468, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17985,6 +17985,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
+        type: 3}
+      propertyPath: enemyScript
+      value: 
+      objectReference: {fileID: 448979667}
     - target: {fileID: 6732696285355333433, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -20528,6 +20533,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 137257210}
     m_Modifications:
+    - target: {fileID: 4099678622665466531, guid: aa4fcf7ddee084fde87968799076ff1e,
+        type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 2082408840}
     - target: {fileID: 6722190193066320948, guid: aa4fcf7ddee084fde87968799076ff1e,
         type: 3}
       propertyPath: m_Name
@@ -20588,6 +20598,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8136088435803375304, guid: aa4fcf7ddee084fde87968799076ff1e,
+        type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 2082408840}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa4fcf7ddee084fde87968799076ff1e, type: 3}
 --- !u!1 &1422132929
@@ -22886,6 +22901,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 137257210}
     m_Modifications:
+    - target: {fileID: 4099678622665466531, guid: aa4fcf7ddee084fde87968799076ff1e,
+        type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 132311145}
     - target: {fileID: 6722190193066320948, guid: aa4fcf7ddee084fde87968799076ff1e,
         type: 3}
       propertyPath: m_Name
@@ -22946,6 +22966,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8136088435803375304, guid: aa4fcf7ddee084fde87968799076ff1e,
+        type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 132311145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa4fcf7ddee084fde87968799076ff1e, type: 3}
 --- !u!4 &1601779355 stripped
@@ -31035,11 +31060,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
-        type: 3}
-      propertyPath: enemyScript
-      value: 
-      objectReference: {fileID: 773090699}
     - target: {fileID: 1519636959306269468, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31145,6 +31165,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1519636959306269470, guid: 39b847d2186854daba88569e20660d5a,
+        type: 3}
+      propertyPath: enemyScript
+      value: 
+      objectReference: {fileID: 773090699}
     - target: {fileID: 6732696285355333433, guid: 39b847d2186854daba88569e20660d5a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -31604,6 +31629,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8136088435803375304, guid: aa4fcf7ddee084fde87968799076ff1e,
+        type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 1346958764}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa4fcf7ddee084fde87968799076ff1e, type: 3}
 --- !u!1001 &2565403123563289317

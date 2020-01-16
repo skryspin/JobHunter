@@ -55,7 +55,6 @@ public class Player : MonoBehaviour
     
     //Death
     private bool dieOnNextUpdate = false; 
-    public Vector3 spawnpoint;
     public bool isDead = false; //becomes true when GameOver is called, becomes false when respawn is over
     
     //Picking and placing items
@@ -65,6 +64,9 @@ public class Player : MonoBehaviour
     
     //Respawn
     public List<Animator> resetOnRespawn; 
+    public Vector3 spawnpoint;
+    public Transform spawnCamera; 
+
     
     public GameController gc; 
 
@@ -521,11 +523,13 @@ public class Player : MonoBehaviour
     private void GameOver() {
         SceneManager.LoadSceneAsync("DeathScreen", LoadSceneMode.Additive);
         isDead = true; 
+        this.currentHealth = maxHealth; 
+        this.gameObject.transform.position = spawnpoint; //set position
+
+
         //Debug.Log("You died!");
         lastMovement = new Vector3(0, 0, 0);  
         PauseGameOnButtonDown.Pause(); 
-        this.currentHealth = maxHealth; 
-        this.gameObject.transform.position = spawnpoint; //set position
         framesRemainingForRed = 0;
         framesRemainingForStoredJump = 0;
         framesRemainingForStoredGround = 0;
@@ -533,7 +537,7 @@ public class Player : MonoBehaviour
     
     //Respawns the player at the last spawn point
     public void Respawn() {
-    
+        my_camera.GetComponent<MainCamera>().SetCameraPosition(spawnCamera);
         foreach (Animator x in resetOnRespawn) {
             x.SetTrigger("Reset");              //reset these animations
             Debug.Log("Reseting animator for " + x.gameObject.name); 
@@ -543,8 +547,9 @@ public class Player : MonoBehaviour
         isDead = false; 
     }
   
-    public void SetSpawn(Vector3 position) {
+    public void SetSpawn(Vector3 position, Transform spawnCamera) {
         this.spawnpoint = position; 
-    
+        this.spawnCamera = spawnCamera; 
+        Debug.Log("spawnCamera: " + spawnCamera.position); 
     }
 }
