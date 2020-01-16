@@ -29990,6 +29990,36 @@ PrefabInstance:
       propertyPath: triggerOnlyOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3966624413091256079, guid: f1d74b9d4d0e247edbfa0992be221223,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.6766183
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966624413091256079, guid: f1d74b9d4d0e247edbfa0992be221223,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.1442262
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966624413091256079, guid: f1d74b9d4d0e247edbfa0992be221223,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.107599
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966624413091256079, guid: f1d74b9d4d0e247edbfa0992be221223,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.17654537
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966624413091256079, guid: f1d74b9d4d0e247edbfa0992be221223,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.066306114
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966624413091256079, guid: f1d74b9d4d0e247edbfa0992be221223,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 2.9927297
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d74b9d4d0e247edbfa0992be221223, type: 3}
 --- !u!4 &2060785780 stripped
