@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class PauseGameOnButtonDown : MonoBehaviour
 {
     public string btnName; 
+    public static bool paused = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,15 @@ public class PauseGameOnButtonDown : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown(btnName)) {
-            Pause(); 
+            if (!paused) {
+                Debug.Log("pausing");
+                Pause(); 
+            }
+            else {
+                                Debug.Log("unpauseing");
+
+                UnPause();
+            }
         }
     }
     
@@ -48,6 +57,7 @@ public class PauseGameOnButtonDown : MonoBehaviour
                 }
             } 
         }
+        paused = false; 
     }
     
 
@@ -79,6 +89,7 @@ public class PauseGameOnButtonDown : MonoBehaviour
                 }
             } 
         }
+        paused = true; 
     }
     
 }
