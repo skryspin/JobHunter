@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class Level : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class Level : MonoBehaviour
     }
     
     void Update() {
+        if (EventSystem.current.currentSelectedGameObject == this.gameObject) {
+            if (Input.GetButton("Submit")) {
+                this.gameObject.GetComponent<Animator>().SetTrigger("Pressed"); 
+                Debug.Log("submitting");
+                GameController.LoadLevel(myname); 
+            }
+        }
 
     }
     

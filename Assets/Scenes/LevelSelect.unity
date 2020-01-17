@@ -670,7 +670,8 @@ PrefabInstance:
       propertyPath: myname
       value: Boss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1885816328519625589, guid: 1e48f7c588ef7428d9ec11831fbe357d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e48f7c588ef7428d9ec11831fbe357d, type: 3}
 --- !u!224 &1813760702 stripped
 RectTransform:
@@ -908,7 +909,8 @@ PrefabInstance:
       propertyPath: sceneName
       value: Level2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1885816328519625589, guid: 1e48f7c588ef7428d9ec11831fbe357d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e48f7c588ef7428d9ec11831fbe357d, type: 3}
 --- !u!1 &1885816328836816009 stripped
 GameObject:
