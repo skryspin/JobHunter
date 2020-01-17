@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\NavigableEnemy.cs" />
     <Compile Include="Assets\Scripts\OpenableBook.cs" />
     <Compile Include="Assets\Scripts\PauseGameOnButtonDown.cs" />
+    <Compile Include="Assets\Scripts\PauseManager.cs" />
     <Compile Include="Assets\Scripts\Pickup.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />

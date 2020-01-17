@@ -8,24 +8,28 @@ public class PauseGameOnButtonDown : MonoBehaviour
 {
     public string btnName; 
     public static bool paused = false; 
+    Player player; 
 
     // Start is called before the first frame update
     void Start()
     {
+         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+         paused = false; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(btnName)) {
-            if (!paused) {
-                Debug.Log("pausing");
-                Pause(); 
-            }
-            else {
-                                Debug.Log("unpauseing");
-
-                UnPause();
+        if (!player.isDead) {
+            if (Input.GetButtonDown(btnName)) {
+                if (!paused) {
+                    Debug.Log("pausing");
+                    Pause(); 
+                }
+                else {
+                    Debug.Log("unpauseing");
+                    UnPause();
+                }
             }
         }
     }

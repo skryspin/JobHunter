@@ -94,6 +94,24 @@ public class  GameController : MonoBehaviour
     // Update is called once per frame
      void Update()
     {
+        if (Input.GetButtonDown("JumpJoy")) {
+            Debug.Log("Pressing JumpJoy"); 
+        }
+        if (Input.GetButton("JumpJoy")) {
+            Debug.Log("Holding JumpJoy"); 
+        }
+        if (Input.GetButtonUp("JumpJoy")) {
+            Debug.Log("Releasing JumpJoy"); 
+        }
+             if (Input.GetButtonDown("Jump")) {
+            Debug.Log("Pressing Jump"); 
+        }
+        if (Input.GetButton("Jump")) {
+            Debug.Log("Holding Jump"); 
+        }
+        if (Input.GetButtonUp("Jump")) {
+            Debug.Log("Releasing Jump"); 
+        }
         toggleMode(); //handles toggling control method
         setAxis();
         checkLevelLoaded(); 

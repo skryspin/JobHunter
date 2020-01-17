@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     public DialogueAnimation dialogueAnimation; 
 
     //Movement (public)
-    public float speed;
+    private const float SPEED = 9.5f; //the speed constant
     public float jumpSpeed;
     public float gravity;
     public float pushPower;
@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if ((currentHealth == 0) || (dieOnNextUpdate)) {
             GameOver();
             dieOnNextUpdate = false ;
@@ -355,17 +356,21 @@ public class Player : MonoBehaviour
         float verticalInput = getVerticalInput();
         float horizontalInput = getHorizontalInput();
 
+
         Vector3 up_direction = Vector3.Normalize(new Vector3(my_camera.transform.forward.x, 0, my_camera.transform.forward.z));
         //Debug.DrawRay(this.transform.position, Vector3.Normalize(up_direction)*3, Color.blue); 
-        //Debug.Log("Up magnitude" + up_direction.magnitude); 
+
         Vector3 right_direction = Vector3.Normalize(new Vector3(my_camera.transform.right.x, 0, my_camera.transform.right.z));
+
         //Debug.DrawRay(this.transform.position, Vector3.Normalize(right_direction)*3, Color.red); 
         //Debug.Log("Right magnitude" + right_direction.magnitude); 
         
         
 
         Vector3 movement = up_direction * verticalInput + right_direction * horizontalInput;
-        //lastMovementDirection = movement; 
+        movement = Vector3.Normalize(movement); 
+
+
 
 
         
@@ -375,7 +380,7 @@ public class Player : MonoBehaviour
 
         }
         
-        movement *= speed;
+        movement *= SPEED;
 
         string jumpName = getJumpName(); 
         

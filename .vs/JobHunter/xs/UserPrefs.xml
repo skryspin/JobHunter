@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Checkpoint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoadSceneOnSubmit.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="34" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="74" Column="6" />
       <File FileName="Assets/Scripts/ToggleObjectPositions.cs" Line="35" Column="13" />
       <File FileName="Assets/Scenes/TriggerCamera.cs" Line="25" Column="114" />
-      <File FileName="Assets/Scripts/Player.cs" Line="547" Column="37" />
+      <File FileName="Assets/Scripts/Player.cs" Line="97" Column="1" />
       <File FileName="Assets/Scripts/SetCameraPosition.cs" Line="23" Column="80" />
       <File FileName="Assets/Scripts/Resume.cs" Line="45" Column="6" />
       <File FileName="Assets/Scripts/ResumeHitbox.cs" Line="25" Column="10" />
@@ -23,15 +23,15 @@
       <File FileName="Assets/Scripts/PointAtCamera.cs" Line="8" Column="24" />
       <File FileName="Assets/Scripts/UIFloat.cs" Line="30" Column="10" />
       <File FileName="Assets/Scripts/LoadLevelOnSubmit.cs" Line="7" Column="14" />
-      <File FileName="Assets/Scripts/LoadSceneOnButtonDown.cs" Line="24" Column="32" />
-      <File FileName="Assets/Scripts/PauseGameOnButtonDown.cs" Line="41" Column="1" />
+      <File FileName="Assets/Scripts/PauseManager.cs" Line="10" Column="27" />
+      <File FileName="Assets/Scripts/PauseGameOnButtonDown.cs" Line="17" Column="26" />
       <File FileName="Assets/Scripts/DialogueTrigger.cs" Line="82" Column="1" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="155" Column="1" />
-      <File FileName="Assets/Scripts/MainCamera.cs" Line="36" Column="1" />
-      <File FileName="Assets/PausePlayerControl.cs" Line="18" Column="31" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="97" Column="9" />
+      <File FileName="Assets/Scripts/MainCamera.cs" Line="4" Column="14" />
+      <File FileName="Assets/PausePlayerControl.cs" Line="5" Column="14" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="9" Column="23" />
       <File FileName="Assets/Scripts/HealDrop.cs" Line="19" Column="9" />
-      <File FileName="Assets/SetCheckpoint.cs" Line="11" Column="49" />
+      <File FileName="Assets/SetCheckpoint.cs" Line="12" Column="143" />
       <File FileName="Assets/RespawnOnSubmit.cs" Line="18" Column="8" />
       <File FileName="Assets/Scripts/EnemyHealth.cs" Line="35" Column="1" />
       <File FileName="Assets/DialogueAnimation.cs" Line="5" Column="1" />
@@ -53,7 +53,9 @@
       <File FileName="Assets/Scripts/DontDestroyOnLoad.cs" Line="5" Column="14" />
       <File FileName="Assets/CheckForCompletionOnTrigger.cs" Line="21" Column="63" />
       <File FileName="Assets/Scripts/AnimationTriggerEnter.cs" Line="46" Column="6" />
-      <File FileName="Assets/Checkpoint.cs" Line="8" Column="5" />
+      <File FileName="Assets/Checkpoint.cs" Line="8" Column="38" />
+      <File FileName="Assets/Scripts/LoadSceneOnButtonDown.cs" Line="1" Column="1" />
+      <File FileName="Assets/JoystickNavigation.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
