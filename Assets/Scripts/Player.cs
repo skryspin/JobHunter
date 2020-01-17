@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {  
+        GameObject.Find("Main Camera").GetComponent<FreeCamera>().enabled = true;
         characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
         if (resumePrefab == null) {

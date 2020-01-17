@@ -112,6 +112,12 @@ public class  GameController : MonoBehaviour
         if (Input.GetButtonUp("Jump")) {
             Debug.Log("Releasing Jump"); 
         }
+        if (Input.GetKeyDown(KeyCode.C)) {
+            GameObject.Find("Main Camera").GetComponent<FreeCamera>().enabled = false;
+        }
+        else if (Input.GetKeyUp(KeyCode.C)) {
+            GameObject.Find("Main Camera").GetComponent<FreeCamera>().enabled = true;
+        }
         toggleMode(); //handles toggling control method
         setAxis();
         checkLevelLoaded(); 
