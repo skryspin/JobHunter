@@ -20,12 +20,15 @@ public class FreeCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 playerpos = player.transform.position;
-        this.transform.position = playerpos + offset;
+        Vector3 playerpos = player.transform.position;  //get player position
+        this.transform.position = playerpos + offset;   //apply the offset
 
         this.transform.RotateAround(player.transform.position, player.transform.up, 200f * Input.GetAxis("RHorizontal") * Time.deltaTime); 
+        this.transform.RotateAround(player.transform.position, player.transform.right, 100f * Input.GetAxis("RVertical") * Time.deltaTime); 
 
         Debug.Log("RHorizontal: " + Input.GetAxis("RHorizontal"));
+                Debug.Log("RVertical: " + Input.GetAxis("RVertical"));
+
         this.transform.LookAt(player.transform); 
         this.transform.rotation = Quaternion.Euler(this.transform.rotation.eulerAngles + rotOffset); 
 

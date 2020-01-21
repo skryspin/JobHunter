@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.44813693, g: 0.49408442, b: 0.5536691, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -999,13 +999,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546120292}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.57160723, y: 0.4162513, z: 0.4162514, w: 0.5716073}
   m_LocalPosition: {x: -21.2, y: 28.3, z: 1.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 162.125, y: -90, z: -90}
 --- !u!1 &620159784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,10 +1469,10 @@ Terrain:
   serializedVersion: 5
   m_TerrainData: {fileID: 15600000, guid: de1c5e0d425664cc39aaea3530682ee8, type: 2}
   m_TreeDistance: 500
-  m_TreeBillboardDistance: 20
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 10
-  m_DetailObjectDistance: 10
+  m_TreeBillboardDistance: 100
+  m_TreeCrossFadeLength: 20
+  m_TreeMaximumFullLODCount: 300
+  m_DetailObjectDistance: 100
   m_DetailObjectDensity: 0.5
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
@@ -2357,7 +2357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: -6, y: 3, z: 0}
-  rotOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1678559385
 GameObject:
   m_ObjectHideFlags: 0
