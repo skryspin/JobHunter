@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\CheckForCompletion.cs" />
     <Compile Include="Assets\CheckForCompletionOnTrigger.cs" />
     <Compile Include="Assets\Checkpoint.cs" />
@@ -70,9 +71,11 @@
     <Compile Include="Assets\DialogueAnimation.cs" />
     <Compile Include="Assets\FreeCamera.cs" />
     <Compile Include="Assets\JoystickNavigation.cs" />
+    <Compile Include="Assets\Laser.cs" />
     <Compile Include="Assets\LevelButton.cs" />
     <Compile Include="Assets\LoadScene.cs" />
     <Compile Include="Assets\LoadSceneOnSubmit.cs" />
+    <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\PausePlayerControl.cs" />
     <Compile Include="Assets\RespawnOnSubmit.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
@@ -133,6 +136,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />

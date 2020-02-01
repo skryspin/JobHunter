@@ -543,7 +543,7 @@ public class Player : MonoBehaviour
     
     //Respawns the player at the last spawn point
     public void Respawn() {
-        my_camera.GetComponent<MainCamera>().SetCameraPosition(spawnCamera);
+        //my_camera.GetComponent<MainCamera>().SetCameraPosition(spawnCamera);
         foreach (Animator x in resetOnRespawn) {
             x.SetTrigger("Reset");              //reset these animations
             Debug.Log("Reseting animator for " + x.gameObject.name); 
