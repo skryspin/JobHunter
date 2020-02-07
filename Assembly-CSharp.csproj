@@ -76,8 +76,12 @@
     <Compile Include="Assets\LoadScene.cs" />
     <Compile Include="Assets\LoadSceneOnSubmit.cs" />
     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+    <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
+    <Compile Include="Assets\OutlineEffect\Outline.cs" />
+    <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
     <Compile Include="Assets\PausePlayerControl.cs" />
     <Compile Include="Assets\RespawnOnSubmit.cs" />
+    <Compile Include="Assets\RotateAlligorithm.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
     <Compile Include="Assets\Scenes\TriggerCamera.cs" />
     <Compile Include="Assets\Scripts\AddTagToChildren.cs" />
@@ -134,6 +138,8 @@
     <Compile Include="Assets\UnlockLevel.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineShader.shader" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
