@@ -60,7 +60,7 @@
       <File FileName="Assets/Laser.cs" Line="28" Column="74" />
       <File FileName="Assets/Bullet.cs" Line="33" Column="38" />
       <File FileName="Assets/RotateAlligorithm.cs" Line="20" Column="90" />
-      <File FileName="Assets/OutlineEffect/OutlineEffect.cs" Line="332" Column="1" />
+      <File FileName="Assets/OutlineEffect/OutlineEffect.cs" Line="186" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
