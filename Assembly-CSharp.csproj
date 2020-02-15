@@ -62,13 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Border.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\CheckForCompletion.cs" />
     <Compile Include="Assets\CheckForCompletionOnTrigger.cs" />
     <Compile Include="Assets\Checkpoint.cs" />
     <Compile Include="Assets\Complete.cs" />
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
+    <Compile Include="Assets\delayAnimatorStart.cs" />
     <Compile Include="Assets\DialogueAnimation.cs" />
+    <Compile Include="Assets\DragPlayer.cs" />
     <Compile Include="Assets\FreeCamera.cs" />
     <Compile Include="Assets\JoystickNavigation.cs" />
     <Compile Include="Assets\Laser.cs" />
@@ -76,10 +79,13 @@
     <Compile Include="Assets\LoadScene.cs" />
     <Compile Include="Assets\LoadSceneOnSubmit.cs" />
     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+    <Compile Include="Assets\MunchDetector.cs" />
     <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
     <Compile Include="Assets\OutlineEffect\Outline.cs" />
     <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
     <Compile Include="Assets\PausePlayerControl.cs" />
+    <Compile Include="Assets\PointAt.cs" />
+    <Compile Include="Assets\Prefabs\SlowAlligorithm.cs" />
     <Compile Include="Assets\RespawnOnSubmit.cs" />
     <Compile Include="Assets\RotateAlligorithm.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />

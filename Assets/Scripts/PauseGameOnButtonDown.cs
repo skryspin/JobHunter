@@ -72,8 +72,10 @@ public class PauseGameOnButtonDown : MonoBehaviour
             foreach (MonoBehaviour script in x.GetComponents<MonoBehaviour>()) {
             
                 /* Toggle scripts on and off */
-                if (script.enabled && !script.gameObject.CompareTag("DoNotDisableOnPause")) {
+                if (script.enabled && !script.gameObject.CompareTag("DoNotDisableOnPause") && script.gameObject.tag != "MainCamera") {
                     script.enabled = false; 
+                    if (script.gameObject.name == "Main Camera")
+                        Debug.LogError("BAD!");
                 }
             }
          
@@ -93,6 +95,7 @@ public class PauseGameOnButtonDown : MonoBehaviour
                 }
             } 
         }
+        Camera.main.GetComponent<FreeCamera>().enabled = true; 
         paused = true; 
     }
     

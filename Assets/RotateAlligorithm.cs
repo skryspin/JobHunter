@@ -7,6 +7,7 @@ public class RotateAlligorithm : MonoBehaviour
 
     public float normalSpeed; 
     public float slowSpeed; 
+    public bool slowAtTopOfRotation = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class RotateAlligorithm : MonoBehaviour
     void Update()
     {
         float speed;
-        if (this.transform.localRotation.z > -0.4 && this.transform.localRotation.z < 0.4) {
+        if (slowAtTopOfRotation && this.transform.localRotation.z > -0.4 && this.transform.localRotation.z < 0.4) {
             speed = slowSpeed;
         }
         else {
