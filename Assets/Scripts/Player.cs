@@ -526,7 +526,7 @@ public class Player : MonoBehaviour
     }
     
     //Loads the death screen
-    private void GameOver() {
+    public void GameOver() {
         SceneManager.LoadSceneAsync("DeathScreen", LoadSceneMode.Additive);
         isDead = true; 
         this.currentHealth = maxHealth; 

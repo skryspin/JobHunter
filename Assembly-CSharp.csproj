@@ -64,6 +64,9 @@
   <ItemGroup>
     <Compile Include="Assets\Border.cs" />
     <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\CapturePlayer.cs" />
+    <Compile Include="Assets\CaptureRange.cs" />
+    <Compile Include="Assets\ChasePlayer.cs" />
     <Compile Include="Assets\CheckForCompletion.cs" />
     <Compile Include="Assets\CheckForCompletionOnTrigger.cs" />
     <Compile Include="Assets\Checkpoint.cs" />
@@ -72,7 +75,9 @@
     <Compile Include="Assets\delayAnimatorStart.cs" />
     <Compile Include="Assets\DialogueAnimation.cs" />
     <Compile Include="Assets\DragPlayer.cs" />
+    <Compile Include="Assets\FollowRange.cs" />
     <Compile Include="Assets\FreeCamera.cs" />
+    <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\JoystickNavigation.cs" />
     <Compile Include="Assets\Laser.cs" />
     <Compile Include="Assets\LevelButton.cs" />
@@ -129,6 +134,7 @@
     <Compile Include="Assets\Scripts\Resume.cs" />
     <Compile Include="Assets\Scripts\ResumeHitbox.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
+    <Compile Include="Assets\Scripts\SecurityGuard.cs" />
     <Compile Include="Assets\Scripts\SendTriggersToParents.cs" />
     <Compile Include="Assets\Scripts\SetCameraPosition.cs" />
     <Compile Include="Assets\Scripts\SetIntegerParameterToValue.cs" />
@@ -141,7 +147,9 @@
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
     <Compile Include="Assets\SetCheckpoint.cs" />
     <Compile Include="Assets\submit.cs" />
+    <Compile Include="Assets\TrackingRange.cs" />
     <Compile Include="Assets\UnlockLevel.cs" />
+    <Compile Include="Assets\VisualChaseRange.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\OutlineEffect\Resources\OutlineShader.shader" />

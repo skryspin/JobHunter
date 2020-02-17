@@ -14,14 +14,13 @@ public class FreeCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Started camera");
         player = GameObject.FindWithTag("Player").GetComponent<Player>(); 
         this.gameObject.GetComponent<Animator>().enabled = false; 
 
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (pointmode) {
             this.transform.LookAt(target.transform);
@@ -41,7 +40,6 @@ public class FreeCamera : MonoBehaviour
     
             offset = this.transform.position - playerpos;
         }
-
 
     }
 }

@@ -7,7 +7,7 @@ public abstract class NavigableEnemy : Enemy
 {
     private GameObject currentDestinationMarker; 
     public GameObject destinationMarkerPrefab; 
-    protected NavMeshAgent navMeshAgent; 
+    public NavMeshAgent navMeshAgent; 
     public GameObject target; 
     protected Vector3 goal; 
     public bool rotating = false; 
