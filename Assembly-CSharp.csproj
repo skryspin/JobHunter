@@ -79,6 +79,7 @@
     <Compile Include="Assets\FreeCamera.cs" />
     <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\JoystickNavigation.cs" />
+    <Compile Include="Assets\KillPlayer.cs" />
     <Compile Include="Assets\Laser.cs" />
     <Compile Include="Assets\LevelButton.cs" />
     <Compile Include="Assets\LoadScene.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
     <Compile Include="Assets\OutlineEffect\Outline.cs" />
     <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
+    <Compile Include="Assets\Patrol.cs" />
     <Compile Include="Assets\PausePlayerControl.cs" />
     <Compile Include="Assets\PointAt.cs" />
     <Compile Include="Assets\Prefabs\SlowAlligorithm.cs" />
