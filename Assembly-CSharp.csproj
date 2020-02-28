@@ -74,6 +74,7 @@
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
     <Compile Include="Assets\delayAnimatorStart.cs" />
     <Compile Include="Assets\DialogueAnimation.cs" />
+    <Compile Include="Assets\DisableOnTrigger.cs" />
     <Compile Include="Assets\DragPlayer.cs" />
     <Compile Include="Assets\FollowRange.cs" />
     <Compile Include="Assets\FreeCamera.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Assets\Scripts\UnpauseOnSubmit.cs" />
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
     <Compile Include="Assets\SetCheckpoint.cs" />
+    <Compile Include="Assets\SetColliderPlanes.cs" />
     <Compile Include="Assets\submit.cs" />
     <Compile Include="Assets\TrackingRange.cs" />
     <Compile Include="Assets\UnlockLevel.cs" />

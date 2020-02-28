@@ -559,4 +559,11 @@ public class Player : MonoBehaviour
         this.spawnCamera = spawnCamera; 
         Debug.Log("spawnCamera: " + spawnCamera.position); 
     }
+
+
+    /* Get damaged from laser particles */
+    private void OnParticleCollision(GameObject other)
+    {
+        TakeDamage(10);
+    }
 }

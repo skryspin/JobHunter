@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/KillPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
       <File FileName="Assets/Scripts/AnimationTriggerEnter.cs" Line="1" Column="1" />
       <File FileName="Assets/delayAnimatorStart.cs" Line="16" Column="72" />
-      <File FileName="Assets/Bullet.cs" Line="14" Column="32" />
+      <File FileName="Assets/Bullet.cs" Line="14" Column="30" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="15" Column="20" />
       <File FileName="Assets/Prefabs/SlowAlligorithm.cs" Line="43" Column="1" />
       <File FileName="Assets/Scripts/HealDrop.cs" Line="1" Column="1" />
@@ -17,7 +17,7 @@
       <File FileName="Assets/Scripts/PlayerHealth.cs" Line="9" Column="23" />
       <File FileName="Assets/Scripts/PauseManager.cs" Line="10" Column="12" />
       <File FileName="Assets/Scripts/PauseGameOnButtonDown.cs" Line="82" Column="13" />
-      <File FileName="Assets/Scripts/Player.cs" Line="542" Column="44" />
+      <File FileName="Assets/Scripts/Player.cs" Line="567" Column="22" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="39" Column="1" />
       <File FileName="Assets/Scripts/SecurityGuard.cs" Line="40" Column="32" />
       <File FileName="Assets/Scripts/NavigableEnemy.cs" Line="51" Column="41" />
@@ -33,6 +33,8 @@
       <File FileName="Assets/GameOver.cs" Line="10" Column="54" />
       <File FileName="Assets/Patrol.cs" Line="10" Column="1" />
       <File FileName="Assets/KillPlayer.cs" Line="21" Column="67" />
+      <File FileName="Assets/SetColliderPlanes.cs" Line="1" Column="1" />
+      <File FileName="Assets/DisableOnTrigger.cs" Line="27" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
