@@ -111,6 +111,7 @@ MonoBehaviour:
   resetOnRespawn: []
   spawnpoint: {x: 0, y: 0, z: 0}
   spawnCamera: {fileID: 0}
+  my_animator: {fileID: 8650572274379705330}
   gc: {fileID: 0}
 --- !u!143 &3444328029392469930
 CharacterController:
@@ -265,6 +266,12 @@ PrefabInstance:
 --- !u!4 &1623268832903325320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0708c3cdf25314d3eac57d66e4295724,
+    type: 3}
+  m_PrefabInstance: {fileID: 6052194314202893714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8650572274379705330 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 0708c3cdf25314d3eac57d66e4295724,
     type: 3}
   m_PrefabInstance: {fileID: 6052194314202893714}
   m_PrefabAsset: {fileID: 0}

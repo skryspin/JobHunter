@@ -66,6 +66,9 @@ public class Player : MonoBehaviour
     public List<Animator> resetOnRespawn; 
     public Vector3 spawnpoint;
     public Transform spawnCamera; 
+    
+    //Animation
+    public Animator my_animator; 
 
     
     public GameController gc; 
@@ -106,7 +109,7 @@ public class Player : MonoBehaviour
             mode = GameController.mode; // get mode from GameController
             doMovement();
           
-            turnToMovement(); 
+            turnToMovement();
             doResumeThrow();
             if (Input.GetButtonDown("Lift / Throw / Place")) {
                 if (nearbyItem != null) {
@@ -124,6 +127,11 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
 
+    }
+    
+    private void doAnimationBlend() {
+        my_animator.SetFloat("HorizontalMovement", new Vector2(lastMovement.x, lastMovement.z).normalized.magnitude); 
+    
     }
     
     /* Decides whether damage has recently taken place, and if so, displays a
@@ -428,6 +436,7 @@ public class Player : MonoBehaviour
 
         characterController.Move(movement * Time.deltaTime);
         lastMovement = movement;
+        doAnimationBlend(); 
        // Debug.DrawRay(transform.position, lastMovement, Color.blue);
 
         
@@ -527,7 +536,6 @@ public class Player : MonoBehaviour
     
     //Loads the death screen
     public void GameOver() {
-    
         SceneManager.LoadSceneAsync("DeathScreen", LoadSceneMode.Additive);
         isDead = true; 
         this.currentHealth = maxHealth; 
