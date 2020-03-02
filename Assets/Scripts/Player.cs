@@ -130,7 +130,8 @@ public class Player : MonoBehaviour
     }
     
     private void doAnimationBlend() {
-        my_animator.SetFloat("HorizontalMovement", new Vector2(lastMovement.x, lastMovement.z).normalized.magnitude); 
+        my_animator.SetFloat("HorizontalMovement", new Vector2(lastMovement.x, lastMovement.z).magnitude / SPEED); 
+        //must divide by speed to get range of about 0 to 1
 
         if (this.characterController.isGrounded) {
             my_animator.SetFloat("VerticalMovement", 0);
