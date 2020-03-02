@@ -17,7 +17,7 @@
       <File FileName="Assets/Scripts/PlayerHealth.cs" Line="9" Column="23" />
       <File FileName="Assets/Scripts/PauseManager.cs" Line="10" Column="12" />
       <File FileName="Assets/Scripts/PauseGameOnButtonDown.cs" Line="82" Column="13" />
-      <File FileName="Assets/Scripts/Player.cs" Line="567" Column="22" />
+      <File FileName="Assets/Scripts/Player.cs" Line="133" Column="110" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="39" Column="1" />
       <File FileName="Assets/Scripts/SecurityGuard.cs" Line="40" Column="32" />
       <File FileName="Assets/Scripts/NavigableEnemy.cs" Line="51" Column="41" />

@@ -131,7 +131,13 @@ public class Player : MonoBehaviour
     
     private void doAnimationBlend() {
         my_animator.SetFloat("HorizontalMovement", new Vector2(lastMovement.x, lastMovement.z).normalized.magnitude); 
-    
+
+        if (this.characterController.isGrounded) {
+            my_animator.SetFloat("VerticalMovement", 0);
+        }
+        else {
+            my_animator.SetFloat("VerticalMovement", 1); 
+        }
     }
     
     /* Decides whether damage has recently taken place, and if so, displays a
@@ -377,7 +383,6 @@ public class Player : MonoBehaviour
         
 
         Vector3 movement = up_direction * verticalInput + right_direction * horizontalInput;
-        movement = Vector3.Normalize(movement); 
 
 
 
