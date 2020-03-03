@@ -21,9 +21,7 @@ public class SecurityGuard : NavigableEnemy
     // Update is called once per frame
     public override void Update()
     {
-        if(dieOnNextFrame) {
-            Destroy(this.gameObject); 
-        } 
+        base.Update(); 
     }
 
     public override void takeDamage(int x)

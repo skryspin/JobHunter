@@ -22,11 +22,11 @@ public abstract class NavigableEnemy : Enemy
 
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}{
+    // Update is called once per frame
+    override public void Update()
+    {
+        base.Update(); 
+    }
     
     public void removeGoal() {
         Destroy(currentDestinationMarker);

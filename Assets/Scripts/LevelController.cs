@@ -18,7 +18,7 @@ public class LevelController
         try {
         missingRequirements = GameObject.Find("MissingRequirements").GetComponent<DialogueTrigger>(); 
         }
-        catch (NullReferenceException e) {
+        catch (NullReferenceException) {
             Debug.Log("missingRequirements is null"); 
         }
         Debug.Log("Level constructor for scene " + SceneManager.GetActiveScene().name); 

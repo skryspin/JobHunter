@@ -8,6 +8,12 @@ public abstract class Enemy : MonoBehaviour
     protected int contact_damage; 
     public Animator anim; 
     public EnemyHealth healthBar; 
+    
+    
+    // Health Drops
+    public GameObject healthSpawner; 
+    public Vector3 healthOffset = new Vector3(0, 0, 0);  
+    
 
     public Vector3 spawnLocation;  
     public Vector3 spawnRotation;   
@@ -23,7 +29,12 @@ public abstract class Enemy : MonoBehaviour
     
     
     // Update is called once per frame
-    public abstract void Update();
+    virtual public void Update() {
+        if(dieOnNextFrame) {
+            Debug.Log("Instantiating " + Instantiate(healthSpawner, this.transform.position + healthOffset, this.transform.rotation));
+            Destroy(this.gameObject); 
+        } 
+    }
     
     virtual public void takeDamage(int x) {
         currentHealth = currentHealth - x; 

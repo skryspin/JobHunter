@@ -42,9 +42,7 @@ public class Alligorithm : NavigableEnemy
     // Update is called once per frame
     public override void Update()
     {
-        if(dieOnNextFrame) {
-            Destroy(this.gameObject); 
-        } 
+        base.Update();
         doNavigate(); 
         if (rotating) {
             Vector3 goal = spawnRotation;

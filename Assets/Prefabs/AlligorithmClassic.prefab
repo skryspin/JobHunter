@@ -330,10 +330,15 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 3
   anim: {fileID: 483409910337825897}
+  healthBar: {fileID: 0}
+  healthSpawner: {fileID: 7835944497719252002, guid: b4564dc375784408c97fadf81ec9a1fb,
+    type: 3}
+  healthOffset: {x: 0, y: 1, z: -1}
   spawnLocation: {x: 2.62, y: 0, z: -10.13}
   spawnRotation: {x: 0, y: 0, z: 0}
   destinationMarkerPrefab: {fileID: 2529184466787245158, guid: 558927f28b1f74a9e99b94aee17172dd,
     type: 3}
+  navMeshAgent: {fileID: 0}
   target: {fileID: 0}
   rotating: 0
   displayDestination: 0

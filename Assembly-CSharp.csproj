@@ -115,8 +115,8 @@
     <Compile Include="Assets\Scripts\Eraspider.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\HealDrop.cs" />
+    <Compile Include="Assets\Scripts\HealthSpawner.cs" />
     <Compile Include="Assets\Scripts\Hitbox.cs" />
-    <Compile Include="Assets\Scripts\Hover.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\LoadLevelOnSubmit.cs" />
