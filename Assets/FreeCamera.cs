@@ -18,8 +18,10 @@ public class FreeCamera : MonoBehaviour
         this.gameObject.GetComponent<Animator>().enabled = false; 
 
     }
+    
 
-    // Update is called once per frame
+    // We manage camera in LateUpdate to ensure it is after the player's position is updated
+    // This prevents jitter
     void LateUpdate()
     {
         if (pointmode) {

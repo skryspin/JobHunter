@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
     <Compile Include="Assets\SetCheckpoint.cs" />
     <Compile Include="Assets\SetColliderPlanes.cs" />
+    <Compile Include="Assets\SkipCutscene.cs" />
     <Compile Include="Assets\submit.cs" />
     <Compile Include="Assets\TrackingRange.cs" />
     <Compile Include="Assets\UnlockLevel.cs" />
@@ -181,6 +182,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -195,6 +199,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/sarahkryspin/Documents/tc/senior/seniorproject/JobHunter/JobHunter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
