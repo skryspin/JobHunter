@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SkipCutscene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="107" />
       <File FileName="Assets/Scripts/SecurityGuard.cs" Line="24" Column="24" />
@@ -13,7 +13,8 @@
       <File FileName="Assets/Scripts/AddTagToChildren.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/MainCamera.cs" Line="19" Column="3" />
       <File FileName="Assets/FreeCamera.cs" Line="21" Column="5" />
-      <File FileName="Assets/SkipCutscene.cs" Line="16" Column="9" />
+      <File FileName="Assets/SkipCutscene.cs" Line="18" Column="10" />
+      <File FileName="Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs" Line="18" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

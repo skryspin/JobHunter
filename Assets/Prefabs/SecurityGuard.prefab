@@ -342,8 +342,9 @@ MonoBehaviour:
   currentHealth: 10
   anim: {fileID: 2643647383322740545}
   healthBar: {fileID: 0}
-  healthSpawner: {fileID: 5498362568695325593, guid: b4564dc375784408c97fadf81ec9a1fb,
+  healthSpawner: {fileID: 7835944497719252002, guid: b4564dc375784408c97fadf81ec9a1fb,
     type: 3}
+  healthOffset: {x: 0, y: 0, z: 0}
   spawnLocation: {x: 140, y: 21.3, z: 309.49}
   spawnRotation: {x: 0, y: 0, z: 0}
   destinationMarkerPrefab: {fileID: 3683024393332084678, guid: 004900179777d4359893619479e946da,

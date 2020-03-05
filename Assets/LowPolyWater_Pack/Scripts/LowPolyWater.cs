@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+/* This code is from the Asset store - NOT written by Seb! */ 
 namespace LowPolyWater
 {
     public class LowPolyWater : MonoBehaviour
@@ -24,6 +25,15 @@ namespace LowPolyWater
         void Start()
         {
             CreateMeshLowPoly(meshFilter);
+            
+            // START seb's Code (the rest of this file is NOT my code)
+            BoxCollider bc = this.gameObject.AddComponent<BoxCollider>();
+            Vector3 old_c = bc.center;
+            Vector3 old_size = bc.size;
+            bc.center = new Vector3(old_c.x, -2.25f, old_c.z);
+            bc.size = new Vector3 (old_size.x, 4f, old_size.z); 
+            this.gameObject.tag = "InstaDeath"; 
+            // END seb's code
         }
 
         /// <summary>
