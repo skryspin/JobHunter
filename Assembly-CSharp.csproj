@@ -90,9 +90,11 @@
     <Compile Include="Assets\OutlineEffect\LinkedSet.cs" />
     <Compile Include="Assets\OutlineEffect\Outline.cs" />
     <Compile Include="Assets\OutlineEffect\OutlineEffect.cs" />
+    <Compile Include="Assets\ParentPlayerOnTriggerToMyParent.cs" />
     <Compile Include="Assets\Patrol.cs" />
     <Compile Include="Assets\PausePlayerControl.cs" />
     <Compile Include="Assets\PointAt.cs" />
+    <Compile Include="Assets\PointCameraOnTriggerEnter.cs" />
     <Compile Include="Assets\Prefabs\SlowAlligorithm.cs" />
     <Compile Include="Assets\RespawnOnSubmit.cs" />
     <Compile Include="Assets\RotateAlligorithm.cs" />
