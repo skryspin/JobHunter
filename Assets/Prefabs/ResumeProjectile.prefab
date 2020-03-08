@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4509333684465736590}
   - component: {fileID: 2867874192779358198}
   - component: {fileID: 3205616253369441216}
-  - component: {fileID: 4987032002548684230}
   m_Layer: 0
   m_Name: AnimatedComponent
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 802876283848293042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0212549, y: 1.3216239, z: 0.0034244477}
+  m_LocalScale: {x: 1.0212549, y: 1.3216239, z: 0.081303865}
   m_Children: []
   m_Father: {fileID: 8056076364973629294}
   m_RootOrder: 0
@@ -51,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802876283848293042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -61,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3cee507f504024133bf076ceb58151f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,19 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbd80a77380b472bb3c57ec26dfcc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &4987032002548684230
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802876283848293042}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2, z: 50}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8056076364973629266
 GameObject:
   m_ObjectHideFlags: 0

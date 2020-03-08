@@ -247,7 +247,7 @@ public class Player : MonoBehaviour
     public void doResumeThrow() {
         if (Input.GetButtonDown("Throw")) {
             Resume resume = Instantiate(resumePrefab, this.transform.position, new Quaternion()).GetComponent<Resume>();
-            resume.SetDirection(lastMovementDirection, this.transform);  
+            resume.SetDirection(this.transform.forward);  
             Debug.DrawRay(transform.position, lastMovementDirection, Color.cyan); 
        }
     }
