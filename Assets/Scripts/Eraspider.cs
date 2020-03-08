@@ -25,21 +25,16 @@ public class Eraspider : NavigableEnemy
         }
         spawnLocation = this.gameObject.transform.position; 
         spawnRotation = this.gameObject.transform.rotation.eulerAngles;
-        //Debug.Log("Script active");
     }
     
     override public void Update()
     {
+        base.Update();
+        
         if (navMeshAgent.enabled) {
-            if (reachedDestination()) {
-               // Debug.Log("Eraspider Reached destination."); 
-            }
             setGoal(target.transform.position);
         }
-        if(dieOnNextFrame) {
-            removeGoal(); 
-            Destroy(this.gameObject); 
-        } 
+
         
         if (heldItem != null) {
             heldItem.isHeld = true; 
