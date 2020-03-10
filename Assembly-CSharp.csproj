@@ -155,6 +155,7 @@
     <Compile Include="Assets\SetColliderPlanes.cs" />
     <Compile Include="Assets\SkipCutscene.cs" />
     <Compile Include="Assets\submit.cs" />
+    <Compile Include="Assets\Torch.cs" />
     <Compile Include="Assets\TrackingRange.cs" />
     <Compile Include="Assets\UnlockLevel.cs" />
     <Compile Include="Assets\VisualChaseRange.cs" />

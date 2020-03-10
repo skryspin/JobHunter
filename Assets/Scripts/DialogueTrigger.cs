@@ -14,6 +14,8 @@ public class DialogueTrigger : MonoBehaviour
     public string[] dialogue; 
     public bool proximityPlayOnly = false; //use for one-line text that should only play while player is in range
     
+    public bool disableOnParentPickup; //stop dialogue if a parent object of this is picked up
+    
     
 
     // Start is called before the first frame update
@@ -28,6 +30,9 @@ public class DialogueTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (this.GetComponentInParent<Pickup>().isHeld && disableOnParentPickup) {
+            dialogueAnimationToTrigger.Mute(); 
+        }
         
     }
     
@@ -85,6 +90,7 @@ public class DialogueTrigger : MonoBehaviour
             return false; 
         }
     }
+   
     
 
 }
