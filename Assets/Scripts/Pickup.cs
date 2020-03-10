@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
     // Start is called before the first frame update
     
     public bool isHeld; 
+    public Vector3 holdOffset; 
     public GameObject destinationTriggerObj; 
     public GameObject destinationPosition; 
     public GameObject destinationParent; //the parent that holds all the keyboard keys 
@@ -14,6 +15,7 @@ public class Pickup : MonoBehaviour
     void Start()
     {
         destinationTrigger = destinationTriggerObj.GetComponent<Collider>(); 
+        holdOffset = new Vector3(0, 1.8f, 0);
     }
 
     // Update is called once per frame

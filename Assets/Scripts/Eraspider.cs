@@ -7,6 +7,7 @@ public class Eraspider : NavigableEnemy
 {
 
     public Pickup heldItem; 
+    public Vector3 holdOffset; 
     
 
 
@@ -14,6 +15,7 @@ public class Eraspider : NavigableEnemy
     {
         base.Start(); 
 
+        holdOffset = new Vector3(0, 1.8f, 0);
         if (navMeshAgent is null) {
             foreach (NavMeshAgent x in this.gameObject.GetComponentsInChildren<NavMeshAgent>()) {
                 navMeshAgent = x;

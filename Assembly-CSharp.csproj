@@ -83,6 +83,7 @@
     <Compile Include="Assets\KillPlayer.cs" />
     <Compile Include="Assets\Laser.cs" />
     <Compile Include="Assets\LevelButton.cs" />
+    <Compile Include="Assets\Lightable.cs" />
     <Compile Include="Assets\LoadScene.cs" />
     <Compile Include="Assets\LoadSceneOnSubmit.cs" />
     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />

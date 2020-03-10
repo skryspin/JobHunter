@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
     
     //Picking and placing items
     public Pickup helditem; 
-    private Vector3 holdOffset = new Vector3(0, 1.8f, 0); //the offset from the center of the player at which pickups should be held
+    //private Vector3 holdOffset = new Vector3(0, 1.8f, 0); //the offset from the center of the player at which pickups should be held
     public Pickup nearbyItem; 
     
     //Respawn
@@ -183,14 +183,14 @@ public class Player : MonoBehaviour
             helditem.GetComponent<SphereCollider>().enabled = false; //disable the sphere collider
             helditem.isHeld = true; 
             //(do some kind of animation, but for now we will just place it above the player...)
-            helditem.transform.position = this.transform.position + holdOffset;
+            helditem.transform.position = this.transform.position + helditem.holdOffset;
         }
     } 
     
     private void holdItem() {
         if (helditem != null) {
             //Debug.Log("holding item");
-            helditem.transform.position = this.transform.position + holdOffset; 
+            helditem.transform.position = this.transform.position + helditem.holdOffset; 
         }
     }
     
