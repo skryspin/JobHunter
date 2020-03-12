@@ -570,8 +570,8 @@ public class Player : MonoBehaviour
   
     public void SetSpawn(Vector3 position, Transform spawnCamera) {
         this.spawnpoint = position; 
-        this.spawnCamera = spawnCamera; 
-        Debug.Log("spawnCamera: " + spawnCamera.position); 
+        //this.spawnCamera = spawnCamera; 
+        //Debug.Log("spawnCamera: " + spawnCamera.position); 
     }
 
 

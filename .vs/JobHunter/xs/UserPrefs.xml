@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Torch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DialogueTrigger.cs">
     <Files>
       <File FileName="Assets/Scripts/SecurityGuard.cs" Line="24" Column="24" />
       <File FileName="Assets/Scripts/HealthSpawner.cs" Line="23" Column="45" />
@@ -26,8 +26,8 @@
       <File FileName="Assets/Scripts/Pickup.cs" Line="18" Column="46" />
       <File FileName="Assets/submit.cs" Line="1" Column="1" />
       <File FileName="Assets/Lightable.cs" Line="24" Column="57" />
-      <File FileName="Assets/Scripts/DialogueTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Torch.cs" Line="7" Column="5" />
+      <File FileName="Assets/Scripts/DialogueTrigger.cs" Line="33" Column="1" />
+      <File FileName="Assets/Torch.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

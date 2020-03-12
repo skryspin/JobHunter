@@ -30,7 +30,7 @@ public class DialogueTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.GetComponentInParent<Pickup>().isHeld && disableOnParentPickup) {
+        if (this.GetComponentInParent<Pickup>() != null && this.GetComponentInParent<Pickup>().isHeld && disableOnParentPickup) {
             dialogueAnimationToTrigger.Mute(); 
         }
         
