@@ -456,14 +456,8 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         GameObject cuddleBuddy = other.gameObject;
-        if (cuddleBuddy.CompareTag("RequiredCollectable")) {
-            Destroy(cuddleBuddy);
-            score++;
-            //Debug.Log("Score: " + score);
-            Debug.Log("Collision detected with " + cuddleBuddy + " resulting in score increase.");
 
-        }
-        else if (cuddleBuddy.CompareTag("Collectable")) {  
+        if (cuddleBuddy.CompareTag("Collectable")) {  
             HealDrop obj = cuddleBuddy.gameObject.GetComponent<HealDrop>(); 
             if (obj != null) {
                 int val = obj.value;

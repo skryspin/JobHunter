@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelController
 {
@@ -47,5 +48,10 @@ public class LevelController
         Debug.Log("Level Complete!"); 
         GameController.unlockLevelAfter(SceneManager.GetActiveScene().name);
         GameObject.Find("LevelComplete").GetComponent<Animator>().SetTrigger("Complete");
+    }
+    
+    public void Collect(Image sprite) {
+        sprite.enabled = true;
+        player.score++;
     }
 }
