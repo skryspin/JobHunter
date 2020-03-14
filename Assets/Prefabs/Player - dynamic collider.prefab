@@ -89,7 +89,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3444328029392469941}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b84d23041264468d9dbd79b7127b576, type: 3}
   m_Name: 
@@ -103,13 +103,13 @@ MonoBehaviour:
   currentHealth: 10
   maxHealth: 10
   healthBar: {fileID: 0}
-  resumePrefab: {fileID: 8056076364973629266, guid: b7d892e33ad644c2c85959f03f5c0697,
+  resumePrefab: {fileID: 8056076364973629266, guid: bd8a4c23edc6f428f86822984c7be0c6,
     type: 3}
   isDead: 0
   helditem: {fileID: 0}
   nearbyItem: {fileID: 0}
   resetOnRespawn: []
-  spawnpoint: {x: 0, y: 0, z: 0}
+  spawnpoint: {x: 7, y: 42.2, z: 30}
   spawnCamera: {fileID: 0}
   my_animator: {fileID: 8650572274379705330}
   gc: {fileID: 0}
@@ -156,19 +156,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    - target: {fileID: -8684251187902555887, guid: 0708c3cdf25314d3eac57d66e4295724,
+    - target: {fileID: 4224801822505238522, guid: 0708c3cdf25314d3eac57d66e4295724,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 0708c3cdf25314d3eac57d66e4295724,
+    - target: {fileID: -8684251187902555887, guid: 0708c3cdf25314d3eac57d66e4295724,
         type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 87051bbb466eb42e2997d20e1ebcf639, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 0708c3cdf25314d3eac57d66e4295724,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0708c3cdf25314d3eac57d66e4295724,
@@ -241,6 +236,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3337611
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0708c3cdf25314d3eac57d66e4295724,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 87051bbb466eb42e2997d20e1ebcf639, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 0708c3cdf25314d3eac57d66e4295724,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1304192527846552929, guid: 0708c3cdf25314d3eac57d66e4295724,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -254,11 +259,6 @@ PrefabInstance:
     - target: {fileID: 1304192527846552929, guid: 0708c3cdf25314d3eac57d66e4295724,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4224801822505238522, guid: 0708c3cdf25314d3eac57d66e4295724,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
