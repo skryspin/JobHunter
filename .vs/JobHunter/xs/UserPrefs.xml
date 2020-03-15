@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/DisableOnTrigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
       <File FileName="Assets/Scripts/Level.cs" Line="11" Column="1" />
       <File FileName="Assets/Scripts/LevelController.cs" Line="17" Column="12" />
@@ -14,7 +14,7 @@
       <File FileName="Assets/PointCameraOnTriggerEnter.cs" Line="27" Column="10" />
       <File FileName="Assets/ParentPlayerOnTriggerToMyParent.cs" Line="33" Column="6" />
       <File FileName="Assets/Scripts/Eraspider.cs" Line="18" Column="46" />
-      <File FileName="Assets/Scripts/Player.cs" Line="459" Column="2" />
+      <File FileName="Assets/Scripts/Player.cs" Line="459" Column="1" />
       <File FileName="Assets/Scripts/Resume.cs" Line="13" Column="16" />
       <File FileName="Assets/Scenes/ResumeCollider.cs" Line="5" Column="14" />
       <File FileName="Assets/Checkpoint.cs" Line="8" Column="22" />
