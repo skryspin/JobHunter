@@ -8,7 +8,7 @@ public class FreeCamera : MonoBehaviour
     [SerializeField] private GameObject target;
     public bool pointmode = false;
     private Player player;     
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +49,7 @@ public class FreeCamera : MonoBehaviour
         this.transform.RotateAround(player.transform.position, player.transform.up, 200f * Input.GetAxis("RHorizontal") * Time.deltaTime);
 
     }
+    
     
     /* Calculates and applies the vertical rotation of the camera */ 
     private void doVertRot() {
