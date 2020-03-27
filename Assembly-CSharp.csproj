@@ -97,6 +97,7 @@
     <Compile Include="Assets\PausePlayerControl.cs" />
     <Compile Include="Assets\PointAt.cs" />
     <Compile Include="Assets\PointCameraOnTriggerEnter.cs" />
+    <Compile Include="Assets\PreciseCenter.cs" />
     <Compile Include="Assets\Prefabs\SlowAlligorithm.cs" />
     <Compile Include="Assets\RebakeCollider.cs" />
     <Compile Include="Assets\RespawnOnSubmit.cs" />

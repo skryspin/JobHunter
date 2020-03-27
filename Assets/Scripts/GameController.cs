@@ -121,7 +121,7 @@ public class  GameController : MonoBehaviour
         toggleMode(); //handles toggling control method
         setAxis();
         checkLevelLoaded(); 
-        Debug.Log("active scene: " + SceneManager.GetActiveScene().name); 
+//        Debug.Log("active scene: " + SceneManager.GetActiveScene().name); 
         if (SceneManager.GetActiveScene().name == "LevelSelect") {
             unlockLevels();
         }

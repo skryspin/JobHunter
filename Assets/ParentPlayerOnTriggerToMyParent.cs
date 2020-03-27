@@ -21,6 +21,7 @@ public class ParentPlayerOnTriggerToMyParent : MonoBehaviour
         Player player = other.gameObject.GetComponent<Player>();
         if (player != null) {
             player.transform.parent = this.transform.parent;
+            Debug.Log("Parenting");
         }
     }
     
@@ -29,6 +30,8 @@ public class ParentPlayerOnTriggerToMyParent : MonoBehaviour
         Player player = other.gameObject.GetComponent<Player>();
         if (player != null) {
             player.transform.parent = null;
+            Debug.Log("Unparenting");
+
         }
     }        
 }
