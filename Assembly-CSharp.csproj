@@ -62,7 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AskQuestion.cs" />
     <Compile Include="Assets\Border.cs" />
+    <Compile Include="Assets\Boss.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\CapturePlayer.cs" />
     <Compile Include="Assets\CaptureRange.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Assets\CheckForCompletion.cs" />
     <Compile Include="Assets\CheckForCompletionOnTrigger.cs" />
     <Compile Include="Assets\Checkpoint.cs" />
+    <Compile Include="Assets\Choice.cs" />
     <Compile Include="Assets\Collectable.cs" />
     <Compile Include="Assets\Complete.cs" />
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
@@ -109,6 +112,7 @@
     <Compile Include="Assets\Scripts\AnimationTrigger.cs" />
     <Compile Include="Assets\Scripts\AnimationTriggerEnter.cs" />
     <Compile Include="Assets\Scripts\AnimationTriggerStay.cs" />
+    <Compile Include="Assets\Scripts\Answer.cs" />
     <Compile Include="Assets\Scripts\AxisTest.cs" />
     <Compile Include="Assets\Scripts\DecrementIntegerParameter.cs" />
     <Compile Include="Assets\Scripts\DestroySelf.cs" />

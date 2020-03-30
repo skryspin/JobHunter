@@ -2653,6 +2653,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2784810493374402708, guid: 0279d45ddf06e4eec82d6bafb2b5388e,
+        type: 3}
+      propertyPath: m_Name
+      value: BossModel
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0279d45ddf06e4eec82d6bafb2b5388e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3840,7 +3845,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36956
+  m_Name: pb_Mesh16044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
