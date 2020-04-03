@@ -5,17 +5,27 @@ using UnityEngine.UI;
 public class Boss : MonoBehaviour
 {
 
-    List<Question> questions = new List<Question>(); 
-    Question currentQuestion;
+    List<Question> questions = new List<Question>(); //list of questions that haven't been asked yet
+    Question currentQuestion;   
     Animator animator;
+    
     public GameObject questionbox; 
     private Text textBox; //where the question text is displayed
+    
+    public GameObject answerA;
+    private Text textA; //where the answerA text is displayed
+    
+    public GameObject answerB;
+    private Text textB; //where the answerB text is displayed
     
     // Start is called before the first frame update
     void Start()
     {
        textBox = questionbox.GetComponentInChildren<Text>(); 
-       initializeQuestions();
+       textA = answerA.GetComponentInChildren<Text>(); 
+       textB = answerB.GetComponentInChildren<Text>(); 
+       
+       initializeQuestions(); // must assign field values passed to Question() constructor before this call
        animator = this.GetComponent<Animator>();
        
     }
@@ -64,42 +74,42 @@ public class Boss : MonoBehaviour
         Answer ans = new Answer("Not much.", false); 
         Answer ans2 = new Answer("Not much, but I'm happy to learn.", true); 
         Choice c = new Choice(ans, ans2); 
-        Question q = new Question(quest, c, questionbox, textBox); 
+        Question q = new Question(quest, c, questionbox, textBox, answerA, textA, answerB, textB); 
         questions.Add(q); 
         
         quest = "Have you used [extremely specific software]?";
         ans = new Answer("No.", false); 
         ans2 = new Answer("No, but I will learn it in my spare time before I get on the job, without asking for overtime pay!", true); 
         c = new Choice(ans, ans2); 
-        q = new Question(quest, c, questionbox, textBox); 
+        q = new Question(quest, c, questionbox, textBox, answerA, textA, answerB, textB); 
         questions.Add(q); 
         
         quest = "How do you deal with stressful situations?";
         ans = new Answer("Sometimes I panic and cry, but I know I will make it through.", false); 
         ans2 = new Answer("I keep a positive outlook (and hide my true feelings).", true); 
         c = new Choice(ans, ans2); 
-        q = new Question(quest, c, questionbox, textBox); 
+        q = new Question(quest, c, questionbox, textBox, answerA, textA, answerB, textB); 
         questions.Add(q); 
         
         quest = "Do you have experience working with others?";
         ans = new Answer("Of course, I collaborated for many school projects and in my previous internships.", true); 
         ans2 = new Answer("Yes, experiences I'd rather not repeat.", false); 
         c = new Choice(ans, ans2); 
-        q = new Question(quest, c, questionbox, textBox); 
+        q = new Question(quest, c, questionbox, textBox, answerA, textA, answerB, textB); 
         questions.Add(q); 
         
         quest = "How would you describe yourself?";
         ans = new Answer("Extremely hardworking. Have you seen my GPA?", false); 
         ans2 = new Answer("Hardworking, but also chill, like, you could grab a beer with me.", true); 
         c = new Choice(ans, ans2); 
-        q = new Question(quest, c, questionbox, textBox); 
+        q = new Question(quest, c, questionbox, textBox, answerA, textA, answerB, textB); 
         questions.Add(q); 
         
         quest = "Are you willing to travel up to 99% of the time?";
         ans = new Answer("...Umm...am I allowed to say 'no'?", false); 
         ans2 = new Answer("Of course!", true); 
         c = new Choice(ans, ans2); 
-        q = new Question(quest, c, questionbox, textBox); 
+        q = new Question(quest, c, questionbox, textBox, answerA, textA, answerB, textB); 
         questions.Add(q); 
     }
 }
