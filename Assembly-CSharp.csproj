@@ -116,6 +116,7 @@
     <Compile Include="Assets\Scripts\Answer.cs" />
     <Compile Include="Assets\Scripts\AnswerSelectionManager.cs" />
     <Compile Include="Assets\Scripts\AxisTest.cs" />
+    <Compile Include="Assets\Scripts\BossHealth.cs" />
     <Compile Include="Assets\Scripts\DecrementIntegerParameter.cs" />
     <Compile Include="Assets\Scripts\DestroySelf.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Eraspider.cs" />
+    <Compile Include="Assets\Scripts\FinalBoss.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\HealDrop.cs" />
     <Compile Include="Assets\Scripts\HealthSpawner.cs" />

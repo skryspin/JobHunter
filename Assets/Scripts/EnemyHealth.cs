@@ -7,11 +7,11 @@ public class EnemyHealth : MonoBehaviour
 {
 
     public Enemy enemyScript;
-    private Slider mySlider; 
-    private int BUFFER = 60;
-    private int currentBuffer = 0;     
+    protected Slider mySlider; 
+    protected int BUFFER = 60;
+    protected int currentBuffer = 0;     
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         mySlider = this.GetComponent<Slider>();
         mySlider.minValue = 0;    
@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    virtual protected void Update()
     {
         //Debug.Log(currentBuffer); 
         if (currentBuffer > 0) {
@@ -37,7 +37,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
     
-    public void display() {
+    virtual public void display() {
         currentBuffer = BUFFER;  
         enableChildren(); 
         mySlider.maxValue = enemyScript.maxHealth;
@@ -45,14 +45,14 @@ public class EnemyHealth : MonoBehaviour
 
     }
     
-    private void disableChildren() {
+    protected void disableChildren() {
         Image[] images = this.gameObject.GetComponentsInChildren<Image>();
         foreach (Image x in images) {
             x.enabled = false;
         } 
     }
     
-    private void enableChildren() {
+    protected void enableChildren() {
         Image[] images = this.gameObject.GetComponentsInChildren<Image>();
         foreach (Image x in images) {
             x.enabled = true;
