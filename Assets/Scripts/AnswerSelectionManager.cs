@@ -67,4 +67,8 @@ public class AnswerSelectionManager : MonoBehaviour
     public void select(Selection val) {
         selected = val; 
     }
+    
+    public Selection GetSelected() {
+        return selected; 
+    }
 }

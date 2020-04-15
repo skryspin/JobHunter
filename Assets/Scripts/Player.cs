@@ -72,11 +72,14 @@ public class Player : MonoBehaviour
 
     
     public GameController gc; 
+    
+    private GameObject mesh; 
 
     // Start is called before the first frame update
     void Start()
     {  
         //GameObject.Find("Main Camera").GetComponent<FreeCamera>().enabled = true;
+        mesh = this.gameObject.transform.GetComponentInChildren<SkinnedMeshRenderer>().gameObject; 
         characterController = this.GetComponent<CharacterController>();
         my_camera = GameObject.FindWithTag("MainCamera");
         if (resumePrefab == null) {
@@ -148,14 +151,14 @@ public class Player : MonoBehaviour
         //change to use red_buffer not strict values
         //invincible frames? 
         if (framesRemainingForRed > 4) {
-            this.gameObject.GetComponent<MeshRenderer>().material.color = Color.red; 
+            mesh.GetComponent<SkinnedMeshRenderer>().material.color = Color.red; 
         } 
         else if (framesRemainingForRed > 2) {
-            this.gameObject.GetComponent<MeshRenderer>().material.color = test; 
+            mesh.GetComponent<SkinnedMeshRenderer>().material.color = test; 
 
         }
         else if (framesRemainingForRed == 0) {
-            this.gameObject.GetComponent<MeshRenderer>().material.color = Color.white; 
+            mesh.GetComponent<SkinnedMeshRenderer>().material.color = Color.white; 
         }
         
         framesRemainingForRed--; 

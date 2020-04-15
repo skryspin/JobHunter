@@ -18,6 +18,9 @@ public class Question
     private GameObject answerB;
     private Text textB; 
     
+    public static Text correct;
+    public static Text incorrect; 
+    
     
     public bool IsDone {
         get
@@ -45,6 +48,7 @@ public class Question
         this.textA = textA;
         this.textB = textB; 
         Debug.Log(textbox.text); 
+        
     }
     
     public string getQuestion() {
@@ -77,12 +81,22 @@ public class Question
 
     }
     
-    public void ShowAnswer() {
+    public void ShowResult(Answer answer) {
         Debug.Log("Answer: " + choice.getCorrect().getText());
+        if (answer == getCorrectAnswer() ) {
+            Debug.Log("Correct!");
+            enableCorrect(); 
+        }
+        else {
+            Debug.Log("Incorrect!");
+            enableIncorrect();
+        }
     }
     
     public void finish() {
         isDone = true; //marks as done
+        
+        disableCorrectness();
         
         //hide UI elements
         textbox.text = " "; 
@@ -91,6 +105,25 @@ public class Question
         answerA.SetActive(false); 
         textB.text = " ";
         answerB.SetActive(false); 
+    }
+    
+    void enableCorrect() {
+        correct.enabled = true; 
+        correct.transform.GetChild(0).GetComponent<Text>().enabled = true; 
+
+
+    } 
+    
+    void disableCorrectness() {
+        correct.enabled = false; 
+        correct.transform.GetChild(0).GetComponent<Text>().enabled = false;
+        incorrect.enabled = false; 
+        incorrect.transform.GetChild(0).GetComponent<Text>().enabled = false; 
+    }
+    
+    void enableIncorrect() {
+        incorrect.enabled = true; 
+        incorrect.transform.GetChild(0).GetComponent<Text>().enabled = true; 
     }
     
     

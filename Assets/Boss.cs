@@ -6,6 +6,7 @@ using UnityEngine.UI;
 /* Manages the asking / answering system for the boss battle */ 
 public class Boss : MonoBehaviour
 {
+    Player player; 
 
     List<Question> questions = new List<Question>(); //list of questions that haven't been asked yet
     Question currentQuestion;   
@@ -21,6 +22,13 @@ public class Boss : MonoBehaviour
     private Text textB; //where the answerB text is displayed
     
     private bool selecting = false; //is an answer selectable at this time? (i.e., the choices are displayed and the answer has not been shown) 
+    AnswerSelectionManager asm; //class to manage which answer is selected 
+    Answer playerAnswer; // the player's answer to the question
+    
+    public Text correct;
+    public Text incorrect; 
+
+    
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +39,11 @@ public class Boss : MonoBehaviour
        
        initializeQuestions(); // must assign field values passed to Question() constructor before this call
        animator = this.GetComponent<Animator>();
+       asm = GameObject.Find("AnswerSelectionManager").GetComponent<AnswerSelectionManager>();
+       player = GameObject.FindWithTag("Player").GetComponent<Player>();  
+       
+       Question.correct = correct;
+       Question.incorrect = incorrect; 
        
     }
 
@@ -53,7 +66,7 @@ public class Boss : MonoBehaviour
         currentQuestion.Ask(); 
 
         Invoke("ShowChoices", 1f); 
-        Invoke("ShowAnswer", 10f); 
+        Invoke("ShowResult", 10f); 
 
     }
     
@@ -64,10 +77,22 @@ public class Boss : MonoBehaviour
     }
     
     /* Calls ShowAnswer() on the current question, and removes the current question from the list and from this class */ 
-    private void ShowAnswer() {
+    private void ShowResult() {
         Invoke("finishQuestion", 5f); 
-        selecting = false; 
-        currentQuestion.ShowAnswer();
+        selecting = false;
+        LockInAnswer(); //determines which answer the player chose
+        currentQuestion.ShowResult(playerAnswer);
+        Invoke("TrickOrTreat", 2f); 
+    }
+    
+    /* Locks in the player's current selection with AnswerSelectionManager as the answer */
+    private void LockInAnswer() {
+        if (asm.GetSelected() == AnswerSelectionManager.Selection.A) {
+            playerAnswer = currentQuestion.getChoice().getChoiceA();  
+        }
+        else {
+            playerAnswer = currentQuestion.getChoice().getChoiceB();
+        }
     }
     
     private void finishQuestion() {
@@ -75,6 +100,29 @@ public class Boss : MonoBehaviour
         questions.Remove(currentQuestion);
         animator.SetTrigger("DoneWithQuestion");
     }
+    
+    
+    
+    /* Depending on whether the player's answer was correct, give them a reward or
+     * a punishment. */ 
+    private void TrickOrTreat() {
+        if (playerAnswer == currentQuestion.getCorrectAnswer()) {
+            Treat(); 
+        }
+        else {
+            Trick(); 
+        }
+    }
+    
+    private void Trick() {
+        player.TakeDamage(3); 
+    }
+    
+    /* Rewards the player with the SPECIAL weapon to hurt the boss */
+    private void Treat() {
+    
+    }
+    
     
     
     /* Creates the Questions and adds them to questions */
