@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FreeCamera : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class FreeCamera : MonoBehaviour
     public bool pointmode = false;
     private Player player;     
     
+    public AnswerSelectionManager asm ;  
+    
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>(); 
-        this.gameObject.GetComponent<Animator>().enabled = false; 
+        //this.gameObject.GetComponent<Animator>().enabled = false;
+         
 
     }
     
@@ -34,6 +38,10 @@ public class FreeCamera : MonoBehaviour
             
             this.transform.LookAt(player.transform); 
             offset = this.transform.position - playerpos;   //save the new offset
+        }
+        
+        if (SceneManager.GetActiveScene().name == "Boss") {
+            asm.SuperLateUpdate();  //only call this on the boss fight
         }
 
     }

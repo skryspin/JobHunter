@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
+
+/* Manages the asking / answering system for the boss battle */ 
 public class Boss : MonoBehaviour
 {
 
@@ -17,6 +19,8 @@ public class Boss : MonoBehaviour
     
     public GameObject answerB;
     private Text textB; //where the answerB text is displayed
+    
+    private bool selecting = false; //is an answer selectable at this time? (i.e., the choices are displayed and the answer has not been shown) 
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +39,12 @@ public class Boss : MonoBehaviour
     {
 
     }
+    
+    public bool isSelecting() {
+        return selecting;
+    }
+    
+
 
     /* Chooses a random Question from questions and asks it */ 
     public void AskQuestion() {
@@ -49,12 +59,14 @@ public class Boss : MonoBehaviour
     
     /* Calls ShowChoices() on the current question */ 
     private void ShowChoices() {
+        selecting = true; 
         currentQuestion.ShowChoices();
     }
     
     /* Calls ShowAnswer() on the current question, and removes the current question from the list and from this class */ 
     private void ShowAnswer() {
         Invoke("finishQuestion", 5f); 
+        selecting = false; 
         currentQuestion.ShowAnswer();
     }
     

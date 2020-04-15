@@ -80,6 +80,7 @@
     <Compile Include="Assets\DialogueAnimation.cs" />
     <Compile Include="Assets\DisableOnTrigger.cs" />
     <Compile Include="Assets\DragPlayer.cs" />
+    <Compile Include="Assets\EnableFreeCmaera.cs" />
     <Compile Include="Assets\FollowRange.cs" />
     <Compile Include="Assets\FreeCamera.cs" />
     <Compile Include="Assets\GameOver.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Scripts\AnimationTriggerEnter.cs" />
     <Compile Include="Assets\Scripts\AnimationTriggerStay.cs" />
     <Compile Include="Assets\Scripts\Answer.cs" />
+    <Compile Include="Assets\Scripts\AnswerSelectionManager.cs" />
     <Compile Include="Assets\Scripts\AxisTest.cs" />
     <Compile Include="Assets\Scripts\DecrementIntegerParameter.cs" />
     <Compile Include="Assets\Scripts\DestroySelf.cs" />
@@ -159,6 +161,7 @@
     <Compile Include="Assets\Scripts\UIFloat.cs" />
     <Compile Include="Assets\Scripts\UnpauseOnSubmit.cs" />
     <Compile Include="Assets\Scripts\VisionCollider.cs" />
+    <Compile Include="Assets\Selector.cs" />
     <Compile Include="Assets\SetCheckpoint.cs" />
     <Compile Include="Assets\SetColliderPlanes.cs" />
     <Compile Include="Assets\SkipCutscene.cs" />
