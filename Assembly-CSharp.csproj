@@ -73,6 +73,7 @@
     <Compile Include="Assets\CheckForCompletionOnTrigger.cs" />
     <Compile Include="Assets\Checkpoint.cs" />
     <Compile Include="Assets\Choice.cs" />
+    <Compile Include="Assets\ChooseBehavior.cs" />
     <Compile Include="Assets\Collectable.cs" />
     <Compile Include="Assets\Complete.cs" />
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
