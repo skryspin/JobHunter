@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbd80a77380b472bb3c57ec26dfcc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 1
+  dmg: 10
 --- !u!114 &8495454074021625649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,9 +375,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8056076364973629294}
-  - component: {fileID: 6694631860019356126}
+  - component: {fileID: 4428815326366030048}
   m_Layer: 0
-  m_Name: ResumeProjectileProBuilder
+  m_Name: SpecialWeaponProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6694631860019356126
+--- !u!114 &4428815326366030048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8056076364973629266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2b7b6cc7cc6644008fc9c97af8393d7, type: 3}
+  m_Script: {fileID: 11500000, guid: e99e3223980304929a44c2248c8ad8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   div: 0

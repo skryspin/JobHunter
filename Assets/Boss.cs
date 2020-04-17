@@ -27,6 +27,8 @@ public class Boss : MonoBehaviour
     
     public Text correct;
     public Text incorrect; 
+    
+    public GameObject SpecialWeaponPickup; 
 
     
     
@@ -120,7 +122,7 @@ public class Boss : MonoBehaviour
     
     /* Rewards the player with the SPECIAL weapon to hurt the boss */
     private void Treat() {
-    
+        GameObject temp = Instantiate(SpecialWeaponPickup, new Vector3(301.75f, 120.518f, 256.9f), new Quaternion()); 
     }
     
     

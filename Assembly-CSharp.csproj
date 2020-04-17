@@ -158,6 +158,7 @@
     <Compile Include="Assets\Scripts\SetCameraPosition.cs" />
     <Compile Include="Assets\Scripts\SetIntegerParameterToValue.cs" />
     <Compile Include="Assets\Scripts\SightedEnemy.cs" />
+    <Compile Include="Assets\Scripts\SpecialResume.cs" />
     <Compile Include="Assets\Scripts\ToggleObjectPositions.cs" />
     <Compile Include="Assets\Scripts\TriggerNavigation.cs" />
     <Compile Include="Assets\Scripts\TriggerValue.cs" />
@@ -167,7 +168,9 @@
     <Compile Include="Assets\Selector.cs" />
     <Compile Include="Assets\SetCheckpoint.cs" />
     <Compile Include="Assets\SetColliderPlanes.cs" />
+    <Compile Include="Assets\SetColor.cs" />
     <Compile Include="Assets\SkipCutscene.cs" />
+    <Compile Include="Assets\SpecialWeaponPickup.cs" />
     <Compile Include="Assets\StartRotateFreeCamera.cs" />
     <Compile Include="Assets\submit.cs" />
     <Compile Include="Assets\Torch.cs" />

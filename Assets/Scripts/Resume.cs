@@ -8,13 +8,13 @@ public class Resume : MonoBehaviour
     public float div;  
     
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     { 
         div = 3;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         this.transform.position += new Vector3(direction.x / div, direction.y / div, direction.z / div); 
         transform.rotation = Quaternion.LookRotation(direction); 
@@ -22,7 +22,7 @@ public class Resume : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(forward); 
     }
     
-    public void SetDirection(Vector3 dir) {
+    public virtual void SetDirection(Vector3 dir) {
         direction = Vector3.Normalize(dir);
         Debug.DrawRay(this.transform.position, direction, Color.red); 
         Vector3 forward=  Quaternion.AngleAxis(90, Vector3.up) * direction;
