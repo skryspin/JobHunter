@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class SkipCutscene : StateMachineBehaviour
 {
+    public Animator Boss; 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        Boss = animator.gameObject.GetComponent<BossRef>().boss; 
+    }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (Input.GetButtonDown("Jump") || Input.GetButtonDown("JumpJoy")){
             animator.gameObject.GetComponent<Animator>().SetTrigger("SkipCutscene");
+            Boss.SetTrigger("SkipCutscene"); 
         }
     }
 

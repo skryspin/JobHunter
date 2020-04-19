@@ -17,4 +17,12 @@ public class FinalBoss : Enemy
     {
         base.Update(); 
     }
+    
+    /* Takes damage, but only if the damage is 5 or above */ 
+    override public void takeDamage(int x) { 
+        if (x < 5) {
+            x = 0;
+        }
+        base.takeDamage(x); 
+    }
 }
