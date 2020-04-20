@@ -91,6 +91,7 @@
     <Compile Include="Assets\Laser.cs" />
     <Compile Include="Assets\LevelButton.cs" />
     <Compile Include="Assets\Lightable.cs" />
+    <Compile Include="Assets\Load.cs" />
     <Compile Include="Assets\LoadScene.cs" />
     <Compile Include="Assets\LoadSceneOnSubmit.cs" />
     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets\RebakeCollider.cs" />
     <Compile Include="Assets\RespawnOnSubmit.cs" />
     <Compile Include="Assets\RotateAlligorithm.cs" />
+    <Compile Include="Assets\Save.cs" />
     <Compile Include="Assets\Scenes\ResumeCollider.cs" />
     <Compile Include="Assets\Scenes\TriggerCamera.cs" />
     <Compile Include="Assets\Scripts\AddTagToChildren.cs" />

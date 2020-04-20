@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{1B296D4D-05A6-DBD9-CB4C-82AE337511A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Collectable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Save.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="16" Column="21" />
+      <File FileName="Assets/Scripts/Player.cs" Line="89" Column="45" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="44" Column="16" />
       <File FileName="Assets/Scripts/FinalBoss.cs" Line="19" Column="6" />
       <File FileName="Assets/Scripts/Alligorithm.cs" Line="1" Column="1" />
@@ -10,7 +10,7 @@
       <File FileName="Assets/Scripts/BossHealth.cs" Line="16" Column="41" />
       <File FileName="Assets/SkipCutscene.cs" Line="7" Column="21" />
       <File FileName="Assets/Scripts/MainCamera.cs" Line="20" Column="56" />
-      <File FileName="Assets/ChooseBehavior.cs" Line="48" Column="46" />
+      <File FileName="Assets/ChooseBehavior.cs" Line="46" Column="23" />
       <File FileName="Assets/Boss.cs" Line="185" Column="40" />
       <File FileName="Assets/Scripts/HealthSpawner.cs" Line="11" Column="9" />
       <File FileName="Assets/Scripts/SpecialResume.cs" Line="10" Column="66" />
@@ -25,8 +25,13 @@
       <File FileName="Assets/Scripts/Question.cs" Line="37" Column="13" />
       <File FileName="Assets/Selector.cs" Line="6" Column="14" />
       <File FileName="Assets/CheckForCompletion.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LevelController.cs" Line="53" Column="17" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="38" Column="53" />
       <File FileName="Assets/Collectable.cs" Line="29" Column="51" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="228" Column="93" />
+      <File FileName="Assets/Load.cs" Line="8" Column="1" />
+      <File FileName="Assets/LevelButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Level.cs" Line="20" Column="4" />
+      <File FileName="Assets/Save.cs" Line="3" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

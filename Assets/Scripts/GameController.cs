@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 using UnityEngine.EventSystems;
+using System; 
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO; 
 
 
 /* This class holds data vital to the overall game: Levels locked and unlocked, completed, and control settings */
@@ -53,9 +56,7 @@ public class  GameController : MonoBehaviour
         newLevels.Clear();  //all new levels have been added, hurray
     }
     
-       
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -206,6 +207,37 @@ public class  GameController : MonoBehaviour
     {
         Debug.Log("Destroying GC with ID" + this.GetInstanceID());
     }
+    
+    public void Save() {
+        BinaryFormatter bf = new BinaryFormatter(); 
+        FileStream file = File.Create(Application.persistentDataPath + "/saveData.dat");
+        
+        Debug.Log("Saving to " + Application.persistentDataPath + "/saveData.dat" ); 
+        SaveData sd = new SaveData();
+        sd.newLevels = newLevels; 
+        sd.oldLevels = oldLevels;
+        
+        bf.Serialize(file, sd); //serializes save data to saveData.dat
+        file.Close(); 
+    }
+    
+    public void Load() {
+        if (File.Exists(Application.persistentDataPath + "/saveData.dat")) {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/saveData.dat", FileMode.Open);
+            Debug.Log("Loading from " + Application.persistentDataPath + "/saveData.dat" ); 
 
-
+            SaveData data = (SaveData) bf.Deserialize(file);
+            file.Close();
+            
+            oldLevels = data.oldLevels;
+            newLevels = data.newLevels; 
+        }
+    }
 }
+
+[Serializable]
+class SaveData {
+    public List<string> newLevels; 
+    public List<string> oldLevels; 
+} 
