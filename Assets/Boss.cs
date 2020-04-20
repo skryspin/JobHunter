@@ -174,4 +174,16 @@ public class Boss : MonoBehaviour
         q = new Question(quest, c, questionbox, textBox, answerA, textA, answerB, textB); 
         questions.Add(q); 
     }
+
+    private void OnDestroy()
+    {
+        AbortQuestionEarly(); 
+        Debug.Log("I AM DESTROYED NOW"); 
+    }
+    
+    /* Stops the question asking */
+    private void AbortQuestionEarly() {
+        selecting = false; 
+        currentQuestion.finish(); 
+    }
 }
