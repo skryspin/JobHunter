@@ -156,6 +156,8 @@ public class  GameController : MonoBehaviour
         //Debug.Log("before: " + mode);
         //Debug.Log("mode: " + mode); 
         //Debug.Log("Inside toggle"); 
+                Debug.Log("mode: " + mode); 
+
         if ((mode == "Keyboard") && (Input.GetButton("JumpJoy"))) {
             mode = "Joycon";
             Debug.Log("mode: " + mode);

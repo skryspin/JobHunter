@@ -77,6 +77,7 @@
     <Compile Include="Assets\ChooseBehavior.cs" />
     <Compile Include="Assets\Collectable.cs" />
     <Compile Include="Assets\Complete.cs" />
+    <Compile Include="Assets\CompleteLevel.cs" />
     <Compile Include="Assets\Controller Tester\Scripts\DetectUnknownControllerMappings.cs" />
     <Compile Include="Assets\delayAnimatorStart.cs" />
     <Compile Include="Assets\DialogueAnimation.cs" />
