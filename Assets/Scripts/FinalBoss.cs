@@ -4,12 +4,14 @@ using System.Collections;
 public class FinalBoss : Enemy
 {
     // Use this for initialization
+    public GameObject joboffer; 
     public override void Start()
     {
         base.Start(); 
         maxHealth = 200; 
         currentHealth = 200; 
         contact_damage = 1;
+        joboffer.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,5 +26,10 @@ public class FinalBoss : Enemy
             x = 0;
         }
         base.takeDamage(x); 
+    }
+
+    public void OnDestroy()
+    {
+        joboffer.SetActive(true);
     }
 }

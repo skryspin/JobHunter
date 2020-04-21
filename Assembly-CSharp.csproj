@@ -87,6 +87,7 @@
     <Compile Include="Assets\FollowRange.cs" />
     <Compile Include="Assets\FreeCamera.cs" />
     <Compile Include="Assets\GameOver.cs" />
+    <Compile Include="Assets\JobOffer.cs" />
     <Compile Include="Assets\JoystickNavigation.cs" />
     <Compile Include="Assets\KillPlayer.cs" />
     <Compile Include="Assets\Laser.cs" />

@@ -95,7 +95,7 @@ public class PauseGameOnButtonDown : MonoBehaviour
                 }
             } 
         }
-        Camera.main.GetComponent<FreeCamera>().enabled = true; 
+        Camera.main.GetComponent<FreeCamera>().enabled = false; //CHANGED to false 4/21/20
         paused = true; 
     }
     
